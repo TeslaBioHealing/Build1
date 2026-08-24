@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tesla BioHealing — Frontpage Wireframe</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --ink:#2b2b28;
+    --sub:#6b6b64;
+    --line:#c9c7be;
+    --paper:#faf9f5;
+    --panel:#f1efe6;
+    --accent:#3f6b3f;
+    --accent-soft:#e4ede4;
+    --tag:#8a8578;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+  }
+  a{color:inherit;text-decoration:none;}
+
+  /* ---- wireframe scaffolding helpers ---- */
+  .frame-note{
+    position:relative;
+    border-top:1px dashed var(--line);
+  }
+  .frame-note::before{
+    content: attr(data-label);
+    position:absolute;
+    top:8px; left:16px;
+    font-size:10px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--tag);
+    background:var(--paper);
+    padding:2px 6px;
+    border:1px solid var(--line);
+    z-index:5;
+  }
+  .ph{
+    background:
+      repeating-linear-gradient(45deg, #e3e1d6 0 2px, transparent 2px 10px),
+      #ece9de;
+    border:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:var(--sub);
+    font-size:12px;
+    letter-spacing:.03em;
+    padding:10px;
+  }
+  .btn{
+    display:inline-block;
+    border:1px solid var(--ink);
+    background:transparent;
+    padding:11px 26px;
+    font-size:11px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    cursor:pointer;
+  }
+  .btn.solid{ background:var(--ink); color:#fff; }
+  .btn.accent{ background:var(--accent); color:#fff; border-color:var(--accent); }
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 24px; }
+  .eyebrow{ font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--tag); }
+  h1,h2,h3{ margin:0; font-weight:400; }
+  .container-x{ overflow-x:auto; }
+
+  /* ---- 0 promo bar ---- */
+  .promo{
+    background:var(--ink); color:#fff; text-align:center;
+    font-size:11px; letter-spacing:.08em; padding:9px 16px;
+  }
+  .promo a{ text-decoration:underline; margin-left:8px; }
+
+  /* ---- 1 header ---- */
+  header.site{
+    padding:16px 24px; border-bottom:1px solid var(--line);
+    display:flex; align-items:center; justify-content:space-between;
+    background:#fff;
+  }
+  .nav-left, .nav-right{ display:flex; gap:22px; align-items:center; font-size:12px; letter-spacing:.03em; }
+  .nav-right span.ic{
+    width:20px;height:20px;border:1px solid var(--line);border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;font-size:9px;color:var(--sub);
+  }
+  .logo{ font-size:19px; letter-spacing:.14em; font-weight:700; color:var(--accent); }
+  .logo span{ font-weight:400; color:var(--ink); }
+
+  /* ---- 2 hero ---- */
+  .hero{
+    position:relative; height:560px;
+    display:flex; align-items:flex-end;
+  }
+  .hero .ph{ position:absolute; inset:0; height:100%; }
+  .hero-copy{
+    position:relative; z-index:2; padding:48px; max-width:520px;
+    background:rgba(250,249,245,.9); margin:0 0 40px 40px; border:1px solid var(--line);
+  }
+  .hero-copy .eyebrow{ margin-bottom:10px; }
+  .hero-copy h1{ font-size:30px; line-height:1.25; margin-bottom:14px; }
+  .hero-copy p{ font-size:13px; color:var(--sub); line-height:1.6; margin-bottom:20px; }
+
+  /* ---- 3 trust strip ---- */
+  .trust{
+    background:var(--accent-soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    padding:16px 0;
+  }
+  .trust .wrap{ display:flex; justify-content:space-around; flex-wrap:wrap; gap:16px; text-align:center; }
+  .trust .item{ font-size:12px; color:var(--accent); font-weight:700; max-width:220px; }
+  .trust .item small{ display:block; font-weight:400; color:var(--sub); margin-top:2px; }
+
+  /* ---- 4 bestsellers ---- */
+  .section{ padding:64px 0; }
+  .section-head{
+    display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:24px;
+  }
+  .section-head h2{ font-size:22px; }
+  .section-head a.link{ font-size:11px; text-decoration:underline; letter-spacing:.05em; text-transform:uppercase; }
+
+  .product-row{ display:flex; gap:18px; overflow-x:auto; padding-bottom:6px; }
+  .card{ min-width:230px; flex:0 0 230px; }
+  .card .ph{ height:230px; margin-bottom:10px; }
+  .card h4{ font-size:13px; font-weight:700; margin:0 0 4px; }
+  .card .price{ font-size:12px; color:var(--sub); margin-bottom:8px; }
+  .card .btn{ width:100%; text-align:center; font-size:10px; padding:9px; }
+
+  /* ---- 5 feature callout ---- */
+  .callout{ display:flex; align-items:center; gap:56px; padding:70px 0; }
+  .callout .ph.round{ width:340px; height:340px; border-radius:50%; flex:0 0 340px; }
+  .callout .copy{ max-width:440px; }
+  .callout .copy h2{ font-size:26px; margin-bottom:14px; }
+  .callout .copy p{ font-size:13px; color:var(--sub); line-height:1.7; margin-bottom:18px; }
+  .callout.reverse{ flex-direction:row-reverse; }
+
+  /* ---- 6 finder ---- */
+  .finder{ background:var(--panel); padding:70px 0; text-align:center; }
+  .finder h2{ font-size:26px; margin-bottom:8px; }
+  .finder .sub{ font-size:13px; color:var(--sub); max-width:560px; margin:0 auto 30px; line-height:1.6; }
+  .steps{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:26px; }
+  .step{ background:#fff; border:1px solid var(--line); width:220px; padding:20px 16px; text-align:left; }
+  .step .num{
+    width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:12px;margin-bottom:10px;
+  }
+  .step h4{ font-size:12px; margin:0 0 6px; }
+  .step p{ font-size:11px; color:var(--sub); line-height:1.5; margin:0; }
+
+  /* ---- 7 community ---- */
+  .community{ padding:70px 0; }
+  .community-top{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:24px; flex-wrap:wrap; gap:20px;}
+  .community-top h2{ font-size:24px; margin-bottom:8px; }
+  .community-top p{ font-size:12px; color:var(--sub); max-width:340px; line-height:1.6; }
+  .masonry{ display:grid; grid-template-columns:repeat(5,1fr); gap:12px; }
+  .masonry .ph{ height:170px; font-size:10px; }
+  .masonry .ph:nth-child(2){ height:230px; }
+  .masonry .ph:nth-child(4){ height:230px; }
+
+  /* ---- 8 shop by intention ---- */
+  .categories{ padding:70px 0; background:var(--panel); }
+  .categories h2{ font-size:24px; margin-bottom:24px; }
+  .cat-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .cat-tile{ position:relative; }
+  .cat-tile .ph{ height:230px; }
+  .cat-tile .cat-label{
+    position:absolute; bottom:14px; left:14px; font-size:15px; font-style:italic; color:var(--ink);
+    background:rgba(255,255,255,.85); padding:4px 10px; border:1px solid var(--line);
+  }
+
+  /* ---- 9 impact / commitment ---- */
+  .impact{ display:flex; align-items:center; gap:56px; padding:70px 0; }
+  .impact .ph{ width:50%; height:320px; }
+  .impact .copy{ max-width:420px; }
+  .impact .copy .eyebrow{ margin-bottom:10px; }
+  .impact .copy h2{ font-size:24px; margin-bottom:14px; line-height:1.3; }
+  .impact .copy p{ font-size:13px; color:var(--sub); line-height:1.7; margin-bottom:18px; }
+
+  /* ---- 10 footer ---- */
+  footer{ background:#fff; border-top:1px solid var(--line); padding:56px 0 0; }
+  .footer-grid{ display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:30px; padding-bottom:40px; }
+  .footer-grid h5{ font-size:11px; letter-spacing:.08em; text-transform:uppercase; margin:0 0 14px; color:var(--tag); }
+  .footer-grid ul{ list-style:none; margin:0; padding:0; }
+  .footer-grid li{ font-size:12px; margin-bottom:9px; color:var(--sub); }
+  .newsletter input{
+    width:100%; padding:10px; border:1px solid var(--line); font-size:12px; margin-bottom:10px; background:#fff;
+  }
+  .legal{
+    border-top:1px solid var(--line); padding:22px 0 30px; font-size:10.5px; color:var(--tag); line-height:1.7;
+  }
+  .legal .bottom-row{
+    display:flex; justify-content:space-between; align-items:center; margin-top:14px; flex-wrap:wrap; gap:10px;
+    font-size:10.5px;
+  }
+  .socials{ display:flex; gap:10px; }
+  .socials span{ width:22px; height:22px; border:1px solid var(--line); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:9px; }
+
+  @media (max-width:900px){
+    .callout, .impact{ flex-direction:column; text-align:center; }
+    .callout.reverse{ flex-direction:column; }
+    .callout .ph.round{ width:260px; height:260px; }
+    .masonry{ grid-template-columns:repeat(2,1fr); }
+    .cat-grid{ grid-template-columns:1fr; }
+    .footer-grid{ grid-template-columns:1fr 1fr; }
+    .impact .ph{ width:100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 0 :: PROMO BAR -->
+<div class="promo frame-note" data-label="00 · Announcement Bar">
+  FREE SHIPPING ON U.S. ORDERS OVER $150 <a href="#">SHOP BIOHEALER FOR CHILDREN →</a>
+</div>
+
+<!-- 1 :: HEADER / NAV -->
+<header class="site frame-note" data-label="01 · Header / Navigation">
+  <div class="nav-left">
+    <a>Shop</a>
+    <a>Our Technology</a>
+    <a>Our Wellness Approach</a>
+    <a>Support</a>
+  </div>
+  <div class="logo">TESLA <span>BIOHEALING</span></div>
+  <div class="nav-right">
+    <a>Search</a>
+    <span class="ic">A</span>
+    <span class="ic">0</span>
+  </div>
+</header>
+
+<!-- 2 :: HERO -->
+<section class="hero frame-note" data-label="02 · Hero">
+  <div class="ph">[ HERO IMAGE — BioHealer product on a calm home/nightstand setting ]</div>
+  <div class="hero-copy">
+    <div class="eyebrow">Low-Intensity Photon Technology</div>
+    <h1>Everyday wellness, powered by light.</h1>
+    <p>Tesla BioHealing® Low-Intensity Photon-Generators (LIPG) are designed for
+    noninvasive use as part of a personal wellness routine — supporting rest,
+    relaxation, sleep routines, and everyday well-being.</p>
+    <a class="btn solid">Shop Wellness Products</a>
+  </div>
+</section>
+
+<!-- 3 :: TRUST STRIP -->
+<div class="trust frame-note" data-label="03 · Trust / Stat Bar">
+  <div class="wrap">
+    <div class="item">Trusted by 50,000+ Users <small>across our wellness community</small></div>
+    <div class="item">Backed by Extensive Research <small>peer-reviewed, Biohack Yourself</small></div>
+    <div class="item">Boost Vitality &amp; Energy <small>as part of a healthy routine</small></div>
+  </div>
+</div>
+
+<!-- 4 :: BESTSELLERS -->
+<section class="section frame-note" data-label="04 · Featured Products">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Featured Wellness Products</h2>
+      <a class="link">Shop All Products</a>
+    </div>
+    <div class="container-x">
+      <div class="product-row">
+        <div class="card">
+          <div class="ph">[ BioHealer for Adults ]</div>
+          <h4>BioHealer&trade; for Adults</h4>
+          <div class="price">Designed for: Daily Vitality</div>
+          <a class="btn">Add to Cart</a>
+        </div>
+        <div class="card">
+          <div class="ph">[ BioHealer for Children ]</div>
+          <h4>BioHealer&trade; for Children</h4>
+          <div class="price">Designed for: Family Wellness Space</div>
+          <a class="btn">Add to Cart</a>
+        </div>
+        <div class="card">
+          <div class="ph">[ Biophoton Canister — Travel Pair ]</div>
+          <h4>Biophoton Generators — Travel Pair</h4>
+          <div class="price">Designed for: Portable Wellness</div>
+          <a class="btn">Add to Cart</a>
+        </div>
+        <div class="card">
+          <div class="ph">[ Home &amp; Space Wellness Bundle ]</div>
+          <h4>Home &amp; Space Wellness Bundle</h4>
+          <div class="price">Designed for: Home &amp; Space Wellness</div>
+          <a class="btn">Add to Cart</a>
+        </div>
+        <div class="card">
+          <div class="ph">[ Additional product card ]</div>
+          <h4>Product Name</h4>
+          <div class="price">Designed for: Wellness Intention</div>
+          <a class="btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 :: FEATURE CALLOUT — Biophotons -->
+<section class="wrap callout frame-note" data-label="05 · Feature Callout — Biophotons">
+  <div class="ph round">[ Biophotons badge / light-science visual ]</div>
+  <div class="copy">
+    <div class="eyebrow">Understanding Photons</div>
+    <h2>The science behind every session.</h2>
+    <p>Photons are fundamental units of light energy, occurring naturally
+    throughout our environment. Tesla BioHealing® LIPG products are constructed
+    using selected materials and configurations designed to generate
+    low-intensity photon emissions within their intended wellness setting.</p>
+    <a class="btn accent">Learn About Our Technology</a>
+  </div>
+</section>
+
+<!-- 6 :: FINDER — How to Choose a Wellness Product -->
+<section class="finder frame-note" data-label="06 · Interactive Finder">
+  <div class="wrap">
+    <h2>Find the Routine That Fits You</h2>
+    <p class="sub">Answer four quick questions to match your wellness intention,
+    preferred setting, and daily routine with an approved Tesla BioHealing® product.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h4>Identify Your Wellness Intention</h4>
+        <p>Sleep routines, relaxation, personal vitality, or a comfortable wellness space.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h4>Consider Where You'll Use It</h4>
+        <p>Bedroom, living space, office, personal wellness area, or travel.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h4>Review the Product Information</h4>
+        <p>Intended purpose, features, directions, safety information, and limitations.</p>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <h4>Select What Fits Your Routine</h4>
+        <p>Choose a product you can use comfortably and consistently.</p>
+      </div>
+    </div>
+    <a class="btn solid">Start the Wellness Finder</a>
+  </div>
+</section>
+
+<!-- 7 :: COMMUNITY -->
+<section class="community frame-note" data-label="07 · Community / Social Proof">
+  <div class="wrap">
+    <div class="community-top">
+      <div>
+        <h2>This Is Your Community</h2>
+        <p>Share your wellness routine and tag @TeslaBioHealing for a chance to be featured.</p>
+      </div>
+      <a class="btn">Join the Community</a>
+    </div>
+    <div class="masonry">
+      <div class="ph">[ UGC photo ]</div>
+      <div class="ph">[ UGC photo ]</div>
+      <div class="ph">[ UGC photo ]</div>
+      <div class="ph">[ UGC photo ]</div>
+      <div class="ph">[ UGC photo ]</div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 :: SHOP BY WELLNESS INTENTION -->
+<section class="categories frame-note" data-label="08 · Shop by Wellness Intention">
+  <div class="wrap">
+    <h2>Shop by Wellness Intention</h2>
+    <div class="cat-grid">
+      <div class="cat-tile">
+        <div class="ph">[ Category image ]</div>
+        <div class="cat-label">Sleep &amp; Relaxation</div>
+      </div>
+      <div class="cat-tile">
+        <div class="ph">[ Category image ]</div>
+        <div class="cat-label">Personal Wellness</div>
+      </div>
+      <div class="cat-tile">
+        <div class="ph">[ Category image ]</div>
+        <div class="cat-label">Daily Vitality</div>
+      </div>
+      <div class="cat-tile">
+        <div class="ph">[ Category image ]</div>
+        <div class="cat-label">Home &amp; Space Wellness</div>
+      </div>
+      <div class="cat-tile">
+        <div class="ph">[ Category image ]</div>
+        <div class="cat-label">Portable Wellness</div>
+      </div>
+      <div class="cat-tile">
+        <div class="ph">[ Category image ]</div>
+        <div class="cat-label">Wellness Bundles</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 :: COMMITMENT / IMPACT -->
+<section class="wrap impact frame-note" data-label="09 · Commitment / Impact">
+  <div class="ph">[ Peer-review / research image — Biohack Yourself badge, lab imagery ]</div>
+  <div class="copy">
+    <div class="eyebrow">Our Commitment to Responsible Wellness</div>
+    <h2>Clear information, every product, every time.</h2>
+    <p>We believe every customer should understand what a product is, its
+    intended wellness purpose, how to use it, and its limitations before
+    making a purchase — backed by peer-reviewed research and transparent
+    product information.</p>
+    <a class="btn solid">Read Our Wellness Approach</a>
+  </div>
+</section>
+
+<!-- 10 :: FOOTER -->
+<footer class="frame-note" data-label="10 · Footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="newsletter">
+        <h5>Sign Up for Wellness Tips &amp; Offers</h5>
+        <input type="text" placeholder="Your Email">
+        <a class="btn solid" style="font-size:10px;padding:9px 20px;">Subscribe</a>
+      </div>
+      <div>
+        <h5>Shop</h5>
+        <ul>
+          <li>All Products</li>
+          <li>Sleep &amp; Relaxation</li>
+          <li>Daily Vitality</li>
+          <li>Wellness Bundles</li>
+          <li>Wellness Gifts</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li>Our Technology</li>
+          <li>Our Wellness Approach</li>
+          <li>Wellness Library</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Customer Service</h5>
+        <ul>
+          <li>Support / FAQ</li>
+          <li>Shipping &amp; Delivery</li>
+          <li>Returns &amp; Refunds</li>
+          <li>Product Warranty</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <div class="socials">
+        <span>ig</span><span>fb</span><span>yt</span><span>tt</span>
+      </div>
+      <p style="margin-top:14px;"><strong>General Wellness Notice:</strong> Tesla BioHealing® products
+      are intended solely for general wellness use. They are not intended to diagnose, cure, mitigate,
+      treat, or prevent any disease or medical condition. Information on this website is provided for
+      general educational purposes and is not medical advice. Consult a qualified healthcare professional
+      regarding medical concerns or before making decisions about your healthcare.</p>
+      <div class="bottom-row">
+        <span>&copy; 2026 Tesla BioHealing, Inc. All rights reserved.</span>
+        <span>Privacy Policy &nbsp;·&nbsp; Terms of Service</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
