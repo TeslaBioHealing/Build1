@@ -2,35 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Tesla BioHealing — Frontpage Wireframe</title>
+<title>Healthy Night Habits — Frontpage Wireframe</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root{
-    /* brand palette, as supplied */
-    --c1:#7cc662;
-    --c2:#4f9c56;
-    --c3:#3d6f95;
-    --c4:#c9e63a;
-    --c5:#1f7a5c;
-    --c6:#1e9e3d;
-    --c7:#2fdba0;
-    --c8:#4fc4c1;
-    --c9:#a9d8a4;
-
-    --ink:#20291f;
-    --sub:#5c6b58;
-    --line:#c7d9c2;
-    --paper:#f8faf6;
-    --panel:#eef6ea;
-    --accent:var(--c6);
-    --accent-dark:var(--c5);
-    --accent-soft:#e2f2df;
-    --tag:#7c8f77;
-
-    --dark:#12160f;
-    --dark2:#181d14;
-    --dark-line:rgba(255,255,255,.14);
-    --dark-sub:#a9b6a2;
+    --gold:#b3893f;
+    --gold-light:#e3cd97;
+    --gold-pale:#f3ead2;
+    --deep:#173625;
+    --deep2:#20493214;
+    --ink:#1d2c20;
+    --sub:#6c7566;
+    --line:#e3ddc8;
+    --paper:#faf7ef;
+    --panel:#f3ecd9;
+    --tag:#96906f;
   }
   *{box-sizing:border-box;}
   body{
@@ -40,6 +26,7 @@
     background:var(--paper);
   }
   a{color:inherit;text-decoration:none;}
+  .serif{ font-family:Georgia,'Times New Roman',serif; }
 
   /* ---- wireframe scaffolding helpers ---- */
   .frame-note{ position:relative; border-top:1px dashed var(--line); }
@@ -50,175 +37,186 @@
     color:var(--tag); background:var(--paper); padding:2px 6px;
     border:1px solid var(--line); z-index:5;
   }
-  .frame-note.on-dark::before{ background:var(--dark); color:var(--dark-sub); border-color:var(--dark-line); }
+  .frame-note.on-deep::before{ background:var(--deep); color:var(--gold-light); border-color:rgba(255,255,255,.2); }
 
   .ph{
-    background:
-      repeating-linear-gradient(45deg, #e3e1d6 0 2px, transparent 2px 10px), #ece9de;
+    background: repeating-linear-gradient(45deg, #ece3c8 0 2px, transparent 2px 10px), #f2ead4;
     border:1px solid var(--line);
     display:flex; align-items:center; justify-content:center; text-align:center;
     color:var(--sub); font-size:12px; padding:10px;
   }
-  .ph.dark{
-    background:
-      repeating-linear-gradient(45deg, #23281e 0 2px, transparent 2px 10px), #191d15;
-    border:1px solid var(--dark-line);
-    color:#cfd8c9;
+  .ph.on-deep{
+    background: repeating-linear-gradient(45deg, #1e4630 0 2px, transparent 2px 10px), #163523;
+    border:1px solid rgba(255,255,255,.18);
+    color:#cfe0d3;
   }
   .genprompt{
     font-family:"Courier New", monospace; font-size:10.5px; line-height:1.55;
-    color:var(--accent-dark); background:#fff; border:1px dashed var(--c8);
+    color:#7a6329; background:#fff; border:1px dashed var(--gold);
     padding:8px 10px; margin-top:8px; text-align:left;
   }
   .genprompt b{ color:var(--ink); font-family:Arial, Helvetica, sans-serif; letter-spacing:.06em; }
-  .genprompt.on-dark{ background:var(--dark2); color:var(--c9); border-color:var(--c5); }
-  .genprompt.on-dark b{ color:#fff; }
+  .genprompt.on-deep{ background:#0f2a1b; color:var(--gold-light); border-color:var(--gold); }
+  .genprompt.on-deep b{ color:#fff; }
 
   .btn{
-    display:inline-block; border:1px solid var(--accent-dark); background:transparent;
-    color:var(--accent-dark); padding:12px 28px; font-size:11px; font-weight:700;
-    letter-spacing:.12em; text-transform:uppercase; cursor:pointer;
+    display:inline-flex; align-items:center; gap:8px;
+    border:1px solid var(--deep); background:transparent; color:var(--deep);
+    padding:13px 26px; border-radius:999px; font-size:12.5px; letter-spacing:.02em; cursor:pointer;
   }
-  .btn.solid{ background:var(--accent); color:#fff; border-color:var(--accent); }
-  .btn.on-dark{ border-color:#fff; color:#fff; }
+  .btn.solid{ background:var(--deep); color:#fdf9ee; border-color:var(--deep); }
+  .btn.on-deep{ border-color:var(--gold-light); color:var(--gold-light); }
   .wrap{ max-width:1180px; margin:0 auto; padding:0 24px; }
-  .eyebrow{ font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent-dark); font-weight:700; }
-  .eyebrow.on-dark{ color:var(--c7); }
+  .eyebrow{ font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); font-weight:700; }
   h1,h2,h3{ margin:0; font-weight:400; }
   .container-x{ overflow-x:auto; }
   .center{ text-align:center; }
 
-  /* ---- brand color strip ---- */
-  .color-strip{ display:flex; height:6px; }
-  .color-strip span{ flex:1; }
-
   /* ---- 0 promo bar ---- */
   .promo{ background:var(--panel); color:var(--ink); text-align:center; font-size:11px; letter-spacing:.06em; padding:9px 16px; border-bottom:1px solid var(--line); }
-  .promo b{ color:var(--accent-dark); }
+  .promo b{ color:var(--gold); }
 
-  /* ---- 1 header (dark) ---- */
+  /* ---- 1 header ---- */
   header.site{
-    padding:18px 24px; background:var(--dark); color:#fff;
+    padding:18px 24px; background:#fff; border-bottom:1px solid var(--line);
     display:flex; align-items:center; justify-content:space-between;
   }
-  .nav-left, .nav-right{ display:flex; gap:22px; align-items:center; font-size:11px; letter-spacing:.1em; text-transform:uppercase; }
-  .nav-left a:hover{ color:var(--c7); }
+  .nav-left, .nav-right{ display:flex; gap:22px; align-items:center; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--sub); }
+  .nav-left a:hover{ color:var(--gold); }
   .nav-right span.ic{
-    width:20px;height:20px;border:1px solid var(--dark-line);border-radius:50%;
-    display:inline-flex;align-items:center;justify-content:center;font-size:9px;color:var(--dark-sub);
+    width:20px;height:20px;border:1px solid var(--line);border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;font-size:9px;color:var(--sub);
   }
-  .logo{ font-size:18px; letter-spacing:.16em; font-weight:700; color:var(--c7); }
-  .logo span{ font-weight:400; color:#fff; }
+  .logo{ font-size:19px; letter-spacing:.04em; color:var(--deep); }
+  .logo .amp{ color:var(--gold); font-style:italic; }
 
-  /* ---- 2 hero (dark, full-bleed) ---- */
-  .hero{ position:relative; height:600px; display:flex; align-items:center; background:var(--dark); }
-  .hero .ph{ position:absolute; inset:0; height:100%; }
-  .hero-copy{ position:relative; z-index:2; padding:0 60px; max-width:560px; color:#fff; }
-  .hero-copy .eyebrow{ margin-bottom:12px; }
-  .hero-copy h1{ font-size:44px; line-height:1.1; font-weight:800; letter-spacing:.01em; margin-bottom:14px; text-transform:uppercase; }
-  .hero-copy p{ font-size:13px; color:var(--dark-sub); line-height:1.7; margin-bottom:22px; max-width:420px; }
-  .hero-dots{ position:absolute; right:28px; bottom:28px; display:flex; gap:6px; z-index:2; }
-  .hero-dots span{ width:7px; height:7px; border-radius:50%; background:rgba(255,255,255,.35); }
-  .hero-dots span:first-child{ background:#fff; }
+  /* ---- gold divider ---- */
+  .divider{ display:flex; align-items:center; gap:14px; margin:18px 0; max-width:360px; }
+  .divider .line{ flex:1; height:1px; background:var(--gold); opacity:.6; }
+  .divider .mark{ width:8px; height:8px; border:1px solid var(--gold); transform:rotate(45deg); }
 
-  /* ---- 3 trending products (white) ---- */
+  /* ---- 2 hero (split) ---- */
+  .hero{ display:grid; grid-template-columns:1fr 1.15fr; align-items:stretch; background:#fff; }
+  .hero-copy{ padding:70px 56px; display:flex; flex-direction:column; justify-content:center; }
+  .plaque{
+    display:inline-flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg,var(--gold-light),var(--gold));
+    color:#4a3410; font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+    padding:9px 18px; margin-bottom:20px; width:fit-content; border-radius:2px;
+    box-shadow:0 2px 10px rgba(179,137,63,.35);
+  }
+  .hero-copy h1{ font-size:48px; line-height:1.12; color:var(--deep); margin-bottom:10px; }
+  .hero-copy .sub{ font-size:16px; color:var(--sub); font-style:italic; margin-bottom:4px; }
+  .hero-copy .tagline{ font-size:13px; color:var(--sub); letter-spacing:.02em; margin:16px 0 26px; }
+  .hero .ph{ height:100%; min-height:520px; position:relative; }
+
+  /* feature strip under hero */
+  .feature-strip{ background:#fff; padding:0 0 56px; }
+  .feature-strip .wrap{ display:flex; justify-content:center; gap:70px; flex-wrap:wrap; }
+  .feature-item{ display:flex; align-items:center; gap:14px; }
+  .ficon{
+    width:46px; height:46px; border-radius:50%; border:1px solid var(--gold);
+    display:flex; align-items:center; justify-content:center; flex:0 0 46px; position:relative;
+  }
+  .ficon.moon::after{
+    content:""; position:absolute; width:20px; height:20px; border-radius:50%;
+    background:var(--gold); top:9px; left:9px;
+  }
+  .ficon.moon::before{
+    content:""; position:absolute; width:20px; height:20px; border-radius:50%;
+    background:#fff; top:6px; left:13px; z-index:1;
+  }
+  .ficon.sun{ background:repeating-conic-gradient(var(--gold) 0 8deg, transparent 8deg 40deg); }
+  .ficon.sun::after{ content:""; position:absolute; width:16px; height:16px; border-radius:50%; background:#fff; border:1px solid var(--gold); }
+  .ficon.leaf::after{
+    content:""; width:20px; height:20px; background:var(--gold);
+    border-radius:0 100% 0 100%; transform:rotate(45deg);
+  }
+  .feature-item .txt{ font-size:12.5px; color:var(--ink); line-height:1.5; }
+  .feature-item .txt b{ display:block; color:var(--deep); }
+
+  /* ---- shared section ---- */
   .section{ padding:70px 0; }
-  .section h2.big{ font-size:26px; font-weight:800; letter-spacing:.04em; text-transform:uppercase; text-align:center; margin-bottom:34px; }
+  .section h2.big{ font-size:30px; text-align:center; margin-bottom:38px; color:var(--deep); }
+
+  /* ---- trending products ---- */
   .product-row{ display:flex; gap:18px; overflow-x:auto; padding-bottom:6px; }
   .card{ min-width:220px; flex:0 0 220px; }
   .card .ph{ height:210px; margin-bottom:12px; }
-  .card h4{ font-size:12.5px; font-weight:700; margin:0 0 4px; text-transform:uppercase; }
-  .card .cat{ font-size:10px; color:var(--sub); text-transform:uppercase; letter-spacing:.05em; margin-bottom:4px; }
-  .card .price{ font-size:12px; font-weight:700; margin-bottom:4px; }
-  .card .rating{ font-size:10px; color:var(--accent-dark); margin-bottom:0; }
+  .card h4{ font-size:13px; margin:0 0 4px; color:var(--deep); }
+  .card .cat{ font-size:10px; color:var(--gold); text-transform:uppercase; letter-spacing:.06em; margin-bottom:4px; }
+  .card .price{ font-size:12px; color:var(--sub); margin-bottom:0; }
   .shopall{ text-align:center; margin-top:32px; }
 
-  /* ---- 4 shop by goals (black tiles) ---- */
-  .goals{ background:var(--dark); padding:70px 0; }
-  .goals h2.big{ color:#fff; }
+  /* ---- shop by goals (deep green tiles) ---- */
+  .goals{ background:var(--deep); padding:70px 0; }
+  .goals h2.big{ color:#fdf9ee; }
   .goal-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
   .goal-tile{ position:relative; }
-  .goal-tile .ph{ height:340px; }
+  .goal-tile .ph{ height:320px; }
   .goal-tile .label{
-    position:absolute; bottom:16px; left:16px; right:16px; color:#fff; font-size:13px;
-    font-weight:800; letter-spacing:.05em; text-transform:uppercase;
-    text-shadow:0 1px 4px rgba(0,0,0,.6);
+    position:absolute; bottom:16px; left:16px; right:16px; color:#fdf9ee; font-size:13px;
+    letter-spacing:.03em; font-style:italic;
   }
 
-  /* ---- 5 feature spotlight (white split) ---- */
+  /* ---- spotlight ---- */
   .spotlight{ display:flex; align-items:center; gap:50px; padding:76px 0; }
   .spotlight .copy{ flex:1 1 360px; }
-  .spotlight .copy .eyebrow{ margin-bottom:10px; }
-  .spotlight .copy h2{ font-size:34px; font-weight:800; letter-spacing:.01em; line-height:1.15; margin-bottom:16px; }
+  .spotlight .copy h2{ font-size:32px; color:var(--deep); line-height:1.2; margin-bottom:16px; }
   .spotlight .copy p{ font-size:13px; color:var(--sub); line-height:1.75; margin-bottom:22px; max-width:420px; }
   .spotlight .callouts{ flex:1 1 220px; display:flex; flex-direction:column; gap:12px; }
   .spotlight .callout-card{
-    background:#fff; border:1px solid var(--line); padding:16px 18px; font-size:11.5px;
-    font-weight:700; text-transform:uppercase; letter-spacing:.03em; display:flex; align-items:center; gap:12px;
+    background:var(--gold-pale); border:1px solid var(--line); padding:16px 18px; font-size:12.5px;
+    color:var(--deep); display:flex; align-items:center; gap:12px;
   }
-  .spotlight .callout-card .dot{ width:30px;height:30px;border-radius:50%;flex:0 0 30px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px; }
-  .spotlight .callout-card:nth-child(1) .dot{ background:var(--c6); }
-  .spotlight .callout-card:nth-child(2) .dot{ background:var(--c3); }
-  .spotlight .callout-card:nth-child(3) .dot{ background:var(--c8); }
+  .spotlight .callout-card .dot{ width:30px;height:30px;border-radius:50%;flex:0 0 30px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px; background:var(--gold); }
   .spotlight .product-shot{ flex:1 1 260px; }
   .spotlight .product-shot .ph{ height:300px; }
 
-  /* ---- 6 shop by product line (dual dark banners) ---- */
-  .lines{ background:var(--dark); padding:70px 0; }
-  .lines h2.big{ color:#fff; }
+  /* ---- product lines (deep) ---- */
+  .lines{ background:var(--deep); padding:70px 0; }
+  .lines h2.big{ color:#fdf9ee; }
   .line-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
   .line-tile{ position:relative; }
   .line-tile .ph{ height:420px; }
   .line-tile .label{
-    position:absolute; bottom:22px; left:0; right:0; text-align:center; color:#fff;
-    font-size:16px; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
-    text-shadow:0 1px 4px rgba(0,0,0,.6);
+    position:absolute; bottom:22px; left:0; right:0; text-align:center; color:#fdf9ee;
+    font-size:17px; font-style:italic;
   }
 
-  /* ---- 7 wellness library / blog (white) ---- */
+  /* ---- library / blog ---- */
   .library-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
   .post .ph{ height:170px; margin-bottom:14px; }
-  .post .meta{ font-size:10px; color:var(--sub); text-transform:uppercase; letter-spacing:.04em; margin-bottom:8px; }
-  .post h4{ font-size:14px; font-weight:800; margin:0 0 8px; text-transform:uppercase; line-height:1.3; }
+  .post .meta{ font-size:10px; color:var(--gold); text-transform:uppercase; letter-spacing:.05em; margin-bottom:8px; }
+  .post h4{ font-size:14.5px; margin:0 0 8px; color:var(--deep); line-height:1.35; }
   .post p{ font-size:12px; color:var(--sub); line-height:1.6; margin:0 0 14px; }
 
-  /* ---- 8 footer (dark) ---- */
-  footer{ background:var(--dark); color:var(--dark-sub); padding:60px 0 0; }
+  /* ---- footer ---- */
+  footer{ background:var(--deep); color:#cfe0d3; padding:60px 0 0; }
   .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:30px; padding-bottom:36px; }
-  .footer-grid h5{ font-size:11px; letter-spacing:.1em; text-transform:uppercase; margin:0 0 14px; color:#fff; }
+  .footer-grid h5{ font-size:11px; letter-spacing:.1em; text-transform:uppercase; margin:0 0 14px; color:var(--gold-light); }
   .footer-grid ul{ list-style:none; margin:0; padding:0; }
   .footer-grid li{ font-size:11.5px; margin-bottom:9px; }
   .footer-grid p{ font-size:11.5px; line-height:1.7; margin:0 0 14px; }
   .socials{ display:flex; gap:10px; margin-bottom:8px; }
-  .socials span{ width:22px; height:22px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:9px; color:#fff; }
-  .socials span:nth-child(1){ background:var(--c6); }
-  .socials span:nth-child(2){ background:var(--c3); }
-  .socials span:nth-child(3){ background:var(--c7); }
-  .socials span:nth-child(4){ background:var(--c5); }
-  .badge{ display:inline-block; border:1px solid var(--dark-line); font-size:9px; padding:6px 10px; color:var(--dark-sub); }
-  .legal{ border-top:1px solid var(--dark-line); padding:22px 0 30px; font-size:10.5px; line-height:1.7; }
+  .socials span{ width:22px; height:22px; border-radius:50%; border:1px solid var(--gold-light); display:inline-flex; align-items:center; justify-content:center; font-size:9px; color:var(--gold-light); }
+  .badge{ display:inline-block; border:1px solid var(--gold-light); font-size:9px; padding:6px 10px; color:var(--gold-light); }
+  .legal{ border-top:1px solid rgba(255,255,255,.15); padding:22px 0 30px; font-size:10.5px; line-height:1.7; }
   .legal .bottom-row{ display:flex; justify-content:space-between; align-items:center; margin-top:16px; flex-wrap:wrap; gap:10px; font-size:10.5px; }
 
   @media (max-width:900px){
-    .hero-copy h1{ font-size:32px; }
+    .hero{ grid-template-columns:1fr; }
+    .hero-copy h1{ font-size:34px; }
     .goal-grid{ grid-template-columns:repeat(2,1fr); }
     .line-grid{ grid-template-columns:1fr; }
     .library-grid{ grid-template-columns:1fr; }
     .spotlight{ flex-direction:column; }
     .footer-grid{ grid-template-columns:1fr 1fr; }
+    .feature-strip .wrap{ gap:30px; }
   }
 </style>
 </head>
 <body>
-
-<!-- brand color strip -->
-<div class="color-strip">
-  <span style="background:var(--c1)"></span><span style="background:var(--c2)"></span>
-  <span style="background:var(--c3)"></span><span style="background:var(--c4)"></span>
-  <span style="background:var(--c5)"></span><span style="background:var(--c6)"></span>
-  <span style="background:var(--c7)"></span><span style="background:var(--c8)"></span>
-  <span style="background:var(--c9)"></span>
-</div>
 
 <!-- 0 :: PROMO BAR -->
 <div class="promo frame-note" data-label="00 · Announcement Bar">
@@ -226,14 +224,14 @@
 </div>
 
 <!-- 1 :: HEADER / NAV -->
-<header class="site frame-note on-dark" data-label="01 · Header / Navigation">
+<header class="site frame-note" data-label="01 · Header / Navigation">
   <div class="nav-left">
-    <a>Shop ›</a>
-    <a>Technology ›</a>
-    <a>Wellness ›</a>
+    <a>Shop</a>
+    <a>Our Technology</a>
+    <a>Our Wellness Approach</a>
     <a>Support</a>
   </div>
-  <div class="logo">TESLA <span>BIOHEALING</span></div>
+  <div class="logo serif">Healthy Night Habits</div>
   <div class="nav-right">
     <span class="ic">A</span>
     <span class="ic">Q</span>
@@ -242,124 +240,139 @@
 </header>
 
 <!-- 2 :: HERO -->
-<section class="hero frame-note on-dark" data-label="02 · Hero">
-  <div class="ph dark">
-    [ HERO BACKGROUND — dark, moody product shot ]
-  </div>
+<section class="hero frame-note" data-label="02 · Hero">
   <div class="hero-copy">
-    <div class="eyebrow on-dark">Limited Release</div>
-    <h1>The Gold Series Has Arrived</h1>
-    <p>Introducing our limited Biophoton Gold canisters — the same
-    peer-reviewed Low-Intensity Photon-Generator technology, in a
-    collector's finish.</p>
-    <a class="btn solid">Shop the Gold Series</a>
-    <div class="genprompt on-dark">
-      <b>AI IMAGE PROMPT:</b> Two glowing gold cylindrical canisters labeled
-      "TESLA BIOHEALING" on a dark reflective surface, soft emerald-green
-      bioluminescent light particles drifting upward, moody studio lighting,
-      shallow depth of field, premium product photography, 16:9.<br><br>
-      <b>AI VIDEO PROMPT:</b> Slow 5-second dolly-in orbiting the two gold
-      canisters as green light particles drift and pulse gently around them,
-      soft rack focus, cinematic product commercial, seamless loop.
+    <div class="plaque">Biophotons</div>
+    <h1 class="serif">Healthy Night<br>Habits</h1>
+    <div class="sub serif">A worldwide sleep-wellness program</div>
+    <div class="divider"><span class="line"></span><span class="mark"></span><span class="line"></span></div>
+    <div class="tagline">Prepare for rest. Protect the night. Begin again.</div>
+    <a class="btn solid">Explore the Collection →</a>
+  </div>
+  <div class="ph">
+    [ HERO PHOTO — woman waking up stretching, product lineup on a marble
+    table, bright airy bedroom ]
+    <div class="genprompt" style="position:absolute;bottom:14px;left:14px;right:14px;">
+      <b>AI IMAGE PROMPT:</b> A woman in loose linen sleepwear stretches her
+      arms upward with a joyful, relaxed expression, standing in a bright,
+      airy bedroom at sunrise with sheer curtains and soft plants. In the
+      foreground on a marble tabletop, a lineup of four unbranded wellness
+      canisters of varying sizes and finishes (matte white, brushed silver,
+      warm gold) sits beside a small gold plaque. Warm natural light, soft
+      focus background, editorial lifestyle photography, 4:5 crop, no
+      visible logos or brand text on any product.
     </div>
   </div>
-  <div class="hero-dots"><span></span><span></span><span></span><span></span></div>
+</section>
+
+<!-- feature strip -->
+<section class="feature-strip frame-note" data-label="02b · Hero Feature Strip">
+  <div class="wrap">
+    <div class="feature-item">
+      <div class="ficon moon"></div>
+      <div class="txt"><b>In Harmony</b>with Your Body</div>
+    </div>
+    <div class="feature-item">
+      <div class="ficon sun"></div>
+      <div class="txt"><b>Support Your</b>Natural Rhythm</div>
+    </div>
+    <div class="feature-item">
+      <div class="ficon leaf"></div>
+      <div class="txt"><b>Wake Up to</b>Renewed Energy</div>
+    </div>
+  </div>
 </section>
 
 <!-- 3 :: TRENDING PRODUCTS -->
 <section class="section frame-note" data-label="03 · Trending Products">
   <div class="wrap">
-    <h2 class="big">Trending Wellness Products</h2>
+    <h2 class="big serif">Trending in the Collection</h2>
     <div class="container-x">
       <div class="product-row">
         <div class="card">
-          <div class="ph">[ BioHealer for Adults ]</div>
+          <div class="ph">[ Night Ritual Canister — Adults ]</div>
           <div class="cat">Daily Vitality</div>
-          <h4>BioHealer for Adults</h4>
-          <div class="rating">★★★★★ 4,542 Reviews</div>
+          <h4 class="serif">Night Ritual Canister</h4>
           <div class="price">$249.00</div>
         </div>
         <div class="card">
-          <div class="ph">[ BioHealer for Children ]</div>
+          <div class="ph">[ Little Dreamers Canister — Children ]</div>
           <div class="cat">Family Wellness</div>
-          <h4>BioHealer for Children</h4>
-          <div class="rating">★★★★★ 1,308 Reviews</div>
+          <h4 class="serif">Little Dreamers Canister</h4>
           <div class="price">$199.00</div>
         </div>
         <div class="card">
-          <div class="ph">[ Biophoton Travel Pair ]</div>
+          <div class="ph">[ Travel Ritual Pair ]</div>
           <div class="cat">Portable Wellness</div>
-          <h4>Biophoton Travel Pair</h4>
-          <div class="rating">★★★★★ 2,061 Reviews</div>
+          <h4 class="serif">Travel Ritual Pair</h4>
           <div class="price">$149.00</div>
         </div>
         <div class="card">
           <div class="ph">[ Home &amp; Space Bundle ]</div>
           <div class="cat">Home &amp; Space Wellness</div>
-          <h4>Home &amp; Space Bundle</h4>
-          <div class="rating">★★★★★ 987 Reviews</div>
+          <h4 class="serif">Home &amp; Space Bundle</h4>
           <div class="price">$399.00</div>
         </div>
         <div class="card">
-          <div class="ph">[ Gold Series Canister ]</div>
+          <div class="ph">[ Gold Reserve Canister ]</div>
           <div class="cat">Limited Release</div>
-          <h4>Gold Series Canister</h4>
-          <div class="rating">★★★★★ 214 Reviews</div>
+          <h4 class="serif">Gold Reserve Canister</h4>
           <div class="price">$329.00</div>
         </div>
       </div>
     </div>
     <div class="genprompt" style="max-width:640px;margin:14px auto 0;">
-      <b>AI IMAGE PROMPT (per card):</b> Clean white-background studio
-      product photo of a single Tesla BioHealing canister, soft top-down
-      light, subtle shadow, e-commerce packshot style, consistent angle
+      <b>AI IMAGE PROMPT (per card):</b> Clean cream-background studio
+      product photo of a single unbranded wellness canister (matte white,
+      brushed silver, or warm gold finish), soft top-down natural light,
+      subtle warm shadow, minimal luxury packshot style, consistent angle
       across the set.
     </div>
-    <div class="shopall"><a class="btn">Shop All Products</a></div>
+    <div class="shopall"><a class="btn">Shop the Full Collection</a></div>
   </div>
 </section>
 
 <!-- 4 :: SHOP BY GOALS -->
-<section class="goals frame-note on-dark" data-label="04 · Shop by Wellness Goals">
+<section class="goals frame-note on-deep" data-label="04 · Shop by Wellness Goal">
   <div class="wrap">
-    <h2 class="big">Shop by Wellness Goal</h2>
+    <h2 class="big serif">Shop by Wellness Goal</h2>
     <div class="goal-grid">
       <div class="goal-tile">
-        <div class="ph dark">[ Sleep &amp; Relaxation ]</div>
-        <div class="label">Sleep &amp; Relaxation</div>
+        <div class="ph on-deep">[ Sleep &amp; Relaxation ]</div>
+        <div class="label serif">Sleep &amp; Relaxation</div>
       </div>
       <div class="goal-tile">
-        <div class="ph dark">[ Daily Vitality ]</div>
-        <div class="label">Daily Vitality</div>
+        <div class="ph on-deep">[ Daily Vitality ]</div>
+        <div class="label serif">Daily Vitality</div>
       </div>
       <div class="goal-tile">
-        <div class="ph dark">[ Mental Focus ]</div>
-        <div class="label">Mental Focus</div>
+        <div class="ph on-deep">[ Mental Focus ]</div>
+        <div class="label serif">Mental Focus</div>
       </div>
       <div class="goal-tile">
-        <div class="ph dark">[ Family Wellness Space ]</div>
-        <div class="label">Family Wellness Space</div>
+        <div class="ph on-deep">[ Family Wellness Space ]</div>
+        <div class="label serif">Family Wellness Space</div>
       </div>
     </div>
-    <div class="genprompt on-dark" style="max-width:760px;margin:16px auto 0;">
+    <div class="genprompt on-deep" style="max-width:760px;margin:16px auto 0;">
       <b>AI IMAGE PROMPT (per tile):</b> Lifestyle photo of a person in a
       calm, softly lit home setting engaged in [sleep routine / morning
-      stretch / focused reading / family living room], Tesla BioHealing
-      canister visible nearby on a nightstand or shelf, warm-to-cool green
-      accent lighting, editorial wellness photography, vertical 4:5 crop.
+      stretch / focused reading / family living room], an unbranded gold or
+      white wellness canister visible nearby on a nightstand or shelf, warm
+      candlelit-to-dawn palette, editorial wellness photography, vertical
+      4:5 crop, no visible logos.
     </div>
   </div>
 </section>
 
 <!-- 5 :: FEATURE SPOTLIGHT -->
-<section class="wrap spotlight frame-note" data-label="05 · Feature Spotlight — BioHealer for Adults">
+<section class="wrap spotlight frame-note" data-label="05 · Feature Spotlight — Night Ritual Canister">
   <div class="copy">
-    <div class="eyebrow">BioHealer for Adults</div>
-    <h2>Low-Intensity Photon Technology</h2>
-    <p>Tesla BioHealing® Low-Intensity Photon-Generators (LIPG) are designed
-    for noninvasive use as part of a personal wellness routine — supporting
-    rest, relaxation, and everyday vitality. Peer-reviewed and backed by
-    extensive research.</p>
+    <div class="eyebrow">Night Ritual Canister</div>
+    <h2 class="serif">Low-Intensity Photon Technology</h2>
+    <p>Our Low-Intensity Photon-Generators are designed for noninvasive use
+    as part of a personal wellness routine — supporting rest, relaxation,
+    and everyday vitality. Peer-reviewed and backed by extensive research.</p>
     <a class="btn solid">Learn More</a>
   </div>
   <div class="callouts">
@@ -368,37 +381,38 @@
     <div class="callout-card"><span class="dot">⚡</span> Boost Vitality &amp; Energy</div>
   </div>
   <div class="product-shot">
-    <div class="ph">[ BioHealer for Adults — hero product shot ]</div>
+    <div class="ph">[ Night Ritual Canister — hero product shot ]</div>
     <div class="genprompt">
-      <b>AI IMAGE PROMPT:</b> Single white Tesla BioHealing canister on a
-      pale sage-green backdrop, soft directional light, small "Peer
-      Reviewed" badge composited top-right, clean minimal product hero,
-      square crop.
+      <b>AI IMAGE PROMPT:</b> Single matte-white wellness canister, no
+      visible branding, on a pale gold silk backdrop, soft directional
+      light, small "Peer Reviewed" badge composited top-right, clean
+      minimal luxury product hero, square crop.
     </div>
   </div>
 </section>
 
 <!-- 6 :: SHOP BY PRODUCT LINE -->
-<section class="lines frame-note on-dark" data-label="06 · Shop by Product Line">
+<section class="lines frame-note on-deep" data-label="06 · Shop by Product Line">
   <div class="wrap">
-    <h2 class="big">Shop by Product Line</h2>
+    <h2 class="big serif">Shop by Product Line</h2>
     <div class="line-grid">
       <div class="line-tile">
-        <div class="ph dark">[ BioHealer for Adults — lifestyle ]</div>
-        <div class="label">BioHealer for Adults</div>
+        <div class="ph on-deep">[ Night Ritual — adult lifestyle ]</div>
+        <div class="label serif">For Adults</div>
       </div>
       <div class="line-tile">
-        <div class="ph dark">[ BioHealer for Children — lifestyle ]</div>
-        <div class="label">BioHealer for Children</div>
+        <div class="ph on-deep">[ Little Dreamers — family lifestyle ]</div>
+        <div class="label serif">For Children</div>
       </div>
     </div>
-    <div class="genprompt on-dark" style="max-width:760px;margin:16px auto 0;">
+    <div class="genprompt on-deep" style="max-width:760px;margin:16px auto 0;">
       <b>AI IMAGE PROMPT (adults):</b> Adult relaxing in a softly lit
-      bedroom at dusk, BioHealer canister glowing faintly on the nightstand,
-      cinematic wellness photography, muted green-gold palette.<br><br>
-      <b>AI IMAGE PROMPT (children):</b> Warm, safe-feeling family room scene,
-      parent and child reading together near a BioHealer for Children unit,
-      soft daylight, reassuring and gentle tone, no medical imagery.
+      bedroom at dusk, an unbranded gold canister glowing faintly on the
+      nightstand, cinematic wellness photography, muted gold-green palette.<br><br>
+      <b>AI IMAGE PROMPT (children):</b> Warm, safe-feeling family room
+      scene, parent and child reading together near a small white wellness
+      canister, soft daylight, reassuring and gentle tone, no medical
+      imagery, no visible branding.
     </div>
   </div>
 </section>
@@ -406,12 +420,12 @@
 <!-- 7 :: WELLNESS LIBRARY / BLOG -->
 <section class="section frame-note" data-label="07 · Wellness Library">
   <div class="wrap">
-    <h2 class="big">Our Wellness Library</h2>
+    <h2 class="big serif">Our Wellness Library</h2>
     <div class="library-grid">
       <div class="post">
         <div class="ph">[ Article image ]</div>
         <div class="meta">Aug 12, 2026 · 4 min read</div>
-        <h4>Understanding Photons: The Science of Light</h4>
+        <h4 class="serif">Understanding Photons: The Science of Light</h4>
         <p>Photons are fundamental units of light energy that occur
         naturally throughout our environment...</p>
         <a class="btn" style="font-size:10px;padding:9px 18px;">Read More</a>
@@ -419,7 +433,7 @@
       <div class="post">
         <div class="ph">[ Article image ]</div>
         <div class="meta">Aug 5, 2026 · 3 min read</div>
-        <h4>Creating a Consistent Sleep Routine</h4>
+        <h4 class="serif">Creating a Consistent Sleep Routine</h4>
         <p>A consistent schedule, a comfortable environment, and time to
         wind down can help support healthy sleep habits...</p>
         <a class="btn" style="font-size:10px;padding:9px 18px;">Read More</a>
@@ -427,7 +441,7 @@
       <div class="post">
         <div class="ph">[ Article image ]</div>
         <div class="meta">Jul 29, 2026 · 5 min read</div>
-        <h4>What the Peer-Reviewed Study Found</h4>
+        <h4 class="serif">What the Peer-Reviewed Study Found</h4>
         <p>Participants in a published study showed a 2.7-fold increase in
         CD34+ stem cell markers...</p>
         <a class="btn" style="font-size:10px;padding:9px 18px;">Read More</a>
@@ -435,15 +449,15 @@
     </div>
     <div class="genprompt" style="max-width:640px;margin:18px auto 0;">
       <b>AI IMAGE PROMPT (per article):</b> Flat-lay editorial photo related
-      to the article topic (light particles / bedside routine / lab research
-      imagery), soft natural light, consistent warm-neutral palette,
+      to the article topic (light particles / bedside routine / research
+      imagery), soft natural light, warm-neutral cream and gold palette,
       16:9 crop.
     </div>
   </div>
 </section>
 
 <!-- 8 :: FOOTER -->
-<footer class="frame-note on-dark" data-label="08 · Footer">
+<footer class="frame-note on-deep" data-label="08 · Footer">
   <div class="wrap">
     <div class="footer-grid">
       <div>
@@ -459,7 +473,7 @@
         <ul>
           <li>All Products</li>
           <li>Best Sellers</li>
-          <li>Gold Series</li>
+          <li>Gold Reserve</li>
           <li>Wellness Bundles</li>
         </ul>
       </div>
@@ -484,15 +498,15 @@
       </div>
     </div>
     <div class="legal">
-      <p><strong>General Wellness Notice:</strong> Tesla BioHealing® products
-      are intended solely for general wellness use. They are not intended to
-      diagnose, cure, mitigate, treat, or prevent any disease or medical
-      condition. Information on this website is provided for general
-      educational purposes and is not medical advice. Consult a qualified
-      healthcare professional regarding medical concerns or before making
-      decisions about your healthcare.</p>
+      <p><strong>General Wellness Notice:</strong> Healthy Night Habits
+      products are intended solely for general wellness use. They are not
+      intended to diagnose, cure, mitigate, treat, or prevent any disease or
+      medical condition. Information on this website is provided for
+      general educational purposes and is not medical advice. Consult a
+      qualified healthcare professional regarding medical concerns or
+      before making decisions about your healthcare.</p>
       <div class="bottom-row">
-        <span>&copy; 2026 Tesla BioHealing, Inc. All rights reserved.</span>
+        <span>&copy; 2026 Healthy Night Habits. All rights reserved.</span>
         <span>United States (USD $) &nbsp;·&nbsp; Privacy Policy &nbsp;·&nbsp; Terms of Service</span>
       </div>
     </div>
