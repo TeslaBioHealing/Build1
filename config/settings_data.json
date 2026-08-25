@@ -5,6 +5,39 @@
       "logo_width": 90,
       "customer_account_menu": "customer-account-main-menu",
       "color_schemes": {
+        "scheme-hss-navy": {
+          "settings": {
+            "background": "#08194E",
+            "background_gradient": "",
+            "text": "#F6F6F6",
+            "button": "#F7BA21",
+            "button_label": "#08194E",
+            "secondary_button_label": "#F6F6F6",
+            "shadow": "#000000"
+          }
+        },
+        "scheme-hss-paper": {
+          "settings": {
+            "background": "#F6F6F6",
+            "background_gradient": "",
+            "text": "#08194E",
+            "button": "#F7BA21",
+            "button_label": "#08194E",
+            "secondary_button_label": "#08194E",
+            "shadow": "#08194E"
+          }
+        },
+        "scheme-hss-tint": {
+          "settings": {
+            "background": "#F6F6F6",
+            "background_gradient": "",
+            "text": "#08194E",
+            "button": "#0179BE",
+            "button_label": "#F6F6F6",
+            "secondary_button_label": "#0179BE",
+            "shadow": "#08194E"
+          }
+        },
         "scheme-1": {
           "settings": {
             "background": "#FFFFFF",
@@ -73,7 +106,7 @@
       "animations_hover_elements": "none",
       "buttons_border_thickness": 1,
       "buttons_border_opacity": 100,
-      "buttons_radius": 0,
+      "buttons_radius": 40,
       "buttons_shadow_opacity": 0,
       "buttons_shadow_horizontal_offset": 0,
       "buttons_shadow_vertical_offset": 4,
@@ -87,7 +120,7 @@
       "variant_pills_shadow_blur": 5,
       "inputs_border_thickness": 1,
       "inputs_border_opacity": 55,
-      "inputs_radius": 0,
+      "inputs_radius": 10,
       "inputs_shadow_opacity": 0,
       "inputs_shadow_horizontal_offset": 0,
       "inputs_shadow_vertical_offset": 4,
@@ -95,10 +128,10 @@
       "card_style": "standard",
       "card_image_padding": 0,
       "card_text_alignment": "left",
-      "card_color_scheme": "scheme-2",
+      "card_color_scheme": "scheme-hss-paper",
       "card_border_thickness": 0,
       "card_border_opacity": 10,
-      "card_corner_radius": 0,
+      "card_corner_radius": 16,
       "card_shadow_opacity": 0,
       "card_shadow_horizontal_offset": 0,
       "card_shadow_vertical_offset": 4,
@@ -106,10 +139,10 @@
       "collection_card_style": "standard",
       "collection_card_image_padding": 0,
       "collection_card_text_alignment": "left",
-      "collection_card_color_scheme": "scheme-2",
+      "collection_card_color_scheme": "scheme-hss-paper",
       "collection_card_border_thickness": 0,
       "collection_card_border_opacity": 10,
-      "collection_card_corner_radius": 0,
+      "collection_card_corner_radius": 16,
       "collection_card_shadow_opacity": 0,
       "collection_card_shadow_horizontal_offset": 0,
       "collection_card_shadow_vertical_offset": 4,
@@ -134,7 +167,7 @@
       "text_boxes_shadow_blur": 5,
       "media_border_thickness": 1,
       "media_border_opacity": 5,
-      "media_radius": 0,
+      "media_radius": 20,
       "media_shadow_opacity": 0,
       "media_shadow_horizontal_offset": 0,
       "media_shadow_vertical_offset": 4,
@@ -156,8 +189,8 @@
       "badge_corner_radius": 40,
       "sale_badge_color_scheme": "scheme-4",
       "sold_out_badge_color_scheme": "scheme-3",
-      "brand_headline": "",
-      "brand_description": "<p></p>",
+      "brand_headline": "Healthy Sleep Space",
+      "brand_description": "<p>We believe in clear product information, responsible wellness positioning, and respectful customer support \u2014 so you understand what a product is and how it\u2019s intended to be used before you buy.</p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",

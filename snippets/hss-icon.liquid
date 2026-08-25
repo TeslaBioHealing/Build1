@@ -1,0 +1,79 @@
+{% comment %}
+  Renders a Healthy Sleep Space inline SVG icon.
+  Accepts:
+  - icon: {String} one of moon, sun, leaf, house, spark, device, bed, bag, gift,
+    chat, transparency, individual, arrow
+  Usage:
+  {% render 'hss-icon', icon: 'moon' %}
+{% endcomment %}
+{%- case icon -%}
+  {%- when 'moon' -%}
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+      <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  {%- when 'sun' -%}
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="12" r="4.5"/>
+      <path d="M12 2.5v2.5M12 19v2.5M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12H5M19 12h2.5M4.2 19.8 6 18M18 6l1.8-1.8" stroke-linecap="round"/>
+    </svg>
+  {%- when 'leaf' -%}
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+      <path d="M20 4C10 4 4 10 4 18v2h2c8 0 14-6 14-16Z" stroke-linejoin="round"/>
+      <path d="M8 18c3-3 6-6 11-11" stroke-linecap="round"/>
+    </svg>
+  {%- when 'house' -%}
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+      <path d="M4 11.5 12 4l8 7.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M6 10v9h12v-9" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M10 19v-5h4v5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  {%- when 'spark' -%}
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+      <path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.8 2.8M15.2 15.2 18 18M18 6l-2.8 2.8M8.8 15.2 6 18" stroke-linecap="round"/>
+      <circle cx="12" cy="12" r="2.4"/>
+    </svg>
+  {%- when 'device' -%}
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+      <rect x="7" y="3" width="10" height="18" rx="3"/>
+      <circle cx="12" cy="9" r="2.2"/>
+      <path d="M9.5 16h5" stroke-linecap="round"/>
+    </svg>
+  {%- when 'bed' -%}
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+      <path d="M3 19v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M3 19v2M21 19v2" stroke-linecap="round"/>
+      <path d="M5 11V7a2 2 0 0 1 2-2h3v6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M11 8h6a2 2 0 0 1 2 2v1" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  {%- when 'bag' -%}
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+      <rect x="4" y="8" width="16" height="12" rx="2"/>
+      <path d="M8 8V6a4 4 0 0 1 8 0v2" stroke-linecap="round"/>
+    </svg>
+  {%- when 'gift' -%}
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+      <rect x="4" y="9" width="16" height="11" rx="1.5"/>
+      <path d="M4 13h16" />
+      <path d="M12 9v11" />
+      <path d="M12 9c-1.5-3-6-4.5-6-1.5S9 9 12 9Z" stroke-linejoin="round"/>
+      <path d="M12 9c1.5-3 6-4.5 6-1.5S15 9 12 9Z" stroke-linejoin="round"/>
+    </svg>
+  {%- when 'chat' -%}
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+      <path d="M4 5h16v11H9l-4 4v-4H4Z" stroke-linejoin="round" stroke-linecap="round"/>
+    </svg>
+  {%- when 'transparency' -%}
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+      <path d="M3 12s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6Z" stroke-linejoin="round"/>
+      <circle cx="12" cy="12" r="2.6"/>
+    </svg>
+  {%- when 'individual' -%}
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="8" r="3.2"/>
+      <path d="M5 20c1-4 4-6 7-6s6 2 7 6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  {%- when 'arrow' -%}
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+      <path d="M4 12h16M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+{%- endcase -%}

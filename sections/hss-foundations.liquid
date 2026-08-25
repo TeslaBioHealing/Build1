@@ -1,0 +1,176 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    --padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      --padding-top: {{ section.settings.padding_top }}px;
+      --padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient" style="padding-top: var(--padding-top); padding-bottom: var(--padding-bottom);">
+  <div class="page-width">
+    <div class="center" style="text-align: center; max-width: 62rem; margin: 0 auto 4rem;">
+      {%- if section.settings.eyebrow != blank -%}
+        <span class="hss-eyebrow">{{ section.settings.eyebrow | escape }}</span>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="hss-heading" style="font-size: 3.2rem;">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+    </div>
+    <div class="hss-foundations__grid"{% if settings.animations_reveal_on_scroll %} data-cascade{% endif %}>
+      {%- for block in section.blocks -%}
+        <div class="hss-card{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }}>
+          <div class="hss-card__icon">
+            {%- render 'hss-icon', icon: block.settings.icon -%}
+          </div>
+          {%- if block.settings.number != blank -%}
+            <span class="hss-card__number">{{ block.settings.number }}</span>
+          {%- endif -%}
+          {%- if block.settings.title != blank -%}
+            <h3 class="hss-card__title">{{ block.settings.title }}</h3>
+          {%- endif -%}
+          {%- if block.settings.text != blank -%}
+            <div class="hss-card__text">{{ block.settings.text }}</div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "HSS Foundations",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-hss-paper"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Four Foundations"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The Foundations of a Healthy Sleep Space"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 72
+    }
+  ],
+  "blocks": [
+    {
+      "type": "foundation",
+      "name": "Foundation",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "moon", "label": "Moon" },
+            { "value": "leaf", "label": "Leaf" },
+            { "value": "house", "label": "House" },
+            { "value": "sun", "label": "Sun" }
+          ],
+          "default": "moon"
+        },
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number label",
+          "default": "01"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Protect Time for Rest"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Description",
+          "default": "<p>Set aside a realistic opportunity for sleep and keep a consistent schedule when practical.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "HSS Foundations",
+      "blocks": [
+        {
+          "type": "foundation",
+          "settings": {
+            "icon": "moon",
+            "number": "01",
+            "title": "Protect Time for Rest",
+            "text": "<p>Set aside a realistic opportunity for sleep and keep a consistent schedule when practical.</p>"
+          }
+        },
+        {
+          "type": "foundation",
+          "settings": {
+            "icon": "leaf",
+            "number": "02",
+            "title": "Create a Consistent Wind-Down",
+            "text": "<p>Use a repeatable wind-down to transition away from the day and prepare your mind and body for rest.</p>"
+          }
+        },
+        {
+          "type": "foundation",
+          "settings": {
+            "icon": "house",
+            "number": "03",
+            "title": "Prepare Your Environment",
+            "text": "<p>Create a dark, quiet, comfortable, and welcoming space that supports your nighttime routine.</p>"
+          }
+        },
+        {
+          "type": "foundation",
+          "settings": {
+            "icon": "sun",
+            "number": "04",
+            "title": "Begin the Next Day",
+            "text": "<p>Carry your routine into the morning with healthy choices like daylight, hydration, movement, and nutrition.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -318,6 +318,11 @@
         {%- endif -%}
       </div>
     </div>
+    {%- if section.settings.hss_wellness_notice != blank -%}
+      <div class="footer__content-bottom-wrapper page-width">
+        <p class="footer__wellness-notice">{{ section.settings.hss_wellness_notice }}</p>
+      </div>
+    {%- endif -%}
   </div>
 </footer>
 
@@ -491,6 +496,17 @@
       "default": true,
       "label": "t:sections.footer.settings.show_policy.label",
       "info": "t:sections.footer.settings.show_policy.info"
+    },
+    {
+      "type": "header",
+      "content": "Healthy Sleep Space"
+    },
+    {
+      "type": "text",
+      "id": "hss_wellness_notice",
+      "label": "General wellness notice",
+      "info": "Required disclosure. Keep consistent with the Healthy Sleep Space Disclaimer document.",
+      "default": "General wellness only. Not medical advice or medical care."
     },
     {
       "type": "header",

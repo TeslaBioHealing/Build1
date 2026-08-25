@@ -1,0 +1,169 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    --padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      --padding-top: {{ section.settings.padding_top }}px;
+      --padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="hss-technology color-{{ section.settings.color_scheme }} gradient" style="padding-top: var(--padding-top); padding-bottom: var(--padding-bottom);">
+  <div class="page-width">
+    <div class="hss-technology__grid">
+      <div>
+        {%- if section.settings.eyebrow != blank -%}
+          <span class="hss-eyebrow hss-eyebrow--blue">{{ section.settings.eyebrow | escape }}</span>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="hss-heading" style="font-size: 3.2rem; margin-bottom: 1.6rem;">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.body != blank -%}
+          <div class="hss-technology__body">{{ section.settings.body }}</div>
+        {%- endif -%}
+        {%- if section.settings.button_label != blank -%}
+          <a
+            {% if section.settings.button_link == blank %}
+              role="link" aria-disabled="true"
+            {% else %}
+              href="{{ section.settings.button_link }}"
+            {% endif %}
+            class="link underlined-link"
+          >
+            {{- section.settings.button_label | escape -}} →
+          </a>
+        {%- endif -%}
+      </div>
+      <div>
+        <div class="hss-sequence">
+          <div class="hss-sequence__step">
+            <div class="hss-sequence__circle">{%- render 'hss-icon', icon: 'spark' -%}</div>
+            <span class="hss-sequence__label">{{ section.settings.step_1_label | default: 'Photon Environment' }}</span>
+          </div>
+          <div class="hss-sequence__arrow" aria-hidden="true">→</div>
+          <div class="hss-sequence__step">
+            <div class="hss-sequence__circle">{%- render 'hss-icon', icon: 'device' -%}</div>
+            <span class="hss-sequence__label">{{ section.settings.step_2_label | default: 'LIPG Technology' }}</span>
+          </div>
+          <div class="hss-sequence__arrow" aria-hidden="true">→</div>
+          <div class="hss-sequence__step">
+            <div class="hss-sequence__circle">{%- render 'hss-icon', icon: 'bed' -%}</div>
+            <span class="hss-sequence__label">{{ section.settings.step_3_label | default: 'Supports Your Wellness Routine' }}</span>
+          </div>
+        </div>
+        <div style="margin-top: 2.4rem;">
+          {%- render 'hss-disclaimer', text: section.settings.disclaimer, center: true -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "HSS Technology",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-hss-tint"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Our Technology"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Wellness Technology, Explained Simply"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body text",
+      "default": "<p>Our Low-Intensity Photon-Generators (LIPG) are designed as optional, noninvasive components of the Healthy Sleep Space routine. They create a low-intensity photon environment during rest, relaxation, or other stated wellness activities.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Link label",
+      "default": "Explore our technology"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Sequence labels"
+    },
+    {
+      "type": "text",
+      "id": "step_1_label",
+      "label": "Step 1 label",
+      "default": "Photon Environment"
+    },
+    {
+      "type": "text",
+      "id": "step_2_label",
+      "label": "Step 2 label",
+      "default": "LIPG Technology"
+    },
+    {
+      "type": "text",
+      "id": "step_3_label",
+      "label": "Step 3 label",
+      "default": "Supports Your Wellness Routine"
+    },
+    {
+      "type": "header",
+      "content": "Disclaimer"
+    },
+    {
+      "type": "textarea",
+      "id": "disclaimer",
+      "label": "Disclaimer",
+      "default": "These statements describe physical product characteristics only and are not intended to diagnose, treat, cure, mitigate, or prevent any disease."
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 72
+    }
+  ],
+  "presets": [
+    {
+      "name": "HSS Technology"
+    }
+  ]
+}
+{% endschema %}

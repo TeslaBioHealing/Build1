@@ -4,12 +4,46 @@
   "sections": {
     "footer": {
       "type": "footer",
-      "blocks": {},
-      "block_order": [],
+      "blocks": {
+        "hss-brand": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        },
+        "hss-shop": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Shop",
+            "menu": "footer-shop"
+          }
+        },
+        "hss-support": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Support",
+            "menu": "footer-support"
+          }
+        },
+        "hss-policies": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Policies",
+            "menu": "footer-policies"
+          }
+        }
+      },
+      "block_order": [
+        "hss-brand",
+        "hss-shop",
+        "hss-support",
+        "hss-policies"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-hss-paper",
+        "hss_wellness_notice": "General wellness only. Not medical advice or medical care.",
         "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
+        "newsletter_heading": "Stay in the loop",
         "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": true,

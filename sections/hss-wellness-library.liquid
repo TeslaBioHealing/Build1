@@ -1,0 +1,240 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    --padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      --padding-top: {{ section.settings.padding_top }}px;
+      --padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient" style="padding-top: var(--padding-top); padding-bottom: var(--padding-bottom);">
+  <div class="page-width">
+    <div class="hss-shop__header-row">
+      <div>
+        {%- if section.settings.eyebrow != blank -%}
+          <span class="hss-eyebrow">{{ section.settings.eyebrow | escape }}</span>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="hss-heading" style="font-size: 3rem;">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.body != blank -%}
+          <div class="hss-intro__body" style="margin-top: 1.2rem; margin-bottom: 0;">{{ section.settings.body }}</div>
+        {%- endif -%}
+      </div>
+    </div>
+    <div class="hss-library__grid" style="margin-top: 3.2rem;"{% if settings.animations_reveal_on_scroll %} data-cascade{% endif %}>
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign card_title = block.settings.custom_title
+          assign card_excerpt = block.settings.custom_excerpt
+          assign card_image = block.settings.image
+          assign card_url = block.settings.custom_link
+          assign card_meta = block.settings.custom_meta
+
+          if block.settings.article != blank
+            assign card_title = block.settings.article.title
+            assign card_url = block.settings.article.url
+            assign card_meta = block.settings.article.published_at | date: '%b %d, %Y'
+            if block.settings.custom_excerpt == blank
+              if block.settings.article.excerpt.size > 0
+                assign card_excerpt = block.settings.article.excerpt | strip_html | truncatewords: 22
+              else
+                assign card_excerpt = block.settings.article.content | strip_html | truncatewords: 22
+              endif
+            endif
+            if block.settings.image == blank and block.settings.article.image != blank
+              assign card_image = block.settings.article.image
+            endif
+          endif
+        -%}
+        <a
+          {% if card_url == blank %}
+            role="link" aria-disabled="true"
+          {% else %}
+            href="{{ card_url }}"
+          {% endif %}
+          class="hss-library-card{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {{ block.shopify_attributes }}
+        >
+          <div class="hss-library-card__media">
+            {%- if card_image != blank -%}
+              {{
+                card_image
+                | image_url: width: 900
+                | image_tag: loading: 'lazy', widths: '400, 600, 800, 900', alt: card_title | escape
+              }}
+            {%- endif -%}
+          </div>
+          <div class="hss-library-card__body">
+            {%- if card_meta != blank -%}
+              <div class="hss-library-card__meta">{{ card_meta }}</div>
+            {%- endif -%}
+            {%- if card_title != blank -%}
+              <h3 class="hss-library-card__title">{{ card_title }}</h3>
+            {%- endif -%}
+            {%- if card_excerpt != blank -%}
+              <p class="hss-library-card__excerpt">{{ card_excerpt }}</p>
+            {%- endif -%}
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.button_label != blank -%}
+      <div style="text-align: center; margin-top: 3.2rem;">
+        <a
+          {% if section.settings.button_link == blank %}
+            role="link" aria-disabled="true"
+          {% else %}
+            href="{{ section.settings.button_link }}"
+          {% endif %}
+          class="link underlined-link"
+        >
+          {{- section.settings.button_label | escape -}} →
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "HSS Wellness Library",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-hss-paper"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Wellness Library"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Practical Guidance for Everyday Wellness"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body text",
+      "default": "<p>Explore articles, tips, and resources to help you build healthy nighttime habits, design better spaces, and understand our technology.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Link label",
+      "default": "Visit the Wellness Library"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 72
+    }
+  ],
+  "blocks": [
+    {
+      "type": "article",
+      "name": "Article",
+      "settings": [
+        {
+          "type": "article",
+          "id": "article",
+          "label": "Blog article",
+          "info": "If selected, the title, image, date, and link use this article automatically."
+        },
+        {
+          "type": "text",
+          "id": "custom_title",
+          "label": "Title override"
+        },
+        {
+          "type": "text",
+          "id": "custom_meta",
+          "label": "Meta text override"
+        },
+        {
+          "type": "textarea",
+          "id": "custom_excerpt",
+          "label": "Excerpt override"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image override"
+        },
+        {
+          "type": "url",
+          "id": "custom_link",
+          "label": "Link override (used only if no article is selected)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "HSS Wellness Library",
+      "blocks": [
+        {
+          "type": "article",
+          "settings": {
+            "custom_title": "Understanding Photons: The Science of Light",
+            "custom_meta": "Wellness Library",
+            "custom_excerpt": "Photons are fundamental units of light energy that occur naturally throughout our environment."
+          }
+        },
+        {
+          "type": "article",
+          "settings": {
+            "custom_title": "Creating a Consistent Sleep Routine",
+            "custom_meta": "Evening Wind-Down",
+            "custom_excerpt": "A consistent schedule, a comfortable environment, and time to wind down can help support healthy sleep habits."
+          }
+        },
+        {
+          "type": "article",
+          "settings": {
+            "custom_title": "Designing a Rest-Friendly Sleep Space",
+            "custom_meta": "Healthy Sleep Space Foundations",
+            "custom_excerpt": "Simple changes to light, sound, and comfort can help create a space that supports your nighttime routine."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

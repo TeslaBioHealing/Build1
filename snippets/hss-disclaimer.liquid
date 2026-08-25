@@ -1,0 +1,11 @@
+{% comment %}
+  Renders a small Healthy Sleep Space compliance disclaimer line.
+  Accepts:
+  - text: {String} the disclaimer copy
+  - center: {Boolean} center-align the text (optional)
+  Usage:
+  {% render 'hss-disclaimer', text: section.settings.disclaimer %}
+{% endcomment %}
+{%- if text != blank -%}
+  <p class="hss-disclaimer{% if center %} hss-disclaimer--center{% endif %}">{{ text }}</p>
+{%- endif -%}
