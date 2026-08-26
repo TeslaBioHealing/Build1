@@ -1,0 +1,139 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    --padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      --padding-top: {{ section.settings.padding_top }}px;
+      --padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  #shopify-section-{{ section.id }} .hss-legal {
+    max-width: 78rem;
+    margin: 0 auto;
+    background: rgb(246, 246, 246);
+    border-radius: calc(var(--card-corner-radius) * 1px + 1.2rem);
+    padding: 4rem 3.2rem;
+    box-shadow: 0 1.6rem 4rem rgba(8, 25, 78, 0.08);
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .hss-legal {
+      padding: 5.6rem 6.4rem;
+    }
+  }
+  #shopify-section-{{ section.id }} .hss-legal,
+  #shopify-section-{{ section.id }} .hss-legal p,
+  #shopify-section-{{ section.id }} .hss-legal li {
+    color: rgb(8, 25, 78);
+  }
+  #shopify-section-{{ section.id }} .hss-legal h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin: 4rem 0 1.4rem;
+    padding-left: 1.6rem;
+    border-left: 0.4rem solid rgb(247, 186, 33);
+  }
+  #shopify-section-{{ section.id }} .hss-legal h2:first-child {
+    margin-top: 0;
+  }
+  #shopify-section-{{ section.id }} .hss-legal p {
+    font-size: 1.45rem;
+    line-height: 1.75;
+    margin: 0 0 1.4rem;
+  }
+  #shopify-section-{{ section.id }} .hss-legal ul {
+    margin: 0 0 1.4rem;
+    padding-left: 0;
+    list-style: none;
+  }
+  #shopify-section-{{ section.id }} .hss-legal li {
+    font-size: 1.45rem;
+    line-height: 1.7;
+    padding-left: 1.8rem;
+    position: relative;
+    margin-bottom: 0.6rem;
+  }
+  #shopify-section-{{ section.id }} .hss-legal li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.95rem;
+    width: 0.7rem;
+    height: 0.15rem;
+    background: rgb(1, 121, 190);
+  }
+  #shopify-section-{{ section.id }} .hss-legal a {
+    color: rgb(1, 121, 190);
+    text-decoration: underline;
+  }
+  #shopify-section-{{ section.id }} .hss-legal strong {
+    color: rgb(8, 25, 78);
+  }
+  #shopify-section-{{ section.id }} .hss-legal em {
+    display: block;
+    margin-top: 2.4rem;
+    padding-top: 2rem;
+    border-top: 0.1rem solid rgba(8, 25, 78, 0.15);
+    font-size: 1.3rem;
+    line-height: 1.65;
+    opacity: 0.8;
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient" style="padding-top: var(--padding-top); padding-bottom: var(--padding-bottom);">
+  <div class="page-width">
+    <div class="hss-legal">{{ section.settings.body }}</div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "HSS Legal Content",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-hss-tint"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body content"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 48
+    }
+  ],
+  "presets": [
+    {
+      "name": "HSS Legal Content"
+    }
+  ]
+}
+{% endschema %}
