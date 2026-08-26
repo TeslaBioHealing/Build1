@@ -53,7 +53,11 @@
           }
         }
       },
-      "block_order": ["step-1", "step-2", "step-3"],
+      "block_order": [
+        "step-1",
+        "step-2",
+        "step-3"
+      ],
       "settings": {
         "color_scheme": "scheme-hss-paper",
         "eyebrow": "How It Fits Into Your Routine",
@@ -91,7 +95,11 @@
           }
         }
       },
-      "block_order": ["concept-1", "concept-2", "concept-3"],
+      "block_order": [
+        "concept-1",
+        "concept-2",
+        "concept-3"
+      ],
       "settings": {
         "color_scheme": "scheme-hss-paper",
         "eyebrow": "Understanding the Technology",
@@ -140,7 +148,13 @@
           }
         }
       },
-      "block_order": ["category-1", "category-2", "category-3", "category-4", "category-5"],
+      "block_order": [
+        "category-1",
+        "category-2",
+        "category-3",
+        "category-4",
+        "category-5"
+      ],
       "settings": {
         "color_scheme": "scheme-hss-paper",
         "eyebrow": "Designed for Wellness Routines",
