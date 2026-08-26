@@ -1,0 +1,199 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    --padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      --padding-top: {{ section.settings.padding_top }}px;
+      --padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  #shopify-section-{{ section.id }} .hss-checklist__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.8rem 3.2rem;
+    max-width: 88rem;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 700px) {
+    #shopify-section-{{ section.id }} .hss-checklist__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  #shopify-section-{{ section.id }} .hss-checklist__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.4rem;
+  }
+  #shopify-section-{{ section.id }} .hss-checklist__icon {
+    flex: 0 0 auto;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(247, 186, 33, 0.18);
+    color: rgb(8, 25, 78);
+  }
+  #shopify-section-{{ section.id }} .hss-checklist__icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  #shopify-section-{{ section.id }} .hss-checklist__text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    padding-top: 0.4rem;
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient" style="padding-top: var(--padding-top); padding-bottom: var(--padding-bottom);">
+  <div class="page-width">
+    <div style="max-width: 68rem; margin: 0 auto 4rem; text-align: center;">
+      {%- if section.settings.eyebrow != blank -%}
+        <span class="hss-eyebrow">{{ section.settings.eyebrow | escape }}</span>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="hss-heading" style="font-size: 3rem;">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.body != blank -%}
+        <div class="hss-intro__body" style="margin: 1.6rem auto 0;">{{ section.settings.body }}</div>
+      {%- endif -%}
+    </div>
+    <div class="hss-checklist__grid">
+      {%- for block in section.blocks -%}
+        <div class="hss-checklist__item" {{ block.shopify_attributes }}>
+          <div class="hss-checklist__icon">{%- render 'hss-icon', icon: 'check' -%}</div>
+          <div class="hss-checklist__text">{{ block.settings.text }}</div>
+        </div>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.button_label != blank or section.settings.button_label_2 != blank -%}
+      <div class="hss-cta-row" style="justify-content: center; margin-top: 4rem;">
+        {%- if section.settings.button_label != blank -%}
+          <a
+            {% if section.settings.button_link == blank %}
+              role="link" aria-disabled="true"
+            {% else %}
+              href="{{ section.settings.button_link }}"
+            {% endif %}
+            class="button button--primary"
+          >
+            {{- section.settings.button_label | escape -}}
+          </a>
+        {%- endif -%}
+        {%- if section.settings.button_label_2 != blank -%}
+          <a
+            {% if section.settings.button_link_2 == blank %}
+              role="link" aria-disabled="true"
+            {% else %}
+              href="{{ section.settings.button_link_2 }}"
+            {% endif %}
+            class="button button--secondary"
+          >
+            {{- section.settings.button_label_2 | escape -}}
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "HSS Checklist",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-hss-paper"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Intro body text (optional)"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Primary button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Primary button link"
+    },
+    {
+      "type": "text",
+      "id": "button_label_2",
+      "label": "Secondary button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link_2",
+      "label": "Secondary button link"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 72
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Checklist item",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Item</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "HSS Checklist",
+      "blocks": [
+        { "type": "item", "settings": { "text": "<p>First item</p>" } },
+        { "type": "item", "settings": { "text": "<p>Second item</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,111 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    --padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      --padding-top: {{ section.settings.padding_top }}px;
+      --padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  #shopify-section-{{ section.id }} .hss-pullquote {
+    max-width: 76rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #shopify-section-{{ section.id }} .hss-pullquote__mark {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 6rem;
+    line-height: 1;
+    opacity: 0.35;
+    margin-bottom: -1.6rem;
+  }
+  #shopify-section-{{ section.id }} .hss-pullquote__text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 1.4;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .hss-pullquote__text {
+      font-size: 3.4rem;
+    }
+  }
+  #shopify-section-{{ section.id }} .hss-pullquote__attribution {
+    margin-top: 2.4rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.75;
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient" style="padding-top: var(--padding-top); padding-bottom: var(--padding-bottom);">
+  <div class="page-width">
+    <div class="hss-pullquote">
+      <div class="hss-pullquote__mark" aria-hidden="true">&ldquo;</div>
+      <p class="hss-pullquote__text">{{ section.settings.quote }}</p>
+      {%- if section.settings.attribution != blank -%}
+        <p class="hss-pullquote__attribution">{{ section.settings.attribution }}</p>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "HSS Pull Quote",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-hss-gold-pale"
+    },
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "Quote",
+      "default": "How can people everywhere make time for a more consistent and intentional nighttime wellness routine?"
+    },
+    {
+      "type": "text",
+      "id": "attribution",
+      "label": "Attribution (optional)"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 96
+    }
+  ],
+  "presets": [
+    {
+      "name": "HSS Pull Quote"
+    }
+  ]
+}
+{% endschema %}

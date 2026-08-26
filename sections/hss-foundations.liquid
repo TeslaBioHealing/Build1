@@ -21,7 +21,7 @@
         <h2 class="hss-heading" style="font-size: 3.2rem;">{{ section.settings.heading }}</h2>
       {%- endif -%}
     </div>
-    <div class="hss-foundations__grid"{% if settings.animations_reveal_on_scroll %} data-cascade{% endif %}>
+    <div class="hss-foundations__grid" style="--hss-foundations-cols: {{ section.settings.columns_desktop | default: 4 }};"{% if settings.animations_reveal_on_scroll %} data-cascade{% endif %}>
       {%- for block in section.blocks -%}
         <div class="hss-card{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }}>
           <div class="hss-card__icon">
@@ -67,6 +67,17 @@
       "default": "The Foundations of a Healthy Sleep Space"
     },
     {
+      "type": "select",
+      "id": "columns_desktop",
+      "label": "Desktop columns",
+      "options": [
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" },
+        { "value": "4", "label": "4" }
+      ],
+      "default": "4"
+    },
+    {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
     },
@@ -102,9 +113,19 @@
           "label": "Icon",
           "options": [
             { "value": "moon", "label": "Moon" },
+            { "value": "sun", "label": "Sun" },
             { "value": "leaf", "label": "Leaf" },
             { "value": "house", "label": "House" },
-            { "value": "sun", "label": "Sun" }
+            { "value": "spark", "label": "Spark" },
+            { "value": "device", "label": "Device" },
+            { "value": "bed", "label": "Bed" },
+            { "value": "bag", "label": "Bag" },
+            { "value": "gift", "label": "Gift" },
+            { "value": "chat", "label": "Chat" },
+            { "value": "transparency", "label": "Transparency" },
+            { "value": "individual", "label": "Individual" },
+            { "value": "heart", "label": "Heart" },
+            { "value": "check", "label": "Check" }
           ],
           "default": "moon"
         },

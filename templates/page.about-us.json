@@ -1,0 +1,283 @@
+{
+  "sections": {
+    "about_hero": {
+      "type": "hss-hero",
+      "settings": {
+        "color_scheme": "scheme-hss-indigo",
+        "image_position": "right",
+        "overlay_opacity": 0,
+        "eyebrow": "About Us",
+        "heading": "Building a Worldwide Culture of <em>Healthy Sleep Space.</em>",
+        "body": "<p>Healthy Sleep Space is a worldwide general-wellness program focused on healthy nighttime habits, a comfortable sleep environment, and consistent sleep routines. The program is for general wellness only and does not provide medical advice.</p><p>We believe a positive relationship with rest begins with a simple idea: every person deserves time and space to prepare for sleep, rest comfortably, and begin the next day with intention.</p>",
+        "button_label": "Explore the Healthy Sleep Space Approach",
+        "button_link": "shopify://pages/our-approach",
+        "disclaimer": "General wellness only. Not medical advice or medical care.",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "about_who": {
+      "type": "hss-intro",
+      "settings": {
+        "color_scheme": "scheme-hss-paper",
+        "eyebrow": "",
+        "heading": "Who We Are",
+        "body": "<p>Healthy Sleep Space brings together product development, technology, quality, education, global partnerships, operations, and customer care with one shared purpose: making healthy nighttime routines an understandable and practical part of everyday general wellness around the world.</p><p>Our products are intended solely for general-wellness use in bedrooms, homes, hospitality settings, wellness spaces, and other comfortable environments. They are designed to complement healthy sleep habits, balanced nutrition, appropriate physical activity, relaxation, and responsible self-care. They are not a substitute for professional medical care.</p>",
+        "button_label": "",
+        "button_link": "",
+        "padding_top": 88,
+        "padding_bottom": 40
+      }
+    },
+    "about_story_quote": {
+      "type": "hss-pull-quote",
+      "settings": {
+        "color_scheme": "scheme-hss-gold-pale",
+        "quote": "How can people everywhere make time for a more consistent and intentional nighttime wellness routine?",
+        "attribution": "Our Story",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "about_story_continued": {
+      "type": "hss-intro",
+      "settings": {
+        "color_scheme": "scheme-hss-paper",
+        "eyebrow": "",
+        "heading": "Our Story",
+        "body": "<p>That question led us to combine responsible general-wellness education, comfortable routines, and Healthy Sleep Space Low-Intensity Photon-Generators (LIPG) within one non-medical wellness program.</p><p>As the program grows internationally, our purpose remains centered on approachable wellness experiences and clear communication about what each product is, how it is intended to be used, and its limitations.</p>",
+        "button_label": "",
+        "button_link": "",
+        "padding_top": 40,
+        "padding_bottom": 88
+      }
+    },
+    "about_mission": {
+      "type": "hss-checklist",
+      "blocks": {
+        "m1": { "type": "item", "settings": { "text": "<p>A consistent wind-down and healthy sleep habits</p>" } },
+        "m2": { "type": "item", "settings": { "text": "<p>Quiet relaxation before bedtime</p>" } },
+        "m3": { "type": "item", "settings": { "text": "<p>A positive start to the next day</p>" } },
+        "m4": { "type": "item", "settings": { "text": "<p>Mindful reflection and reduced nighttime distraction</p>" } },
+        "m5": { "type": "item", "settings": { "text": "<p>A comfortable, rest-friendly environment</p>" } },
+        "m6": { "type": "item", "settings": { "text": "<p>Positive daytime lifestyle choices that complement healthy sleep routines</p>" } }
+      },
+      "block_order": ["m1", "m2", "m3", "m4", "m5", "m6"],
+      "settings": {
+        "color_scheme": "scheme-hss-tint",
+        "eyebrow": "Our Mission",
+        "heading": "Accessible Wellness, Wherever You Are",
+        "body": "<p>Our mission is to make Healthy Sleep Space accessible as a general-wellness program through practical education, thoughtfully developed noninvasive products, and supportive experiences that can fit different cultures, homes, and lifestyles. The program encourages routines that make time for:</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_label_2": "",
+        "button_link_2": "",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "about_vision": {
+      "type": "hss-routine-first",
+      "settings": {
+        "color_scheme": "scheme-hss-indigo",
+        "heading": "Our Vision",
+        "body": "<p>We envision Healthy Sleep Space becoming a shared worldwide wellness practice — one that helps individuals, families, wellness professionals, and hospitality partners make healthy sleep routines easier to understand and maintain. We want the program to feel personal, consistent, culturally adaptable, and sustainable — not complicated or overwhelming.</p>",
+        "button_label": "",
+        "button_link": "",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "about_create": {
+      "type": "hss-checklist",
+      "blocks": {
+        "c1": { "type": "item", "settings": { "text": "<p>Nighttime preparation, sleep, and quiet relaxation</p>" } },
+        "c2": { "type": "item", "settings": { "text": "<p>Creating a consistent personal nighttime routine</p>" } },
+        "c3": { "type": "item", "settings": { "text": "<p>Daytime habits that complement healthy sleep</p>" } },
+        "c4": { "type": "item", "settings": { "text": "<p>Bedroom, home, hospitality, and wellness-space use</p>" } },
+        "c5": { "type": "item", "settings": { "text": "<p>Travel and portable Healthy Sleep Space routines</p>" } }
+      },
+      "block_order": ["c1", "c2", "c3", "c4", "c5"],
+      "settings": {
+        "color_scheme": "scheme-hss-paper",
+        "eyebrow": "What We Create",
+        "heading": "Products, Education, and Support Together",
+        "body": "<p>The Healthy Sleep Space program brings together Low-Intensity Photon-Generators (LIPG), related general-wellness products, practical sleep-routine education, customer support, and participating wellness or hospitality environments. Program products and resources may be designed for different settings and routines, including:</p>",
+        "button_label": "Learn About Our Technology",
+        "button_link": "shopify://pages/our-technology",
+        "button_label_2": "Explore Healthy Sleep Space Products",
+        "button_link_2": "shopify://collections/all",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "about_guides": {
+      "type": "hss-foundations",
+      "blocks": {
+        "g1": {
+          "type": "foundation",
+          "settings": {
+            "icon": "leaf",
+            "number": "",
+            "title": "Responsible Wellness",
+            "text": "<p>We distinguish general wellness from medical care. Our wellness products and educational content are not intended to diagnose, treat, cure, mitigate, or prevent any disease or medical condition, and they are not a substitute for professional medical advice or care.</p>"
+          }
+        },
+        "g2": {
+          "type": "foundation",
+          "settings": {
+            "icon": "chat",
+            "number": "",
+            "title": "Clear Communication",
+            "text": "<p>We work to describe every product in straightforward language so customers can understand its intended purpose, features, directions, and limitations.</p>"
+          }
+        },
+        "g3": {
+          "type": "foundation",
+          "settings": {
+            "icon": "transparency",
+            "number": "",
+            "title": "Product Transparency",
+            "text": "<p>We provide relevant product specifications, usage guidance, safety information, package contents, and customer policies before purchase.</p>"
+          }
+        },
+        "g4": {
+          "type": "foundation",
+          "settings": {
+            "icon": "spark",
+            "number": "",
+            "title": "Quality-Focused Improvement",
+            "text": "<p>We are committed to reviewing our products, processes, communications, and customer experiences as part of continuous improvement.</p>"
+          }
+        },
+        "g5": {
+          "type": "foundation",
+          "settings": {
+            "icon": "individual",
+            "number": "",
+            "title": "Respect for the Individual",
+            "text": "<p>We recognize that wellness routines and personal experiences vary. We encourage customers to make choices that are appropriate for their lifestyles and preferences.</p>"
+          }
+        },
+        "g6": {
+          "type": "foundation",
+          "settings": {
+            "icon": "heart",
+            "number": "",
+            "title": "Customer Care",
+            "text": "<p>We aim to provide thoughtful assistance before, during, and after each purchase.</p>"
+          }
+        }
+      },
+      "block_order": ["g1", "g2", "g3", "g4", "g5", "g6"],
+      "settings": {
+        "color_scheme": "scheme-hss-tint",
+        "eyebrow": "What Guides Us",
+        "heading": "Six Commitments Behind Every Product",
+        "columns_desktop": "3",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "about_tech_approach": {
+      "type": "hss-routine-first",
+      "settings": {
+        "color_scheme": "scheme-hss-navy",
+        "heading": "Our Approach to Technology",
+        "body": "<p>We use specialized methods to characterize physical product properties such as low-intensity photon emissions, optical characteristics, and surface temperature where applicable. These measurements describe physical product properties only — they are not presented as evidence of medical, therapeutic, or clinical outcomes.</p><p>Our technology is intended solely to support a general-wellness experience. It is not intended to measure or diagnose medical conditions, guide treatment decisions, or replace professional medical care or an authorized medical device.</p>",
+        "button_label": "Read About Our Technology",
+        "button_link": "shopify://pages/our-technology",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "about_education": {
+      "type": "hss-checklist",
+      "blocks": {
+        "e1": { "type": "item", "settings": { "text": "<p>Healthy Sleep Space foundations and healthy sleep routines</p>" } },
+        "e2": { "type": "item", "settings": { "text": "<p>Evening relaxation and wind-down practices</p>" } },
+        "e3": { "type": "item", "settings": { "text": "<p>Creating a consistent personal nighttime routine</p>" } },
+        "e4": { "type": "item", "settings": { "text": "<p>Daytime habits that complement healthy sleep</p>" } },
+        "e5": { "type": "item", "settings": { "text": "<p>Comfortable sleep and wellness spaces</p>" } },
+        "e6": { "type": "item", "settings": { "text": "<p>The responsible use of low-intensity photon technology</p>" } },
+        "e7": { "type": "item", "settings": { "text": "<p>Product directions, safety, and responsible use</p>" } }
+      },
+      "block_order": ["e1", "e2", "e3", "e4", "e5", "e6", "e7"],
+      "settings": {
+        "color_scheme": "scheme-hss-gold-pale",
+        "eyebrow": "Responsible Education",
+        "heading": "Practical Learning, Not Medical Advice",
+        "body": "<p>Through the Healthy Sleep Space Wellness Library, we share practical educational content about:</p>",
+        "button_label": "Visit the Wellness Library",
+        "button_link": "shopify://blogs/wellness-library",
+        "button_label_2": "",
+        "button_link_2": "",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "about_commitment": {
+      "type": "hss-checklist",
+      "blocks": {
+        "k1": { "type": "item", "settings": { "text": "<p>What the Healthy Sleep Space program is — and what it is not</p>" } },
+        "k2": { "type": "item", "settings": { "text": "<p>Each product's intended general-wellness purpose and program role</p>" } },
+        "k3": { "type": "item", "settings": { "text": "<p>How it should be used</p>" } },
+        "k4": { "type": "item", "settings": { "text": "<p>What safety information should be considered</p>" } },
+        "k5": { "type": "item", "settings": { "text": "<p>What is included with the purchase</p>" } },
+        "k6": { "type": "item", "settings": { "text": "<p>What support is available</p>" } },
+        "k7": { "type": "item", "settings": { "text": "<p>Why the program and products are for general wellness only, are not medical care, and do not guarantee results</p>" } }
+      },
+      "block_order": ["k1", "k2", "k3", "k4", "k5", "k6", "k7"],
+      "settings": {
+        "color_scheme": "scheme-hss-paper",
+        "eyebrow": "Our Commitment to You",
+        "heading": "Trust Begins With Clear Expectations",
+        "body": "<p>We want every Healthy Sleep Space customer to know:</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_label_2": "",
+        "button_link_2": "",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "about_connect_cta": {
+      "type": "hss-final-cta",
+      "settings": {
+        "color_scheme": "scheme-hss-gold",
+        "heading": "Connect With <em>Healthy Sleep Space.</em>",
+        "body": "<p>Whether you are beginning a personal Healthy Sleep Space routine, introducing the program in a wellness or hospitality setting, exploring products, or requesting order support, our team is ready to help.</p>",
+        "button_label": "Explore Healthy Sleep Space Products",
+        "button_link": "shopify://collections/all",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "about_notice": {
+      "type": "hss-notice-bar",
+      "settings": {
+        "color_scheme": "scheme-hss-navy",
+        "heading": "Healthy Sleep Space products and the Healthy Sleep Space program are intended solely for general wellness use.",
+        "line_2": "They are not intended to diagnose, cure, mitigate, treat, or prevent any disease or medical condition.",
+        "line_3": "No product or program statement should be interpreted as medical advice or as a substitute for professional healthcare.",
+        "padding_top": 24,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "about_hero",
+    "about_who",
+    "about_story_quote",
+    "about_story_continued",
+    "about_mission",
+    "about_vision",
+    "about_create",
+    "about_guides",
+    "about_tech_approach",
+    "about_education",
+    "about_commitment",
+    "about_connect_cta",
+    "about_notice"
+  ]
+}
