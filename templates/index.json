@@ -194,7 +194,7 @@
         "heading": "Practical Guidance for Everyday Wellness",
         "body": "<p>Explore articles, tips, and resources to help you build healthy nighttime habits, design better spaces, and understand our technology.</p>",
         "button_label": "Visit the Wellness Library",
-        "button_link": "shopify://pages/wellness-library",
+        "button_link": "shopify://blogs/wellness-library",
         "padding_top": 72,
         "padding_bottom": 72
       }
