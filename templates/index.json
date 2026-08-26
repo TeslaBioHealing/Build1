@@ -67,7 +67,7 @@
             "icon": "house",
             "number": "03",
             "title": "Prepare Your Environment",
-            "text": "<p>Create a dark, quiet, comfortable, and welcoming space that supports your nighttime routine.</p>"
+            "text": "<p>Create a dark, quiet, comfortable, and welcoming space, enhanced by photons from one or more Biophotonizers, to support your nighttime routine.</p>"
           }
         },
         "foundation-4": {
@@ -80,11 +80,17 @@
           }
         }
       },
-      "block_order": ["foundation-1", "foundation-2", "foundation-3", "foundation-4"],
+      "block_order": [
+        "foundation-1",
+        "foundation-2",
+        "foundation-3",
+        "foundation-4"
+      ],
       "settings": {
         "color_scheme": "scheme-hss-paper",
         "eyebrow": "Four Foundations",
         "heading": "The Foundations of a Healthy Sleep Space",
+        "columns_desktop": "4",
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -112,40 +118,56 @@
         "category-1": {
           "type": "category",
           "settings": {
+            "collection": "",
             "custom_title": "Bedroom & Bedside",
-            "custom_text": "Create a restful environment right where you sleep."
+            "custom_text": "Create a restful environment right where you sleep.",
+            "custom_link": ""
           }
         },
         "category-2": {
           "type": "category",
           "settings": {
+            "collection": "",
             "custom_title": "Personal Wellness",
-            "custom_text": "Support your wind-down and quiet-time routines."
+            "custom_text": "Support your wind-down and quiet-time routines.",
+            "custom_link": ""
           }
         },
         "category-3": {
           "type": "category",
           "settings": {
+            "collection": "",
             "custom_title": "Room & Space",
-            "custom_text": "Enhance bedrooms, living areas, and wellness spaces."
+            "custom_text": "Enhance bedrooms, living areas, and wellness spaces.",
+            "custom_link": ""
           }
         },
         "category-4": {
           "type": "category",
           "settings": {
+            "collection": "",
             "custom_title": "Travel Wellness",
-            "custom_text": "Keep your routine consistent wherever you go."
+            "custom_text": "Keep your routine consistent wherever you go.",
+            "custom_link": ""
           }
         },
         "category-5": {
           "type": "category",
           "settings": {
+            "collection": "",
             "custom_title": "Wellness Sets",
-            "custom_text": "Curated combinations to support your routine."
+            "custom_text": "Curated combinations to support your routine.",
+            "custom_link": ""
           }
         }
       },
-      "block_order": ["category-1", "category-2", "category-3", "category-4", "category-5"],
+      "block_order": [
+        "category-1",
+        "category-2",
+        "category-3",
+        "category-4",
+        "category-5"
+      ],
       "settings": {
         "color_scheme": "scheme-hss-paper",
         "eyebrow": "Shop Wellness",
@@ -174,29 +196,39 @@
         "article-1": {
           "type": "article",
           "settings": {
+            "article": "",
             "custom_title": "Understanding Photons: The Science of Light",
             "custom_meta": "Wellness Library",
-            "custom_excerpt": "Photons are fundamental units of light energy that occur naturally throughout our environment."
+            "custom_excerpt": "Photons are fundamental units of light energy that occur naturally throughout our environment.",
+            "custom_link": ""
           }
         },
         "article-2": {
           "type": "article",
           "settings": {
+            "article": "",
             "custom_title": "Creating a Consistent Sleep Routine",
             "custom_meta": "Evening Wind-Down",
-            "custom_excerpt": "A consistent schedule, a comfortable environment, and time to wind down can help support healthy sleep habits."
+            "custom_excerpt": "A consistent schedule, a comfortable environment, and time to wind down can help support healthy sleep habits.",
+            "custom_link": ""
           }
         },
         "article-3": {
           "type": "article",
           "settings": {
+            "article": "",
             "custom_title": "Designing a Rest-Friendly Sleep Space",
             "custom_meta": "Healthy Sleep Space Foundations",
-            "custom_excerpt": "Simple changes to light, sound, and comfort can help create a space that supports your nighttime routine."
+            "custom_excerpt": "Simple changes to light, sound, and comfort can help create a space that supports your nighttime routine.",
+            "custom_link": ""
           }
         }
       },
-      "block_order": ["article-1", "article-2", "article-3"],
+      "block_order": [
+        "article-1",
+        "article-2",
+        "article-3"
+      ],
       "settings": {
         "color_scheme": "scheme-hss-paper",
         "eyebrow": "Wellness Library",
@@ -236,7 +268,11 @@
           }
         }
       },
-      "block_order": ["column-1", "column-2", "column-3"],
+      "block_order": [
+        "column-1",
+        "column-2",
+        "column-3"
+      ],
       "settings": {
         "color_scheme": "scheme-hss-paper",
         "eyebrow": "Responsible Wellness",
