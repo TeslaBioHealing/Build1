@@ -1,0 +1,189 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    --padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      --padding-top: {{ section.settings.padding_top }}px;
+      --padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  #shopify-section-{{ section.id }} .hss-panel {
+    background: linear-gradient(160deg, rgba(7, 178, 206, 0.08), rgba(1, 121, 190, 0.06));
+    border: 0.1rem solid rgba(1, 121, 190, 0.14);
+    border-radius: calc(var(--card-corner-radius) * 1px + 1.2rem);
+    padding: 4.8rem 3.2rem;
+  }
+  #shopify-section-{{ section.id }} .hss-panel__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3.2rem;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .hss-panel__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  #shopify-section-{{ section.id }} .hss-panel__card {
+    background: rgb(var(--color-background));
+    border-radius: calc(var(--card-corner-radius) * 1px + 0.4rem);
+    padding: 2.4rem 2.2rem;
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient" style="padding-top: var(--padding-top); padding-bottom: var(--padding-bottom);">
+  <div class="page-width">
+    <div class="hss-panel">
+      <div style="max-width: 68rem; margin: 0 auto; text-align: center;">
+        {%- if section.settings.eyebrow != blank -%}
+          <span class="hss-eyebrow hss-eyebrow--blue">{{ section.settings.eyebrow | escape }}</span>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="hss-heading" style="font-size: 2.8rem;">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+      </div>
+      <div class="hss-panel__grid">
+        {%- for block in section.blocks -%}
+          <div class="hss-panel__card" {{ block.shopify_attributes }}>
+            <div class="hss-card__icon" style="width: 4.2rem; height: 4.2rem; margin-bottom: 1.4rem;">
+              {%- render 'hss-icon', icon: block.settings.icon -%}
+            </div>
+            {%- if block.settings.title != blank -%}
+              <h3 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 1.6rem; margin-bottom: 0.8rem;">{{ block.settings.title }}</h3>
+            {%- endif -%}
+            {%- if block.settings.text != blank -%}
+              <p class="hss-card__text">{{ block.settings.text }}</p>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+      {%- if section.settings.disclaimer != blank -%}
+        <div style="margin-top: 3.2rem;">
+          {%- render 'hss-disclaimer', text: section.settings.disclaimer, center: true -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "HSS Tech Concepts",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-hss-paper"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Understanding the Technology"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Key Concepts"
+    },
+    {
+      "type": "textarea",
+      "id": "disclaimer",
+      "label": "Disclaimer",
+      "default": "These descriptions relate to physical product characteristics only. They are not intended to diagnose, treat, cure, mitigate, or prevent any disease."
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 72
+    }
+  ],
+  "blocks": [
+    {
+      "type": "concept",
+      "name": "Concept",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "sun", "label": "Sun" },
+            { "value": "spark", "label": "Spark" },
+            { "value": "transparency", "label": "Transparency" },
+            { "value": "device", "label": "Device" }
+          ],
+          "default": "spark"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Concept"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "HSS Tech Concepts",
+      "blocks": [
+        {
+          "type": "concept",
+          "settings": {
+            "icon": "sun",
+            "title": "What Is a Photon?",
+            "text": "Photons are particles of light energy that exist across a range of wavelengths. Specialized instruments can be used to measure and describe light."
+          }
+        },
+        {
+          "type": "concept",
+          "settings": {
+            "icon": "spark",
+            "title": "What Does Low-Intensity Mean?",
+            "text": "Low-intensity refers to the level of photon emissions produced by the device. Product-specific measurements are important for understanding output."
+          }
+        },
+        {
+          "type": "concept",
+          "settings": {
+            "icon": "transparency",
+            "title": "How We Characterize Our Products",
+            "text": "We use specialized instruments to measure and describe physical characteristics, including emission spectrum, radiometric output, surface temperature, and system verification."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,164 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    --padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      --padding-top: {{ section.settings.padding_top }}px;
+      --padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient" style="padding-top: var(--padding-top); padding-bottom: var(--padding-bottom);">
+  <div class="page-width">
+    <div style="max-width: 68rem; margin: 0 auto 4.8rem; text-align: center;">
+      {%- if section.settings.eyebrow != blank -%}
+        <span class="hss-eyebrow hss-eyebrow--blue">{{ section.settings.eyebrow | escape }}</span>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="hss-heading" style="font-size: 3rem; margin-bottom: 1.6rem;">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.body != blank -%}
+        <div class="hss-intro__body" style="margin: 0 auto;">{{ section.settings.body }}</div>
+      {%- endif -%}
+    </div>
+    <div class="hss-sequence">
+      {%- for block in section.blocks -%}
+        {%- unless forloop.first -%}
+          <div class="hss-sequence__arrow" aria-hidden="true">→</div>
+        {%- endunless -%}
+        <div class="hss-sequence__step" {{ block.shopify_attributes }}>
+          <div class="hss-sequence__circle">{%- render 'hss-icon', icon: block.settings.icon -%}</div>
+          <span class="hss-sequence__label" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 1.6rem; font-weight: 400;">{{ forloop.index }}. {{ block.settings.title }}</span>
+          {%- if block.settings.text != blank -%}
+            <span class="hss-sequence__label" style="font-weight: 400; opacity: 0.75;">{{ block.settings.text }}</span>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "HSS Tech Sequence",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-hss-paper"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "How It Fits Into Your Routine"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Technology in Service of Your Wellness"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body text",
+      "default": "<p>Healthy Sleep Space technology is designed to create a low-intensity photon environment during appropriate use. It is one element that can complement your consistent nighttime routine and comfortable sleep environment.</p>"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 72
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "individual", "label": "Person" },
+            { "value": "device", "label": "Device" },
+            { "value": "bed", "label": "Bed" },
+            { "value": "moon", "label": "Moon" },
+            { "value": "leaf", "label": "Leaf" },
+            { "value": "house", "label": "House" }
+          ],
+          "default": "device"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Step"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "HSS Tech Sequence",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "icon": "individual",
+            "title": "Your Routine",
+            "text": "Build a consistent wind-down and create time for rest."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "icon": "device",
+            "title": "Our Technology",
+            "text": "LIPG devices create a low-intensity photon environment."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "icon": "bed",
+            "title": "Your Environment",
+            "text": "A dark, quiet, and comfortable space supports your routine."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
