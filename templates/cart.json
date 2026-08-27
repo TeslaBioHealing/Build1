@@ -31,10 +31,59 @@
         "subtotal",
         "buttons"
       ]
+    },
+    "cart_before_checkout": {
+      "type": "hss-checklist",
+      "blocks": {
+        "item-1": { "type": "item", "settings": { "text": "<p>Intended general-wellness purpose</p>" } },
+        "item-2": { "type": "item", "settings": { "text": "<p>Product features and specifications</p>" } },
+        "item-3": { "type": "item", "settings": { "text": "<p>Directions for use</p>" } },
+        "item-4": { "type": "item", "settings": { "text": "<p>Safety information and limitations</p>" } },
+        "item-5": { "type": "item", "settings": { "text": "<p>Shipping and delivery information</p>" } },
+        "item-6": { "type": "item", "settings": { "text": "<p>Return, refund, and warranty policies</p>" } }
+      },
+      "block_order": ["item-1", "item-2", "item-3", "item-4", "item-5", "item-6"],
+      "settings": {
+        "color_scheme": "scheme-hss-tint",
+        "eyebrow": "Before You Complete Your Purchase",
+        "heading": "Please Review the Following for Every Product",
+        "body": "<p>Healthy Sleep Space products should be selected according to their stated general-wellness purposes — not for a disease, symptom, diagnosis, or medical condition.</p>",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "cart_help": {
+      "type": "hss-checklist",
+      "settings": {
+        "color_scheme": "scheme-hss-paper",
+        "eyebrow": "Need Help Before Ordering?",
+        "heading": "Our Team Can Answer Questions About Features, Options, and Shipping",
+        "body": "<p>Customer support cannot diagnose a medical condition, recommend treatment, or select a product based on a disease or symptom.</p>",
+        "button_label": "Contact Customer Support",
+        "button_link": "shopify://pages/support",
+        "button_label_2": "Read Frequently Asked Questions",
+        "button_link_2": "shopify://pages/support",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "cart_notice": {
+      "type": "hss-notice-bar",
+      "settings": {
+        "color_scheme": "scheme-hss-navy",
+        "heading": "Healthy Sleep Space products are intended solely for general-wellness use.",
+        "line_2": "They are not intended to diagnose, cure, mitigate, treat, or prevent any disease or medical condition.",
+        "line_3": "By proceeding to checkout, you acknowledge this general-wellness purpose — see our full Disclaimer for details.",
+        "padding_top": 24,
+        "padding_bottom": 56
+      }
     }
   },
   "order": [
     "cart-items",
-    "cart-footer"
+    "cart-footer",
+    "cart_before_checkout",
+    "cart_help",
+    "cart_notice"
   ]
 }

@@ -1,0 +1,239 @@
+{
+  "sections": {
+    "library_hero": {
+      "type": "hss-hero",
+      "settings": {
+        "color_scheme": "scheme-hss-navy",
+        "image_position": "right",
+        "overlay_opacity": 0,
+        "eyebrow": "Wellness Library",
+        "heading": "Practical Ideas for <em>Everyday Well-Being.</em>",
+        "body": "<p>Welcome to the Healthy Sleep Space Wellness Library — a collection of educational resources designed to encourage healthy routines for sleep, relaxation, personal vitality, and everyday well-being. Explore simple ideas that can help you make more time for rest, create comfortable wellness spaces, and develop routines that fit naturally into your life.</p>",
+        "button_label": "Explore Our Wellness Approach",
+        "button_link": "shopify://pages/our-approach",
+        "disclaimer": "General wellness only. Not medical advice or medical care.",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "library_topics": {
+      "type": "hss-shop-categories",
+      "blocks": {
+        "topic-1": {
+          "type": "category",
+          "settings": {
+            "custom_title": "Sleep and Rest",
+            "custom_text": "Consistent schedules, comfortable surroundings, and relaxing evening practices.",
+            "custom_link": "shopify://pages/our-approach"
+          }
+        },
+        "topic-2": {
+          "type": "category",
+          "settings": {
+            "custom_title": "Relaxation and Stress Management",
+            "custom_text": "Practical ways to pause, unwind, and create moments of calm during a busy day.",
+            "custom_link": "shopify://pages/our-approach"
+          }
+        },
+        "topic-3": {
+          "type": "category",
+          "settings": {
+            "custom_title": "Daily Vitality",
+            "custom_text": "Healthy lifestyle practices associated with personal energy and everyday well-being.",
+            "custom_link": "shopify://pages/our-approach"
+          }
+        },
+        "topic-4": {
+          "type": "category",
+          "settings": {
+            "custom_title": "Personal Wellness Routines",
+            "custom_text": "How small, consistent choices can help make wellness a natural part of your day.",
+            "custom_link": "shopify://pages/our-approach"
+          }
+        },
+        "topic-5": {
+          "type": "category",
+          "settings": {
+            "custom_title": "Wellness Spaces",
+            "custom_text": "Ideas for creating calm, comfortable, and welcoming spaces for rest and reflection.",
+            "custom_link": "shopify://pages/our-approach"
+          }
+        },
+        "topic-6": {
+          "type": "category",
+          "settings": {
+            "custom_title": "Understanding Our Technology",
+            "custom_text": "Photons, low-intensity photon measurement, and the general-wellness purpose of LIPG.",
+            "custom_link": "shopify://pages/our-technology"
+          }
+        }
+      },
+      "block_order": ["topic-1", "topic-2", "topic-3", "topic-4", "topic-5", "topic-6"],
+      "settings": {
+        "color_scheme": "scheme-hss-paper",
+        "eyebrow": "Explore Wellness Topics",
+        "heading": "Find Guidance for Your Routine",
+        "button_label": "",
+        "button_link": "",
+        "padding_top": 72,
+        "padding_bottom": 48
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "layout": "collage",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": true,
+        "show_author": false,
+        "padding_top": 24,
+        "padding_bottom": 48
+      }
+    },
+    "library_coming_soon": {
+      "type": "hss-checklist",
+      "blocks": {
+        "item-1": { "type": "item", "settings": { "text": "<p>Creating a Calmer Evening</p>" } },
+        "item-2": { "type": "item", "settings": { "text": "<p>Small Wellness Practices for a Busy Day</p>" } },
+        "item-3": { "type": "item", "settings": { "text": "<p>Starting a Simple Wellness Journal</p>" } },
+        "item-4": { "type": "item", "settings": { "text": "<p>What Is a Photon?</p>" } },
+        "item-5": { "type": "item", "settings": { "text": "<p>What Does \"Low-Intensity\" Mean?</p>" } },
+        "item-6": { "type": "item", "settings": { "text": "<p>Understanding Physical Product Measurements</p>" } },
+        "item-7": { "type": "item", "settings": { "text": "<p>How to Read a Wellness Product Description</p>" } }
+      },
+      "block_order": ["item-1", "item-2", "item-3", "item-4", "item-5", "item-6", "item-7"],
+      "settings": {
+        "color_scheme": "scheme-hss-gold-pale",
+        "eyebrow": "More on the Way",
+        "heading": "Coming Soon to the Wellness Library",
+        "body": "<p>We're building out a full library of educational articles. Here's what's next:</p>",
+        "padding_top": 48,
+        "padding_bottom": 72
+      }
+    },
+    "library_routine_cta": {
+      "type": "hss-checklist",
+      "blocks": {
+        "item-1": { "type": "item", "settings": { "text": "<p>What aspect of everyday wellness would I like to focus on?</p>" } },
+        "item-2": { "type": "item", "settings": { "text": "<p>When can I consistently make time for it?</p>" } },
+        "item-3": { "type": "item", "settings": { "text": "<p>Where do I feel most comfortable and relaxed?</p>" } },
+        "item-4": { "type": "item", "settings": { "text": "<p>What healthy habits can I combine with this routine?</p>" } }
+      },
+      "block_order": ["item-1", "item-2", "item-3", "item-4"],
+      "settings": {
+        "color_scheme": "scheme-hss-tint",
+        "eyebrow": "Start Here",
+        "heading": "Build a Routine That Fits Your Life",
+        "body": "<p>A personal wellness routine can begin with four simple questions:</p>",
+        "button_label": "Explore Our Wellness Approach",
+        "button_link": "shopify://pages/our-approach",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "library_education": {
+      "type": "hss-checklist",
+      "blocks": {
+        "item-1": { "type": "item", "settings": { "text": "<p>Encourage healthy lifestyle routines</p>" } },
+        "item-2": { "type": "item", "settings": { "text": "<p>Present information in clear, understandable language</p>" } },
+        "item-3": { "type": "item", "settings": { "text": "<p>Distinguish general wellness from medical care</p>" } },
+        "item-4": { "type": "item", "settings": { "text": "<p>Avoid disease-treatment recommendations</p>" } },
+        "item-5": { "type": "item", "settings": { "text": "<p>Describe technology and product characteristics responsibly</p>" } },
+        "item-6": { "type": "item", "settings": { "text": "<p>Help customers understand intended uses and limitations</p>" } }
+      },
+      "block_order": ["item-1", "item-2", "item-3", "item-4", "item-5", "item-6"],
+      "settings": {
+        "color_scheme": "scheme-hss-paper",
+        "eyebrow": "Responsible Wellness Education",
+        "heading": "How We Approach Educational Content",
+        "body": "<p>Our educational content is developed to:</p>",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "library_new_here": {
+      "type": "hss-checklist",
+      "blocks": {
+        "item-1": { "type": "item", "settings": { "text": "<p><a href=\"/pages/our-approach\">Our Wellness Approach</a></p>" } },
+        "item-2": { "type": "item", "settings": { "text": "<p><a href=\"/pages/our-technology\">Understanding Our Technology</a></p>" } },
+        "item-3": { "type": "item", "settings": { "text": "<p><a href=\"/pages/shop-wellness\">How to Choose a Wellness Product</a></p>" } },
+        "item-4": { "type": "item", "settings": { "text": "<p><a href=\"/pages/disclaimer\">Product Directions and Safety Information</a></p>" } },
+        "item-5": { "type": "item", "settings": { "text": "<p><a href=\"/pages/support\">Frequently Asked Questions</a></p>" } },
+        "item-6": { "type": "item", "settings": { "text": "<p><a href=\"/pages/support\">Contact Customer Support</a></p>" } }
+      },
+      "block_order": ["item-1", "item-2", "item-3", "item-4", "item-5", "item-6"],
+      "settings": {
+        "color_scheme": "scheme-hss-gold-pale",
+        "eyebrow": "New to Healthy Sleep Space?",
+        "heading": "Begin With These Resources",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "library_signup": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Receive New Wellness Articles",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Subscribe for general wellness education, healthy-routine ideas, product information, and Healthy Sleep Space updates. You may unsubscribe at any time.</p>"
+          }
+        },
+        "email_form": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": ["heading", "paragraph", "email_form"],
+      "settings": {
+        "color_scheme": "scheme-hss-tint",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "library_suggest": {
+      "type": "hss-routine-first",
+      "settings": {
+        "color_scheme": "scheme-hss-paper",
+        "heading": "Have a Wellness Topic to Suggest?",
+        "body": "<p>We welcome suggestions for future educational articles about healthy routines, relaxation, sleep habits, wellness spaces, and everyday well-being. Please do not submit private medical information — our team cannot provide medical advice or answer questions about diseases, symptoms, diagnosis, or treatment.</p>",
+        "button_label": "Suggest a Topic",
+        "button_link": "mailto:info@teslabiohealing.com?subject=Wellness%20Library%20Topic%20Suggestion",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "library_notice": {
+      "type": "hss-notice-bar",
+      "settings": {
+        "color_scheme": "scheme-hss-navy",
+        "heading": "Healthy Sleep Space is a general-wellness program.",
+        "line_2": "Content in the Wellness Library is for general educational purposes only and is not medical advice.",
+        "line_3": "Consult a qualified healthcare professional regarding medical concerns.",
+        "padding_top": 24,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "library_hero",
+    "library_topics",
+    "main",
+    "library_coming_soon",
+    "library_routine_cta",
+    "library_education",
+    "library_new_here",
+    "library_signup",
+    "library_suggest",
+    "library_notice"
+  ]
+}

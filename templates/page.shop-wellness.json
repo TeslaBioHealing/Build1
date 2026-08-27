@@ -1,0 +1,233 @@
+{
+  "sections": {
+    "shop_hero": {
+      "type": "hss-hero",
+      "settings": {
+        "color_scheme": "scheme-hss-navy",
+        "image_position": "right",
+        "overlay_opacity": 0,
+        "eyebrow": "Shop Wellness",
+        "heading": "Find Wellness Products That Fit <em>Your Everyday Life.</em>",
+        "body": "<p>Explore Healthy Sleep Space Low-Intensity Photon-Generators (LIPG) and related products designed for noninvasive, general-wellness use. Choose products according to your personal wellness intentions, preferred setting, and daily routine.</p>",
+        "button_label": "Shop All Products",
+        "button_link": "shopify://collections/all",
+        "disclaimer": "General wellness only. Not medical advice or medical care.",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "shop_by_intention": {
+      "type": "hss-shop-categories",
+      "blocks": {
+        "category-1": {
+          "type": "category",
+          "settings": {
+            "custom_title": "Sleep and Relaxation",
+            "custom_text": "Products designed to complement a comfortable bedtime environment and consistent sleep routines."
+          }
+        },
+        "category-2": {
+          "type": "category",
+          "settings": {
+            "custom_title": "Personal Wellness",
+            "custom_text": "Products that can be incorporated into meditation, reflection, reading, and quiet-time practices."
+          }
+        },
+        "category-3": {
+          "type": "category",
+          "settings": {
+            "custom_title": "Daily Vitality",
+            "custom_text": "Products designed to complement healthy routines associated with personal energy and everyday well-being."
+          }
+        },
+        "category-4": {
+          "type": "category",
+          "settings": {
+            "custom_title": "Home and Space Wellness",
+            "custom_text": "Create a calm, welcoming atmosphere in the spaces where you rest, work, and relax."
+          }
+        },
+        "category-5": {
+          "type": "category",
+          "settings": {
+            "custom_title": "Portable Wellness",
+            "custom_text": "Convenient wellness products designed for travel, work, and everyday activities away from home."
+          }
+        },
+        "category-6": {
+          "type": "category",
+          "settings": {
+            "custom_title": "Wellness Bundles",
+            "custom_text": "Thoughtfully assembled combinations of approved products for different routines and occasions."
+          }
+        }
+      },
+      "block_order": ["category-1", "category-2", "category-3", "category-4", "category-5", "category-6"],
+      "settings": {
+        "color_scheme": "scheme-hss-paper",
+        "eyebrow": "Shop by Wellness Intention",
+        "heading": "Choose Products by What You're Trying to Support",
+        "button_label": "Shop All Products",
+        "button_link": "shopify://collections/all",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "shop_choose": {
+      "type": "hss-tech-sequence",
+      "blocks": {
+        "step-1": {
+          "type": "step",
+          "settings": {
+            "icon": "individual",
+            "title": "Identify Your Wellness Intention",
+            "text": "Consider whether you would like to focus on sleep routines, relaxation, personal vitality, or a comfortable wellness environment."
+          }
+        },
+        "step-2": {
+          "type": "step",
+          "settings": {
+            "icon": "house",
+            "title": "Consider Where You Will Use It",
+            "text": "Choose a product designed for your preferred setting, such as a bedroom, living space, office, or travel."
+          }
+        },
+        "step-3": {
+          "type": "step",
+          "settings": {
+            "icon": "transparency",
+            "title": "Review the Product Information",
+            "text": "Read the intended wellness purpose, features, specifications, directions, safety information, and limitations."
+          }
+        },
+        "step-4": {
+          "type": "step",
+          "settings": {
+            "icon": "check",
+            "title": "Select What Fits Your Routine",
+            "text": "Choose a product that can be used comfortably and consistently as part of your healthy lifestyle."
+          }
+        }
+      },
+      "block_order": ["step-1", "step-2", "step-3", "step-4"],
+      "settings": {
+        "color_scheme": "scheme-hss-gold-pale",
+        "eyebrow": "Choosing a Product",
+        "heading": "How to Choose a Wellness Product",
+        "body": "",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "shop_clear_info": {
+      "type": "hss-checklist",
+      "blocks": {
+        "item-1": { "type": "item", "settings": { "text": "<p>Approved general-wellness purpose</p>" } },
+        "item-2": { "type": "item", "settings": { "text": "<p>Product photographs</p>" } },
+        "item-3": { "type": "item", "settings": { "text": "<p>Features and specifications</p>" } },
+        "item-4": { "type": "item", "settings": { "text": "<p>Recommended setting</p>" } },
+        "item-5": { "type": "item", "settings": { "text": "<p>Directions for use</p>" } },
+        "item-6": { "type": "item", "settings": { "text": "<p>Safety information and limitations</p>" } },
+        "item-7": { "type": "item", "settings": { "text": "<p>Care and storage instructions</p>" } },
+        "item-8": { "type": "item", "settings": { "text": "<p>Package contents</p>" } },
+        "item-9": { "type": "item", "settings": { "text": "<p>Price and payment information</p>" } },
+        "item-10": { "type": "item", "settings": { "text": "<p>Shipping and delivery information</p>" } },
+        "item-11": { "type": "item", "settings": { "text": "<p>Return and warranty information</p>" } }
+      },
+      "block_order": ["item-1", "item-2", "item-3", "item-4", "item-5", "item-6", "item-7", "item-8", "item-9", "item-10", "item-11"],
+      "settings": {
+        "color_scheme": "scheme-hss-tint",
+        "eyebrow": "Clear Information for Every Product",
+        "heading": "Know Before You Shop",
+        "body": "<p>Physical measurements or technical characteristics are presented only to describe the product. They do not represent medical or clinical outcomes.</p><p>Each product page provides:</p>",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "shop_gift": {
+      "type": "hss-routine-first",
+      "settings": {
+        "color_scheme": "scheme-hss-gold-pale",
+        "heading": "Shopping for Someone Else?",
+        "body": "<p>A wellness product can be a thoughtful way to encourage rest, relaxation, and personal time. Explore approved gift options suitable for different routines and settings.</p>",
+        "button_label": "Shop Wellness Gifts",
+        "button_link": "shopify://collections/all",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "shop_help": {
+      "type": "hss-checklist",
+      "settings": {
+        "color_scheme": "scheme-hss-paper",
+        "eyebrow": "Need Help Choosing?",
+        "heading": "Our Team Can Help You Understand the Options",
+        "body": "<p>Our customer-support team can explain product features, intended wellness uses, available sizes, ordering, shipping, and general usage instructions. Customer support does not diagnose medical conditions, recommend medical treatments, or select products based on diseases or symptoms.</p>",
+        "button_label": "Contact Customer Support",
+        "button_link": "shopify://pages/support",
+        "button_label_2": "Read Frequently Asked Questions",
+        "button_link_2": "shopify://pages/support",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "shop_expectations": {
+      "type": "hss-checklist",
+      "blocks": {
+        "item-1": { "type": "item", "settings": { "text": "<p>The product's intended general-wellness purpose</p>" } },
+        "item-2": { "type": "item", "settings": { "text": "<p>Directions and recommended setting</p>" } },
+        "item-3": { "type": "item", "settings": { "text": "<p>Safety information and limitations</p>" } },
+        "item-4": { "type": "item", "settings": { "text": "<p>Shipping and delivery estimates</p>" } },
+        "item-5": { "type": "item", "settings": { "text": "<p>Return and refund policy</p>" } },
+        "item-6": { "type": "item", "settings": { "text": "<p>Product warranty</p>" } }
+      },
+      "block_order": ["item-1", "item-2", "item-3", "item-4", "item-5", "item-6"],
+      "settings": {
+        "color_scheme": "scheme-hss-gold-pale",
+        "eyebrow": "Shop with Clear Expectations",
+        "heading": "Review This Before You Purchase",
+        "body": "<p>Individual experiences may vary. A wellness product should be considered one part of a broader healthy lifestyle.</p><p>Before purchasing, please review:</p>",
+        "button_label": "View Shipping Information",
+        "button_link": "/policies/shipping-policy",
+        "button_label_2": "View Return and Refund Policy",
+        "button_link_2": "/policies/refund-policy",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "shop_final_cta": {
+      "type": "hss-final-cta",
+      "settings": {
+        "color_scheme": "scheme-hss-navy",
+        "heading": "Begin Your <em>Wellness Routine.</em>",
+        "body": "<p>Explore products designed to complement the way you rest, relax, and care for your everyday well-being.</p>",
+        "button_label": "Shop All Wellness Products",
+        "button_link": "shopify://collections/all",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "shop_notice": {
+      "type": "hss-notice-bar",
+      "settings": {
+        "color_scheme": "scheme-hss-indigo",
+        "heading": "Healthy Sleep Space products are intended solely for general-wellness use.",
+        "line_2": "They are not intended to diagnose, cure, mitigate, treat, or prevent any disease or medical condition.",
+        "line_3": "Individual experiences may vary — see our full Disclaimer for details.",
+        "padding_top": 24,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "shop_hero",
+    "shop_by_intention",
+    "shop_choose",
+    "shop_clear_info",
+    "shop_gift",
+    "shop_help",
+    "shop_expectations",
+    "shop_final_cta",
+    "shop_notice"
+  ]
+}

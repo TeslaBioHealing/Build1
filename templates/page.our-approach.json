@@ -1,0 +1,239 @@
+{
+  "sections": {
+    "approach_hero": {
+      "type": "hss-hero",
+      "settings": {
+        "color_scheme": "scheme-hss-navy",
+        "image_position": "right",
+        "overlay_opacity": 0,
+        "eyebrow": "Our Approach",
+        "heading": "Simple, Consistent Wellness for <em>Everyday Life.</em>",
+        "body": "<p>We believe wellness is supported by the choices people make each day: making time for rest, creating space for relaxation, maintaining healthy routines, and paying attention to personal well-being. The Healthy Sleep Space approach is designed to complement these everyday choices with a simple, noninvasive way to create a personal wellness experience at home, while resting, or during quiet moments throughout the day.</p>",
+        "button_label": "Explore Wellness Products",
+        "button_link": "shopify://pages/shop-wellness",
+        "disclaimer": "General wellness only. Not medical advice or medical care.",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "approach_practice": {
+      "type": "hss-checklist",
+      "blocks": {
+        "item-1": { "type": "item", "settings": { "text": "<p>Maintain a consistent sleep routine</p>" } },
+        "item-2": { "type": "item", "settings": { "text": "<p>Make time for relaxation</p>" } },
+        "item-3": { "type": "item", "settings": { "text": "<p>Create a comfortable wellness environment</p>" } },
+        "item-4": { "type": "item", "settings": { "text": "<p>Support a positive sense of personal vitality</p>" } },
+        "item-5": { "type": "item", "settings": { "text": "<p>Practice mindfulness and self-care</p>" } },
+        "item-6": { "type": "item", "settings": { "text": "<p>Incorporate wellness into everyday life</p>" } }
+      },
+      "block_order": ["item-1", "item-2", "item-3", "item-4", "item-5", "item-6"],
+      "settings": {
+        "color_scheme": "scheme-hss-tint",
+        "eyebrow": "Wellness Is a Daily Practice",
+        "heading": "Wellness Develops Through Consistent Habits",
+        "body": "<p>Wellness is not defined by a single product or activity. It develops through consistent habits that support how people rest, relax, move, think, and care for themselves. Healthy Sleep Space products are intended to complement — not replace — healthy sleep habits, balanced nutrition, appropriate physical activity, and other positive lifestyle choices. Our approach encourages you to:</p>",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "approach_foundations": {
+      "type": "hss-foundations",
+      "blocks": {
+        "foundation-1": {
+          "type": "foundation",
+          "settings": {
+            "icon": "moon",
+            "number": "01",
+            "title": "Rest and Sleep Routines",
+            "text": "<p>A consistent schedule, a comfortable environment, and time to wind down can help support healthy sleep habits. Our wellness products are designed to fit naturally into personal bedtime and relaxation routines.</p>"
+          }
+        },
+        "foundation-2": {
+          "type": "foundation",
+          "settings": {
+            "icon": "leaf",
+            "number": "02",
+            "title": "Relaxation and Stress Management",
+            "text": "<p>Creating quiet moments during the day can encourage relaxation and help people manage everyday stress. Our approach makes room for calm, reflection, and personal time.</p>"
+          }
+        },
+        "foundation-3": {
+          "type": "foundation",
+          "settings": {
+            "icon": "spark",
+            "number": "03",
+            "title": "Personal Energy and Vitality",
+            "text": "<p>Healthy routines that include adequate rest, movement, relaxation, and self-care can contribute to an overall sense of well-being. Our products are designed to complement these routines.</p>"
+          }
+        },
+        "foundation-4": {
+          "type": "foundation",
+          "settings": {
+            "icon": "individual",
+            "number": "04",
+            "title": "Mental Focus",
+            "text": "<p>A comfortable environment and consistent healthy habits may help people feel more prepared for activities that require attention, learning, and organization.</p>"
+          }
+        },
+        "foundation-5": {
+          "type": "foundation",
+          "settings": {
+            "icon": "house",
+            "number": "05",
+            "title": "A Comfortable Wellness Environment",
+            "text": "<p>A quiet, organized, and welcoming environment can make it easier to pause, relax, and maintain personal wellness practices.</p>"
+          }
+        }
+      },
+      "block_order": ["foundation-1", "foundation-2", "foundation-3", "foundation-4", "foundation-5"],
+      "settings": {
+        "color_scheme": "scheme-hss-paper",
+        "eyebrow": "The Foundations of Our Approach",
+        "heading": "Five Areas Everyday Wellness Can Support",
+        "columns_desktop": "3",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "approach_technology": {
+      "type": "hss-technology",
+      "settings": {
+        "color_scheme": "scheme-hss-indigo",
+        "eyebrow": "Our Wellness Technology",
+        "heading": "Technology Centered on Your Routine",
+        "body": "<p>The Healthy Sleep Space wellness experience is centered on Low-Intensity Photon-Generators (LIPG), developed for noninvasive use as part of a personal wellness routine. We describe our technology using clear product information and measured physical characteristics — never as a tool for diagnosing or treating medical conditions.</p>",
+        "button_label": "Learn About Our Technology",
+        "button_link": "shopify://pages/our-technology",
+        "step_1_label": "Personal Routine",
+        "step_2_label": "LIPG Technology",
+        "step_3_label": "Everyday Wellness",
+        "disclaimer": "These statements describe physical product characteristics only and are not intended to diagnose, treat, cure, mitigate, or prevent any disease.",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "approach_routine_steps": {
+      "type": "hss-tech-sequence",
+      "blocks": {
+        "step-1": {
+          "type": "step",
+          "settings": {
+            "icon": "individual",
+            "title": "Identify Your Wellness Intention",
+            "text": "Consider what you would like to emphasize in your daily routine, such as sleep, relaxation, personal vitality, or a comfortable wellness space."
+          }
+        },
+        "step-2": {
+          "type": "step",
+          "settings": {
+            "icon": "bag",
+            "title": "Choose an Appropriate Product",
+            "text": "Review each product's intended wellness purpose, features, size, recommended setting, and directions for use."
+          }
+        },
+        "step-3": {
+          "type": "step",
+          "settings": {
+            "icon": "moon",
+            "title": "Create a Consistent Routine",
+            "text": "Select a convenient time and place for your wellness practice. Consistency can make healthy habits easier to maintain."
+          }
+        },
+        "step-4": {
+          "type": "step",
+          "settings": {
+            "icon": "leaf",
+            "title": "Support Your Routine with Healthy Choices",
+            "text": "Combine your wellness practice with adequate rest, balanced nutrition, appropriate physical activity, and other healthy lifestyle choices."
+          }
+        }
+      },
+      "block_order": ["step-1", "step-2", "step-3", "step-4"],
+      "settings": {
+        "color_scheme": "scheme-hss-gold-pale",
+        "eyebrow": "A Simple Four-Step Approach",
+        "heading": "Creating Your Personal Wellness Routine",
+        "body": "<p>Everyone's wellness routine is different. We encourage a simple four-step approach.</p>",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "approach_fits_life": {
+      "type": "hss-checklist",
+      "blocks": {
+        "item-1": { "type": "item", "settings": { "text": "<p>A bedtime or sleep routine</p>" } },
+        "item-2": { "type": "item", "settings": { "text": "<p>Quiet time at home</p>" } },
+        "item-3": { "type": "item", "settings": { "text": "<p>Meditation or reflection</p>" } },
+        "item-4": { "type": "item", "settings": { "text": "<p>Reading or relaxation</p>" } },
+        "item-5": { "type": "item", "settings": { "text": "<p>A personal wellness space</p>" } },
+        "item-6": { "type": "item", "settings": { "text": "<p>Travel and daily activities</p>" } },
+        "item-7": { "type": "item", "settings": { "text": "<p>Time shared with family</p>" } }
+      },
+      "block_order": ["item-1", "item-2", "item-3", "item-4", "item-5", "item-6", "item-7"],
+      "settings": {
+        "color_scheme": "scheme-hss-paper",
+        "eyebrow": "Wellness That Fits Your Life",
+        "heading": "Flexible, Not One-Size-Fits-All",
+        "body": "<p>Our products are designed to support flexible personal routines. Depending on the product selected, a wellness experience may be incorporated into:</p>",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "approach_commitment": {
+      "type": "hss-checklist",
+      "blocks": {
+        "item-1": { "type": "item", "settings": { "text": "<p>Clear and understandable product descriptions</p>" } },
+        "item-2": { "type": "item", "settings": { "text": "<p>Consistent general-wellness positioning</p>" } },
+        "item-3": { "type": "item", "settings": { "text": "<p>Appropriate directions and safety information</p>" } },
+        "item-4": { "type": "item", "settings": { "text": "<p>Responsible educational content</p>" } },
+        "item-5": { "type": "item", "settings": { "text": "<p>Respectful customer support</p>" } },
+        "item-6": { "type": "item", "settings": { "text": "<p>Continuous attention to quality and customer experience</p>" } }
+      },
+      "block_order": ["item-1", "item-2", "item-3", "item-4", "item-5", "item-6"],
+      "settings": {
+        "color_scheme": "scheme-hss-gold-pale",
+        "eyebrow": "Our Commitment",
+        "heading": "Responsible Wellness, By Design",
+        "body": "<p>We want every customer to understand what a product is, its intended wellness purpose, how to use it, and its limitations before making a purchase. We are committed to providing:</p>",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "approach_cta": {
+      "type": "hss-checklist",
+      "settings": {
+        "color_scheme": "scheme-hss-tint",
+        "heading": "Find an Approach That Works for You",
+        "body": "<p>Wellness should feel personal, practical, and sustainable. Begin with a simple intention, choose products and routines that fit your lifestyle, and give yourself time to rest, relax, and reconnect with your well-being.</p>",
+        "button_label": "Shop Wellness Products",
+        "button_link": "shopify://pages/shop-wellness",
+        "button_label_2": "Visit the Wellness Library",
+        "button_link_2": "shopify://blogs/wellness-library",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "approach_notice": {
+      "type": "hss-notice-bar",
+      "settings": {
+        "color_scheme": "scheme-hss-navy",
+        "heading": "Healthy Sleep Space is a general-wellness program.",
+        "line_2": "Products are not intended to diagnose, cure, mitigate, treat, or prevent any disease or medical condition.",
+        "line_3": "This page is not medical advice — see our full Disclaimer for details.",
+        "padding_top": 24,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "approach_hero",
+    "approach_practice",
+    "approach_foundations",
+    "approach_technology",
+    "approach_routine_steps",
+    "approach_fits_life",
+    "approach_commitment",
+    "approach_cta",
+    "approach_notice"
+  ]
+}
