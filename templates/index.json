@@ -118,8 +118,8 @@
         "category-1": {
           "type": "category",
           "settings": {
-            "collection": "",
-            "custom_title": "Bedroom & Bedside",
+            "collection": "bedroom-bedside",
+            "custom_title": "",
             "custom_text": "Create a restful environment right where you sleep.",
             "custom_link": ""
           }
@@ -127,8 +127,8 @@
         "category-2": {
           "type": "category",
           "settings": {
-            "collection": "",
-            "custom_title": "Personal Wellness",
+            "collection": "personal-wellness",
+            "custom_title": "",
             "custom_text": "Support your wind-down and quiet-time routines.",
             "custom_link": ""
           }
@@ -136,8 +136,8 @@
         "category-3": {
           "type": "category",
           "settings": {
-            "collection": "",
-            "custom_title": "Room & Space",
+            "collection": "room-space",
+            "custom_title": "",
             "custom_text": "Enhance bedrooms, living areas, and wellness spaces.",
             "custom_link": ""
           }
@@ -145,8 +145,8 @@
         "category-4": {
           "type": "category",
           "settings": {
-            "collection": "",
-            "custom_title": "Travel Wellness",
+            "collection": "travel-wellness",
+            "custom_title": "",
             "custom_text": "Keep your routine consistent wherever you go.",
             "custom_link": ""
           }
@@ -154,8 +154,8 @@
         "category-5": {
           "type": "category",
           "settings": {
-            "collection": "",
-            "custom_title": "Wellness Sets",
+            "collection": "wellness-sets",
+            "custom_title": "",
             "custom_text": "Curated combinations to support your routine.",
             "custom_link": ""
           }
