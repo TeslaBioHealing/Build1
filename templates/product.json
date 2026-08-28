@@ -49,82 +49,82 @@
             "show_gift_card_recipient": true
           }
         },
-        "collapsible_tab_qrwKmi": {
+        "collapsible_tab_UJCt7w": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "General-Wellness Features",
+            "heading": "Recovery Sleep™ Program Fit and General-WellnessFeatures",
             "icon": "check_mark",
-            "content": "{{ product.metafields.custom.general_wellness_features | metafield_tag }}",
+            "content": "{{ product.metafields.custom.healthy_sleep_space_program_fit_and_general_wellness_features | metafield_tag }}",
             "page": ""
           }
         },
-        "collapsible_tab_pCGzzR": {
+        "collapsible_tab_bCVghF": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Who May Enjoy the Product",
+            "heading": "Who May Enjoy Healthy Sleep Space™ with This Pillow",
             "icon": "check_mark",
             "content": "{{ product.metafields.custom.who_may_enjoy_the_product | metafield_tag }}",
             "page": ""
           }
         },
-        "collapsible_tab_bmAwQi": {
+        "collapsible_tab_4kTGQH": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "How to Incorporate It into a Daily Routine",
+            "heading": "How to Use It in the Healthy Sleep Space™ Routine",
             "icon": "check_mark",
-            "content": "{{ product.metafields.custom.how_to_incorporate_it_into_a_daily_routine_water_bottle | metafield_tag }}",
+            "content": "{{ product.metafields.custom.how_to_use_it_in_the_healthy_sleep_space_routine | metafield_tag }}",
             "page": ""
           }
         },
-        "collapsible_tab_REqY8w": {
+        "collapsible_tab_rnAfyc": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Directions for Use",
+            "heading": "Directions for use",
             "icon": "check_mark",
             "content": "{{ product.metafields.custom.directions_for_use_water_bottle | metafield_tag }}",
             "page": ""
           }
         },
-        "collapsible_tab_M9fbf9": {
+        "collapsible_tab_RWhkqU": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Safety Information and Limitations",
+            "heading": "Safety information and limitations",
             "icon": "check_mark",
             "content": "{{ product.metafields.custom.safety_information_and_limitations_water_bottle | metafield_tag }}",
             "page": ""
           }
         },
-        "collapsible_tab_PUCx6B": {
+        "collapsible_tab_3iXqAx": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "What Is Included",
+            "heading": "What is included",
             "icon": "check_mark",
             "content": "{{ product.metafields.custom.what_is_included_water_bottle | metafield_tag }}",
             "page": ""
           }
         },
-        "collapsible_tab_yMb487": {
+        "collapsible_tab_4ULDPW": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Frequently Asked Questions",
+            "heading": "Frequently asked questions",
             "icon": "check_mark",
             "content": "{{ product.metafields.custom.frequently_asked_questions_water_bottle | metafield_tag }}",
             "page": ""
           }
         },
-        "collapsible_tab_KD43bH": {
+        "collapsible_tab_qgk8cX": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Shipping, Returns, and Warranty",
+            "heading": "Shipping, returns and warranty",
             "icon": "check_mark",
-            "content": "{{ product.metafields.custom.shipping_returns_and_warranty_water_bottle | metafield_tag }}",
+            "content": "",
             "page": ""
           }
         },
-        "collapsible_tab_DRE8nD": {
+        "collapsible_tab_tjVaLH": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Approved Wellness Disclaimer",
+            "heading": "Approved wellness disclaimer",
             "icon": "check_mark",
             "content": "{{ product.metafields.custom.approved_wellness_disclaimer_water_bottle | metafield_tag }}",
             "page": ""
@@ -145,15 +145,15 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "collapsible_tab_qrwKmi",
-        "collapsible_tab_pCGzzR",
-        "collapsible_tab_bmAwQi",
-        "collapsible_tab_REqY8w",
-        "collapsible_tab_M9fbf9",
-        "collapsible_tab_PUCx6B",
-        "collapsible_tab_yMb487",
-        "collapsible_tab_KD43bH",
-        "collapsible_tab_DRE8nD",
+        "collapsible_tab_UJCt7w",
+        "collapsible_tab_bCVghF",
+        "collapsible_tab_4kTGQH",
+        "collapsible_tab_rnAfyc",
+        "collapsible_tab_RWhkqU",
+        "collapsible_tab_3iXqAx",
+        "collapsible_tab_4ULDPW",
+        "collapsible_tab_qgk8cX",
+        "collapsible_tab_tjVaLH",
         "share"
       ],
       "settings": {
