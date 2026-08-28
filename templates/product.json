@@ -170,9 +170,9 @@
         "collapsible_row_Wd7wNU": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Shipping, Returns, and Warranty",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<h4><strong>Shipping</strong></h4><ul><li>Bottled water is a heavy consumable product; display case weight and dimensions before purchase</li><li>Confirm eligible destinations, shipping charge, processing time, delivery estimate, carrier, tracking, and temperature controls</li><li>Provide a clear procedure for damaged, leaking, missing, or delayed shipments</li><li>Inspect the case promptly and retain damaged bottles, lot codes, the case, and shipping label</li></ul><h4><strong>Returns</strong></h4><ul><li>Return status: [Insert approved final-sale or limited-return policy]</li><li>Damaged shipment remedy: [Insert approved replacement or refund process]</li><li>Quality complaint procedure and reporting period: [Insert approved details]</li><li>Unopened and opened case eligibility: [Insert approved policy]</li></ul><p></p><p>A final-sale policy does noteliminate legally required remedies for contaminated, adulterated, misbranded, damaged, or improperly shipped products.</p><h4></h4><h4><strong>Warranty or Product-Quality Policy</strong></h4><ul><li>A conventional device warranty does not apply to bottled water.</li><li>The product-quality policy should address broken seals, leaks, damage, foreign material, unusual appearance/odor/taste, incorrect quantity, lot traceability, complaint investigation, refunds or replacements, and recall communication.</li></ul>",
             "page": ""
           }
         },
