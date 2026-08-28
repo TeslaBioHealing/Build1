@@ -58,6 +58,78 @@
             "page": ""
           }
         },
+        "collapsible_tab_pCGzzR": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Who May Enjoy the Product",
+            "icon": "check_mark",
+            "content": "{{ product.metafields.custom.who_may_enjoy_the_product | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_bmAwQi": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How to Incorporate It into a Daily Routine",
+            "icon": "check_mark",
+            "content": "{{ product.metafields.custom.how_to_incorporate_it_into_a_daily_routine_water_bottle | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_REqY8w": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Directions for Use",
+            "icon": "check_mark",
+            "content": "{{ product.metafields.custom.directions_for_use_water_bottle | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_M9fbf9": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Safety Information and Limitations",
+            "icon": "check_mark",
+            "content": "{{ product.metafields.custom.safety_information_and_limitations_water_bottle | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_PUCx6B": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What Is Included",
+            "icon": "check_mark",
+            "content": "{{ product.metafields.custom.what_is_included_water_bottle | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_yMb487": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Frequently Asked Questions",
+            "icon": "check_mark",
+            "content": "{{ product.metafields.custom.frequently_asked_questions_water_bottle | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_KD43bH": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping, Returns, and Warranty",
+            "icon": "check_mark",
+            "content": "{{ product.metafields.custom.shipping_returns_and_warranty_water_bottle | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_DRE8nD": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Approved Wellness Disclaimer",
+            "icon": "check_mark",
+            "content": "{{ product.metafields.custom.approved_wellness_disclaimer_water_bottle | metafield_tag }}",
+            "page": ""
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -74,6 +146,14 @@
         "quantity_selector",
         "buy_buttons",
         "collapsible_tab_qrwKmi",
+        "collapsible_tab_pCGzzR",
+        "collapsible_tab_bmAwQi",
+        "collapsible_tab_REqY8w",
+        "collapsible_tab_M9fbf9",
+        "collapsible_tab_PUCx6B",
+        "collapsible_tab_yMb487",
+        "collapsible_tab_KD43bH",
+        "collapsible_tab_DRE8nD",
         "share"
       ],
       "settings": {
