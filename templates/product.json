@@ -52,7 +52,7 @@
         "collapsible_tab_UJCt7w": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Recovery Sleep™ Program Fit and General-WellnessFeatures",
+            "heading": "Recovery Sleep™ Program Fit and General-Wellness Features",
             "icon": "check_mark",
             "content": "{{ product.metafields.custom.healthy_sleep_space_program_fit_and_general_wellness_features | metafield_tag }}",
             "page": ""
@@ -117,7 +117,7 @@
           "settings": {
             "heading": "Shipping, returns and warranty",
             "icon": "check_mark",
-            "content": "",
+            "content": "{{ product.metafields.custom.shipping_returns_and_warranty_water_bottle | metafield_tag }}",
             "page": ""
           }
         },
