@@ -101,122 +101,23 @@
         "padding_bottom": 28
       }
     },
-    "collapsible_content_nmnTwe": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_mnzeGd": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "General-Wellness Features",
-            "icon": "check_mark",
-            "row_content": "<p>Designed for simple, intentional everyday use, the ENLOVA™ Water Bottle:</p><ul><li>Holds plain potable water for everyday drinking</li><li>Encourages a consistent, mindful hydration routine</li><li>Provides a reusable alternative to repeatedly purchasing single-use bottles</li><li>Uses a compact, substantial format for a stable home or office surface</li><li>Requires no electricity, batteries, charging, software, or wireless connection</li><li>Can be cleaned and reused according to approved care instructions</li><li>May contain a sealed, non-food-contact LIPG-related component, subject to verification</li></ul><p>No claim is made that the bottle changes water, improves absorption, increases hydration efficiency, adds nutrients, alters pH, transfers photons, removes contaminants, or produces a health benefit.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_HfyVwg": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Who May Enjoy the Product",
-            "icon": "check_mark",
-            "row_content": "<p>ENLOVA™ Water may suit people who:</p><ul><li>Want convenient bottled water for ordinary consumption</li><li>Keep sealed drinking water available at home or work</li><li>Prefer individually sealed portions</li><li>Want a 24-bottle case for a household or workplace</li><li>Include mindful hydration in a balanced lifestyle</li></ul><p>Fluid needs vary. People with medically directed fluid, sodium, mineral, kidney, cardiac, or other dietary restrictions should follow professional guidance.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_iypdcT": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How to Incorporate It into a Daily Routine",
-            "icon": "check_mark",
-            "row_content": "<p><strong>Keep It Available: </strong>Store unopened bottles in a clean, cool, dry area away from sunlight, heat,<br/>chemicals, fuels, strong odors, pests, and contamination.</p><p><strong>Inspect Before Opening: </strong>Confirm that the bottle, cap, and tamper-evident seal are intact.</p><p><strong>Drink Normally: </strong>Consume according to personal preference, activity, environment, diet, and professional advice. No universal number of bottles is recommended.</p><p><strong>After Opening: </strong>Refrigerate and consume promptly. Do not share or repeatedly refill a single-use bottle.</p><p>No charging, activation, waiting period, geometric arrangement, or special placement is required.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_EwMHrM": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Directions for Use",
-            "icon": "check_mark",
-            "row_content": "<ul><li>Inspect the bottle and tamper-evident seal before opening.</li><li>Do not consume if the seal is broken, the bottle leaks, or the water has an unusual appearance, odor, or taste.</li><li>Open with clean hands and drink according to ordinary hydration needs.</li><li>Refrigerate after opening and consume promptly. Do not share an opened bottle.</li><li>Do not refill or repeatedly reuse a bottle designed for single use.</li><li>Store unopened bottles in a clean, cool, dry area away from sunlight, chemicals, fuels, strong odors, pests, and excessive heat.</li><li>Do not microwave, boil, or heat water in the original plastic bottle. Transfer it to a suitable heat-safe container if warming is desired.</li><li>Follow the printed lot and best-by information and recycle the empty bottle and cap where accepted.</li></ul>",
-            "page": ""
-          }
-        },
-        "collapsible_row_cexffC": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Safety Information and Limitations",
-            "icon": "check_mark",
-            "row_content": "<ul><li>Consume only from bottles with an intact tamper-evident seal.</li><li>Do not consume from a leaking, swollen, punctured, opened, damaged, or abnormal bottle.</li><li>Store away from sunlight, excessive heat, chemicals, gasoline, pesticides, cleaning products, and strong odors.</li><li>Do not leave cases in a hot vehicle for extended periods.</li><li>Do not microwave, boil, or heat water in the original plastic bottle.</li><li>Refrigerate after opening, consume promptly, and do not repeatedly refill a single-use bottle.</li><li>Keep caps and plastic packaging away from infants and young children.</li><li>Do not use for wound care, contact-lens care, nasal rinsing, injection, inhalation equipment, or another medical use.</li><li>Do not use as a substitute for prescribed oral rehydration products or medical treatment.</li><li>Retain the bottle, lot code, case, and purchase information when reporting contamination, illness, damage, or a quality concern.</li></ul>",
-            "page": ""
-          }
-        },
-        "collapsible_row_kKrA8y": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What Is Included",
-            "icon": "check_mark",
-            "row_content": "<ul><li>One case of ENLOVA™ Water</li><li>Twenty-four sealed bottles</li><li>16.9 fl oz / 500 mL per bottle</li><li>Required product and food labeling</li><li>Lot and best-by coding</li><li>Protective case packaging</li></ul><p>Reusable bottles, water-treatment products, LIPG products, subscriptions, and other products are not included unless expressly stated.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_aRiVxt": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Frequently Asked Questions",
-            "icon": "check_mark",
-            "row_content": "<p><strong>How many bottles are included?</strong></p><p>One case contains 24 individually sealed bottles.</p><p><strong>How much water is in each bottle?</strong></p><p>16.9 fluid ounces / 500 milliliters.</p><p><strong>Is it spring water?</strong></p><p>Use the term spring water only after the source and collection method are verified to meet the applicable standard of identity.</p><p><strong>Where does it come from?</strong></p><p>The approved label and product page must state the verified source name and location. Do not publish unverified aquifer or regional descriptions.</p><p><strong>Is it energized or biophoton-infused?</strong></p><p>No energized, charged, infused, restructured, or physically altered-water claim is made.</p><p><strong>Does it hydrate better than ordinary<br/>bottled water?</strong></p><p>No comparative or enhanced-hydration claim<br/>is made.</p><p><strong>How much should I drink?</strong></p><p>Fluid needs differ. Drink according to personal needs and professional advice; no universal number of bottles is recommended.</p><p><strong>How should it be stored?</strong></p><p>Keep unopened bottles in a cool, clean, dry area away from sunlight, heat, chemicals, pests, and strong odors.</p><p><strong>Can I heat it?</strong></p><p>Do not heat the original plastic bottle. Transfer the water to a suitable heat-safe container.</p><p><strong>How is the water tested?</strong></p><p>The source water and finished product must be tested as required. Offer a quality report only after approval.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_Wd7wNU": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Shipping, Returns, and Warranty",
-            "icon": "check_mark",
-            "row_content": "<h4><strong>Shipping</strong></h4><ul><li>Bottled water is a heavy consumable product; display case weight and dimensions before purchase</li><li>Confirm eligible destinations, shipping charge, processing time, delivery estimate, carrier, tracking, and temperature controls</li><li>Provide a clear procedure for damaged, leaking, missing, or delayed shipments</li><li>Inspect the case promptly and retain damaged bottles, lot codes, the case, and shipping label</li></ul><h4><strong>Returns</strong></h4><ul><li>Return status: [Insert approved final-sale or limited-return policy]</li><li>Damaged shipment remedy: [Insert approved replacement or refund process]</li><li>Quality complaint procedure and reporting period: [Insert approved details]</li><li>Unopened and opened case eligibility: [Insert approved policy]</li></ul><p></p><p>A final-sale policy does noteliminate legally required remedies for contaminated, adulterated, misbranded, damaged, or improperly shipped products.</p><h4></h4><h4><strong>Warranty or Product-Quality Policy</strong></h4><ul><li>A conventional device warranty does not apply to bottled water.</li><li>The product-quality policy should address broken seals, leaks, damage, foreign material, unusual appearance/odor/taste, incorrect quantity, lot traceability, complaint investigation, refunds or replacements, and recall communication.</li></ul>",
-            "page": ""
-          }
-        },
-        "collapsible_row_LcJYjM": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Approved Wellness Disclaimer",
-            "icon": "check_mark",
-            "row_content": "<p>ENLOVA™ Water is bottled water intended for ordinary consumption as part of a safe and mindful hydration routine.</p><p>No claim is made that the water is energized, charged, infused, restructured, amplified, enhanced with photons, or otherwise changed in its chemical, molecular, nutritional, vibrational, or biological properties.</p><p>ENLOVA™ Water is not intended to diagnose, treat, cure, mitigate, or prevent dehydration requiring medical care or any disease or medical condition. It is not claimed to hydrate better than other compliant drinking water or improve energy, cognition, circulation, sleep, metabolism, fitness, or recovery.</p><p>Bottled water is regulated as food; an individual brand is not FDA approved. Source, bottler, processing, testing, packaging, and labeling must be verified before compliance statements are<br/>published.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_mnzeGd",
-        "collapsible_row_HfyVwg",
-        "collapsible_row_iypdcT",
-        "collapsible_row_EwMHrM",
-        "collapsible_row_cexffC",
-        "collapsible_row_kKrA8y",
-        "collapsible_row_aRiVxt",
-        "collapsible_row_Wd7wNU",
-        "collapsible_row_LcJYjM"
-      ],
-      "name": "t:sections.collapsible_content.presets.name",
+    "hss_final_cta_cTWHEJ": {
+      "type": "hss-final-cta",
+      "name": "HSS Final CTA",
       "settings": {
-        "caption": "",
-        "heading": "<strong>FAQs</strong>",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "container_color_scheme": "",
         "color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "heading": "Better Sleep, <em>Better You.</em>",
+        "body": "<p>Make space for healthy routines, restful environments, and everyday wellness.</p>",
+        "button_label": "Start Your Healthy Sleep Space",
+        "button_link": "",
+        "padding_top": 96,
+        "padding_bottom": 96
       }
     }
   },
   "order": [
     "main",
     "related-products",
-    "collapsible_content_nmnTwe"
+    "hss_final_cta_cTWHEJ"
   ]
 }
