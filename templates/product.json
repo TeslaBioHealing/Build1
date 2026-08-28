@@ -54,15 +54,6 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "collapsible_tab_PAwwye": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "content": "",
-            "page": ""
-          }
         }
       },
       "block_order": [
@@ -73,8 +64,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "share",
-        "collapsible_tab_PAwwye"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -111,10 +101,73 @@
         "padding_bottom": 28
       }
     },
-    "collapsible_content_wph3bw": {
+    "collapsible_content_nmnTwe": {
       "type": "collapsible-content",
       "blocks": {
-        "collapsible_row_YG7eJk": {
+        "collapsible_row_mnzeGd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "General-Wellness Features",
+            "icon": "check_mark",
+            "row_content": "<p>ENLOVA™ Water offers a simple way to keep drinking water available for ordinary daily use.</p><ul><li>Convenient bottled water for everyday drinking</li><li>Twenty-four individually sealed 16.9 fl oz / 500 mL bottles per case</li><li>Suitable for home, office, meals, travel where permitted, or rotated emergency supplies</li><li>Clearly labeled source, bottler, lot, best-by, and quality information after approval</li><li>Requires no electricity, preparation, charging, waiting period, or special equipment</li><li>Complements a mindful hydration routine within a balanced lifestyle</li></ul><p>No claim is made that ENLOVA™ Water hydrates better than other compliant bottled water or improves circulation, metabolism, cognition, sleep, recovery, energy, or physical performance.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_HfyVwg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Who May Enjoy the Product",
+            "icon": "check_mark",
+            "row_content": "<p>ENLOVA™ Water may suit people who:</p><ul><li>Want convenient bottled water for ordinary consumption</li><li>Keep sealed drinking water available at home or work</li><li>Prefer individually sealed portions</li><li>Want a 24-bottle case for a household or workplace</li><li>Include mindful hydration in a balanced lifestyle</li></ul><p>Fluid needs vary. People with medically directed fluid, sodium, mineral, kidney, cardiac, or other dietary restrictions should follow professional guidance.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_iypdcT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How to Incorporate It into a Daily Routine",
+            "icon": "check_mark",
+            "row_content": "<p><strong>Keep It Available: </strong>Store unopened bottles in a clean, cool, dry area away from sunlight, heat,<br/>chemicals, fuels, strong odors, pests, and contamination.</p><p><strong>Inspect Before Opening: </strong>Confirm that the bottle, cap, and tamper-evident seal are intact.</p><p><strong>Drink Normally: </strong>Consume according to personal preference, activity, environment, diet, and professional advice. No universal number of bottles is recommended.</p><p><strong>After Opening: </strong>Refrigerate and consume promptly. Do not share or repeatedly refill a single-use bottle.</p><p>No charging, activation, waiting period, geometric arrangement, or special placement is required.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_EwMHrM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Directions for Use",
+            "icon": "check_mark",
+            "row_content": "<ul><li>Inspect the bottle and tamper-evident seal before opening.</li><li>Do not consume if the seal is broken, the bottle leaks, or the water has an unusual appearance, odor, or taste.</li><li>Open with clean hands and drink according to ordinary hydration needs.</li><li>Refrigerate after opening and consume promptly. Do not share an opened bottle.</li><li>Do not refill or repeatedly reuse a bottle designed for single use.</li><li>Store unopened bottles in a clean, cool, dry area away from sunlight, chemicals, fuels, strong odors, pests, and excessive heat.</li><li>Do not microwave, boil, or heat water in the original plastic bottle. Transfer it to a suitable heat-safe container if warming is desired.</li><li>Follow the printed lot and best-by information and recycle the empty bottle and cap where accepted.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cexffC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Safety Information and Limitations",
+            "icon": "check_mark",
+            "row_content": "<ul><li>Consume only from bottles with an intact tamper-evident seal.</li><li>Do not consume from a leaking, swollen, punctured, opened, damaged, or abnormal bottle.</li><li>Store away from sunlight, excessive heat, chemicals, gasoline, pesticides, cleaning products, and strong odors.</li><li>Do not leave cases in a hot vehicle for extended periods.</li><li>Do not microwave, boil, or heat water in the original plastic bottle.</li><li>Refrigerate after opening, consume promptly, and do not repeatedly refill a single-use bottle.</li><li>Keep caps and plastic packaging away from infants and young children.</li><li>Do not use for wound care, contact-lens care, nasal rinsing, injection, inhalation equipment, or another medical use.</li><li>Do not use as a substitute for prescribed oral rehydration products or medical treatment.</li><li>Retain the bottle, lot code, case, and purchase information when reporting contamination, illness, damage, or a quality concern.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kKrA8y": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What Is Included",
+            "icon": "check_mark",
+            "row_content": "<ul><li>One case of ENLOVA™ Water</li><li>Twenty-four sealed bottles</li><li>16.9 fl oz / 500 mL per bottle</li><li>Required product and food labeling</li><li>Lot and best-by coding</li><li>Protective case packaging</li></ul><p>Reusable bottles, water-treatment products, LIPG products, subscriptions, and other products are not included unless expressly stated.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_aRiVxt": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Frequently Asked Questions",
+            "icon": "check_mark",
+            "row_content": "<p><strong>How many bottles are included?</strong></p><p>One case contains 24 individually sealed bottles.</p><p><strong>How much water is in each bottle?</strong></p><p>16.9 fluid ounces / 500 milliliters.</p><p><strong>Is it spring water?</strong></p><p>Use the term spring water only after the source and collection method are verified to meet the applicable standard of identity.</p><p><strong>Where does it come from?</strong></p><p>The approved label and product page must state the verified source name and location. Do not publish unverified aquifer or regional descriptions.</p><p><strong>Is it energized or biophoton-infused?</strong></p><p>No energized, charged, infused, restructured, or physically altered-water claim is made.</p><p><strong>Does it hydrate better than ordinary<br/>bottled water?</strong></p><p>No comparative or enhanced-hydration claim<br/>is made.</p><p><strong>How much should I drink?</strong></p><p>Fluid needs differ. Drink according to personal needs and professional advice; no universal number of bottles is recommended.</p><p><strong>How should it be stored?</strong></p><p>Keep unopened bottles in a cool, clean, dry area away from sunlight, heat, chemicals, pests, and strong odors.</p><p><strong>Can I heat it?</strong></p><p>Do not heat the original plastic bottle. Transfer the water to a suitable heat-safe container.</p><p><strong>How is the water tested?</strong></p><p>The source water and finished product must be tested as required. Offer a quality report only after approval.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Wd7wNU": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Collapsible row",
@@ -123,7 +176,7 @@
             "page": ""
           }
         },
-        "collapsible_row_YRrJAP": {
+        "collapsible_row_LcJYjM": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Collapsible row",
@@ -132,16 +185,7 @@
             "page": ""
           }
         },
-        "collapsible_row_yLJVF3": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_h7DP6g": {
+        "collapsible_row_xQBgtY": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Collapsible row",
@@ -152,18 +196,24 @@
         }
       },
       "block_order": [
-        "collapsible_row_YG7eJk",
-        "collapsible_row_YRrJAP",
-        "collapsible_row_yLJVF3",
-        "collapsible_row_h7DP6g"
+        "collapsible_row_mnzeGd",
+        "collapsible_row_HfyVwg",
+        "collapsible_row_iypdcT",
+        "collapsible_row_EwMHrM",
+        "collapsible_row_cexffC",
+        "collapsible_row_kKrA8y",
+        "collapsible_row_aRiVxt",
+        "collapsible_row_Wd7wNU",
+        "collapsible_row_LcJYjM",
+        "collapsible_row_xQBgtY"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
-        "heading": "",
+        "heading": "<strong>FAQs</strong>",
         "heading_size": "h1",
         "heading_alignment": "center",
-        "layout": "row",
+        "layout": "none",
         "container_color_scheme": "",
         "color_scheme": "",
         "open_first_collapsible_row": false,
@@ -177,6 +227,6 @@
   "order": [
     "main",
     "related-products",
-    "collapsible_content_wph3bw"
+    "collapsible_content_nmnTwe"
   ]
 }
