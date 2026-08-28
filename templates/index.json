@@ -118,7 +118,7 @@
         "category-1": {
           "type": "category",
           "settings": {
-            "collection": "bedroom-bedside",
+            "collection": "bedroom-and-bedside",
             "custom_title": "",
             "custom_text": "Create a restful environment right where you sleep.",
             "custom_link": ""
@@ -136,7 +136,7 @@
         "category-3": {
           "type": "category",
           "settings": {
-            "collection": "room-space",
+            "collection": "room-and-space",
             "custom_title": "",
             "custom_text": "Enhance bedrooms, living areas, and wellness spaces.",
             "custom_link": ""
