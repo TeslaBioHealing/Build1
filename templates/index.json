@@ -16,7 +16,7 @@
         "image_position": "right",
         "overlay_opacity": 0,
         "eyebrow": "Healthy Sleep Space™",
-        "heading": "A Better Space for <em>Recovery&nbsp;Sleep.</em>",
+        "heading": "A Better Space for <em>Recovery Sleep.</em>",
         "body": "<p>Build a healthy nighttime routine with a comfortable environment, consistent habits, and everyday wellness.</p>",
         "button_label": "Explore Healthy Sleep Space",
         "button_link": "shopify://pages/our-approach",
@@ -31,6 +31,7 @@
       "type": "hss-intro",
       "settings": {
         "color_scheme": "scheme-hss-paper",
+        "image": "shopify://shop_images/89685d04-7d2e-437e-bd6b-6c6e86ec8c18.png",
         "eyebrow": "Where Better Nights Begin",
         "heading": "Simple routines. Comfortable spaces. Better nights.",
         "body": "<p>Healthy Sleep Space is a worldwide general-wellness program designed to help you prepare for rest, protect the night, and begin again with healthy choices.</p>",
