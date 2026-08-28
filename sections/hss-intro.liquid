@@ -16,10 +16,13 @@
     <div class="hss-intro__grid">
       <div class="hss-intro__media{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         {%- if section.settings.image != blank -%}
+          {%- liquid
+            assign hss_intro_alt = section.settings.image.alt | default: section.settings.heading | strip_html | escape
+          -%}
           {{
             section.settings.image
             | image_url: width: 1400
-            | image_tag: loading: 'lazy', widths: '400, 600, 800, 1000, 1400', alt: section.settings.image.alt | default: section.settings.heading | strip_html | escape
+            | image_tag: loading: 'lazy', widths: '400, 600, 800, 1000, 1400', alt: hss_intro_alt
           }}
         {%- else -%}
           <div class="hss-hero__media-placeholder" style="border-radius: calc(var(--media-radius, 0) * 1px);">

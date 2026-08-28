@@ -58,6 +58,9 @@
     </div>
     <div class="hss-hero__media">
       {%- if section.settings.image != blank -%}
+        {%- liquid
+          assign hss_hero_alt = section.settings.image.alt | default: section.settings.heading | strip_html | escape
+        -%}
         <picture>
           {%- if section.settings.image_mobile != blank -%}
             <source media="(max-width: 749px)" srcset="{{ section.settings.image_mobile | image_url: width: 1000 }}">
@@ -69,7 +72,7 @@
               loading: 'eager',
               fetchpriority: 'high',
               widths: '600, 800, 1000, 1200, 1600',
-              alt: section.settings.image.alt | default: section.settings.heading | strip_html | escape
+              alt: hss_hero_alt
           }}
         </picture>
       {%- else -%}
