@@ -179,18 +179,9 @@
         "collapsible_row_LcJYjM": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Approved Wellness Disclaimer",
             "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_xQBgtY": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>ENLOVA™ Water is bottled water intended for ordinary consumption as part of a safe and mindful hydration routine.</p><p>No claim is made that the water is energized, charged, infused, restructured, amplified, enhanced with photons, or otherwise changed in its chemical, molecular, nutritional, vibrational, or biological properties.</p><p>ENLOVA™ Water is not intended to diagnose, treat, cure, mitigate, or prevent dehydration requiring medical care or any disease or medical condition. It is not claimed to hydrate better than other compliant drinking water or improve energy, cognition, circulation, sleep, metabolism, fitness, or recovery.</p><p>Bottled water is regulated as food; an individual brand is not FDA approved. Source, bottler, processing, testing, packaging, and labeling must be verified before compliance statements are<br/>published.</p>",
             "page": ""
           }
         }
@@ -204,8 +195,7 @@
         "collapsible_row_kKrA8y",
         "collapsible_row_aRiVxt",
         "collapsible_row_Wd7wNU",
-        "collapsible_row_LcJYjM",
-        "collapsible_row_xQBgtY"
+        "collapsible_row_LcJYjM"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
