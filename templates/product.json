@@ -52,16 +52,16 @@
         "collapsible_tab_UJCt7w": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Recovery Sleep™ Program Fit and General-Wellness Features",
+            "heading": "General-Wellness Feature",
             "icon": "check_mark",
-            "content": "{{ product.metafields.custom.healthy_sleep_space_program_fit_and_general_wellness_features | metafield_tag }}",
+            "content": "{{ product.metafields.custom.general_wellness_features | metafield_tag }}",
             "page": ""
           }
         },
         "collapsible_tab_bCVghF": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Who May Enjoy Healthy Sleep Space™ with This Pillow",
+            "heading": "Who May Enjoy the Product",
             "icon": "check_mark",
             "content": "{{ product.metafields.custom.who_may_enjoy_the_product | metafield_tag }}",
             "page": ""
@@ -70,9 +70,9 @@
         "collapsible_tab_4kTGQH": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "How to Use It in the Healthy Sleep Space™ Routine",
+            "heading": "How to Incorporate It into a Daily Routine",
             "icon": "check_mark",
-            "content": "{{ product.metafields.custom.how_to_use_it_in_the_healthy_sleep_space_routine | metafield_tag }}",
+            "content": "{{ product.metafields.custom.how_to_incorporate_it_into_a_daily_routine_water_bottle | metafield_tag }}",
             "page": ""
           }
         },
