@@ -135,7 +135,8 @@
   overflow: hidden;
 }
 
-.hss-hero__media img {
+.hss-hero__media img,
+.hss-hero__media svg {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -150,20 +151,6 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(160deg, #0b2263 0%, #08194e 60%, #0a1638 100%);
-}
-
-.hss-hero__media-placeholder svg {
-  width: 40%;
-  max-width: 20rem;
-  height: auto;
-  display: block;
-}
-
-@media screen and (max-width: 749px) {
-  .hss-hero__media-placeholder svg {
-    width: 32%;
-    max-width: 12rem;
-  }
 }
 
 .hss-hero__overlay {
