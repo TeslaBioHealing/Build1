@@ -72,7 +72,7 @@
           "settings": {
             "heading": "How to incorporate it into a daily routine",
             "icon": "check_mark",
-            "content": "{{ product.metafields.custom.how_to_use_it_in_the_healthy_sleep_space_routine | metafield_tag }}",
+            "content": "{{ product.metafields.custom.how_to_incorporate_it_into_a_daily_routine_water_bottle | metafield_tag }}",
             "page": ""
           }
         },
