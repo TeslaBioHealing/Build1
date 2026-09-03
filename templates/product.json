@@ -54,7 +54,7 @@
           "settings": {
             "heading": "General Wellness Benefits",
             "icon": "check_mark",
-            "content": "{{ product.metafields.custom.general_wellness_features | metafield_tag }}",
+            "content": "{{ product.metafields.custom.healthy_sleep_space_program_fit_and_general_wellness_features | metafield_tag }}",
             "page": ""
           }
         },
@@ -126,7 +126,7 @@
           "settings": {
             "heading": "Approved wellness disclaimer",
             "icon": "check_mark",
-            "content": "<p>{{ product.metafields.custom.approved_wellness_disclaimer_water_bottle | metafield_tag }}</p>",
+            "content": "{{ product.metafields.custom.approved_wellness_disclaimer_water_bottle | metafield_tag }}",
             "page": ""
           }
         },
