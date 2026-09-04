@@ -1,0 +1,167 @@
+{{ 'hss-newsletter-popup.css' | asset_url | stylesheet_tag }}
+
+{%- unless request.page_type == 'cart' or request.page_type == 'gift_card' or request.page_type == 'password' -%}
+  <modal-dialog
+    id="HssNewsletterPopup-{{ section.id }}"
+    class="hss-newsletter-popup"
+    data-delay="{{ section.settings.delay_seconds }}"
+    data-reappear-days="{{ section.settings.reappear_days }}"
+  >
+    <div
+      class="hss-newsletter-popup__content color-{{ section.settings.color_scheme }} gradient"
+      role="dialog"
+      aria-label="{{ section.settings.heading | strip_html | escape }}"
+      aria-modal="true"
+      tabindex="-1"
+    >
+      <button
+        id="ModalClose-{{ section.id }}"
+        type="button"
+        class="hss-newsletter-popup__toggle"
+        aria-label="{{ 'accessibility.close' | t }}"
+      >
+        {{- 'icon-close.svg' | inline_asset_content -}}
+      </button>
+
+      <div class="hss-newsletter-popup__body">
+        {%- if section.settings.eyebrow != blank -%}
+          <span class="hss-eyebrow">{{ section.settings.eyebrow | escape }}</span>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="hss-newsletter-popup__heading hss-heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.body != blank -%}
+          <div class="hss-newsletter-popup__text">{{ section.settings.body }}</div>
+        {%- endif -%}
+
+        {% form 'customer', class: 'hss-newsletter-popup__form' %}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          {%- if form.posted_successfully? -%}
+            <p class="hss-newsletter-popup__success" tabindex="-1" autofocus data-newsletter-success>
+              {{- 'newsletter.success' | t -}}
+            </p>
+          {%- else -%}
+            <div class="hss-newsletter-popup__row">
+              <div class="field">
+                <input
+                  id="HssNewsletterPopupEmail-{{ section.id }}"
+                  type="email"
+                  name="contact[email]"
+                  class="field__input"
+                  value="{{ form.email }}"
+                  aria-required="true"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  autocomplete="email"
+                  {% if form.errors %}
+                    autofocus
+                    aria-invalid="true"
+                    aria-describedby="HssNewsletterPopupError-{{ section.id }}"
+                  {% endif %}
+                  placeholder="{{ 'newsletter.label' | t }}"
+                  required
+                >
+                <label class="field__label" for="HssNewsletterPopupEmail-{{ section.id }}">
+                  {{ 'newsletter.label' | t }}
+                </label>
+              </div>
+              <button type="submit" class="button hss-newsletter-popup__submit" name="commit">
+                {{ section.settings.button_label | escape }}
+              </button>
+            </div>
+            {%- if form.errors -%}
+              <small class="form__message" id="HssNewsletterPopupError-{{ section.id }}">
+                {{- form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email -}}
+              </small>
+            {%- endif -%}
+          {%- endif -%}
+        {% endform %}
+
+        {%- if section.settings.disclaimer != blank -%}
+          <p class="hss-newsletter-popup__disclaimer">{{ section.settings.disclaimer | escape }}</p>
+        {%- endif -%}
+      </div>
+    </div>
+  </modal-dialog>
+
+  {{ 'hss-newsletter-popup.js' | asset_url | script_tag }}
+{%- endunless -%}
+
+{% schema %}
+{
+  "name": "HSS Newsletter Popup",
+  "tag": "section",
+  "class": "section hss-newsletter-popup-section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Shows once as a popup across the storefront (not on cart or gift card pages). Use the section's own visibility toggle above to turn it off entirely."
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-hss-gold-pale"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Stay in the Loop"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Join the Healthy Sleep Space Newsletter"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body text",
+      "default": "<p>Get simple routines, gentle reminders, and general-wellness tips for better nights — straight to your inbox.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Subscribe"
+    },
+    {
+      "type": "text",
+      "id": "disclaimer",
+      "label": "Disclaimer line",
+      "default": "General wellness only. Not medical advice or medical care."
+    },
+    {
+      "type": "header",
+      "content": "Timing"
+    },
+    {
+      "type": "range",
+      "id": "delay_seconds",
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "unit": "s",
+      "label": "Delay before showing",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "reappear_days",
+      "min": 1,
+      "max": 90,
+      "step": 1,
+      "unit": "days",
+      "label": "Days before showing again after a visitor closes it",
+      "default": 7
+    }
+  ],
+  "presets": [
+    {
+      "name": "HSS Newsletter Popup"
+    }
+  ]
+}
+{% endschema %}
