@@ -283,6 +283,69 @@
         "padding_bottom": 72
       }
     },
+    "hss_faq": {
+      "type": "hss-faq",
+      "blocks": {
+        "faq-1": {
+          "type": "faq",
+          "settings": {
+            "question": "What is Healthy Sleep Space?",
+            "answer": "<p>Healthy Sleep Space is a worldwide general-wellness program built around healthy nighttime routines, comfortable sleep environments, and consistent daily habits. It is for general wellness only and does not provide medical advice, diagnosis, or treatment.</p>"
+          }
+        },
+        "faq-2": {
+          "type": "faq",
+          "settings": {
+            "question": "Is Healthy Sleep Space a medical treatment or device?",
+            "answer": "<p>No. Healthy Sleep Space and the products offered through the program are not intended to diagnose, treat, cure, mitigate, or prevent any disease or medical condition. They are designed solely for general wellness use and are not a substitute for professional medical care.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "faq",
+          "settings": {
+            "question": "Do I need to buy a product to get started?",
+            "answer": "<p>No. The Healthy Sleep Space approach starts with your routine — a realistic schedule, a consistent wind-down, and a comfortable environment. Wellness products are optional and are designed to complement these everyday choices, not replace them.</p>"
+          }
+        },
+        "faq-4": {
+          "type": "faq",
+          "settings": {
+            "question": "What is a Low-Intensity Photon-Generator (LIPG)?",
+            "answer": "<p>LIPG devices are optional, noninvasive components of the Healthy Sleep Space routine that create a low-intensity photon environment during rest, relaxation, or other stated wellness activities. This describes a physical product characteristic only and is not intended to diagnose, treat, cure, mitigate, or prevent any disease.</p>"
+          }
+        },
+        "faq-5": {
+          "type": "faq",
+          "settings": {
+            "question": "Is it safe to use Healthy Sleep Space products every night?",
+            "answer": "<p>Use each product only for its stated general-wellness purpose, in the recommended setting, and according to the directions supplied with it. Review the safety information included with your product, and consult a qualified healthcare professional with any questions about your individual circumstances.</p>"
+          }
+        },
+        "faq-6": {
+          "type": "faq",
+          "settings": {
+            "question": "Where can I learn more?",
+            "answer": "<p>Visit the <a href=\"/blogs/wellness-library\">Wellness Library</a> for practical articles on nighttime routines and everyday wellness, or read <a href=\"/pages/our-approach\">Our Approach</a> and <a href=\"/pages/our-technology\">Our Technology</a> for more detail on the program.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-4",
+        "faq-5",
+        "faq-6"
+      ],
+      "settings": {
+        "color_scheme": "scheme-hss-tint",
+        "eyebrow": "Frequently Asked Questions",
+        "heading": "Common Questions About Healthy Sleep Space",
+        "body": "<p>General wellness only. Not medical advice or medical care.</p>",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "hss_final_cta": {
       "type": "hss-final-cta",
       "settings": {
@@ -305,6 +368,7 @@
     "hss_routine_first",
     "hss_wellness_library",
     "hss_responsible_wellness",
+    "hss_faq",
     "hss_final_cta"
   ]
 }
