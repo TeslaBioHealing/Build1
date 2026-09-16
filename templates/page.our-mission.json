@@ -1,0 +1,143 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "mission_hero": {
+      "type": "hss-hero",
+      "settings": {
+        "color_scheme": "scheme-hss-navy",
+        "image_position": "right",
+        "overlay_opacity": 0,
+        "eyebrow": "Our Mission",
+        "heading": "Supporting the Everyday Foundations of <em>Healthy Sleep.</em>",
+        "body": "<p>Across every walk of life, people depend on healthy sleep, consistent routines, and a comfortable environment to feel prepared for each day. Our mission is to help people build these everyday wellness habits — at home, during quiet moments, and throughout a busy life.</p>",
+        "button_label": "Read Our Approach",
+        "button_link": "shopify://pages/our-approach",
+        "disclaimer": "General wellness only. Not medical advice or medical care.",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mission_vision": {
+      "type": "hss-intro",
+      "settings": {
+        "color_scheme": "scheme-hss-paper",
+        "eyebrow": "Our Vision",
+        "heading": "More Than Products — A Wellness Resource",
+        "body": "<p>We want to be more than a place to shop. Our vision is to grow into an education-driven, science-informed wellness resource — sharing clear, responsible information about healthy sleep and everyday wellness, alongside thoughtfully designed products that support your routine.</p>",
+        "button_label": "Visit the Wellness Library",
+        "button_link": "shopify://blogs/wellness-library",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "mission_values": {
+      "type": "hss-foundations",
+      "blocks": {
+        "foundation-1": {
+          "type": "foundation",
+          "settings": {
+            "icon": "spark",
+            "number": "01",
+            "title": "Grounded in Science",
+            "text": "<p>We describe our products using clear, measured product information — never overstated claims.</p>"
+          }
+        },
+        "foundation-2": {
+          "type": "foundation",
+          "settings": {
+            "icon": "chat",
+            "number": "02",
+            "title": "Educate First",
+            "text": "<p>We believe people deserve to understand a product and its intended wellness purpose before they buy it.</p>"
+          }
+        },
+        "foundation-3": {
+          "type": "foundation",
+          "settings": {
+            "icon": "transparency",
+            "number": "03",
+            "title": "Build Trust Through Transparency",
+            "text": "<p>Clear directions, honest descriptions, and responsible communication guide everything we publish.</p>"
+          }
+        },
+        "foundation-4": {
+          "type": "foundation",
+          "settings": {
+            "icon": "heart",
+            "number": "04",
+            "title": "Responsible by Design",
+            "text": "<p>Every product and every page is built to stay within general-wellness guidelines, always.</p>"
+          }
+        }
+      },
+      "block_order": ["foundation-1", "foundation-2", "foundation-3", "foundation-4"],
+      "settings": {
+        "color_scheme": "scheme-hss-tint",
+        "eyebrow": "What Guides Our Work",
+        "heading": "The Values Behind Everything We Build",
+        "columns_desktop": "4",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "mission_commitment": {
+      "type": "hss-checklist",
+      "blocks": {
+        "item-1": { "type": "item", "settings": { "text": "<p>Educate before we promote</p>" } },
+        "item-2": { "type": "item", "settings": { "text": "<p>Ground every claim in responsible, general-wellness language</p>" } },
+        "item-3": { "type": "item", "settings": { "text": "<p>Earn trust through clear, honest product information</p>" } },
+        "item-4": { "type": "item", "settings": { "text": "<p>Build a program people can rely on, one routine at a time</p>" } }
+      },
+      "block_order": ["item-1", "item-2", "item-3", "item-4"],
+      "settings": {
+        "color_scheme": "scheme-hss-gold-pale",
+        "eyebrow": "Our Commitment",
+        "heading": "Building a Worldwide Wellness Program, Responsibly",
+        "body": "<p>We are committed to growing the Healthy Sleep Space program thoughtfully — always leading with education, grounded in science, and consistent with general-wellness guidelines. As we grow, our commitment stays the same:</p>",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "mission_cta": {
+      "type": "hss-checklist",
+      "settings": {
+        "color_scheme": "scheme-hss-paper",
+        "heading": "One Mission: Better Nights, Every Day.",
+        "body": "<p>Wherever you are and whatever your routine looks like, we're here to help you build healthy habits that support better sleep and everyday wellness.</p>",
+        "button_label": "Shop Wellness Products",
+        "button_link": "shopify://collections/all",
+        "button_label_2": "About Healthy Sleep Space",
+        "button_link_2": "shopify://pages/about-us",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "mission_notice": {
+      "type": "hss-notice-bar",
+      "settings": {
+        "color_scheme": "scheme-hss-navy",
+        "heading": "Healthy Sleep Space is a general-wellness program.",
+        "line_2": "Products are not intended to diagnose, cure, mitigate, treat, or prevent any disease or medical condition.",
+        "line_3": "This page is not medical advice — see our full Disclaimer for details.",
+        "padding_top": 24,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "mission_hero",
+    "mission_vision",
+    "mission_values",
+    "mission_commitment",
+    "mission_cta",
+    "mission_notice"
+  ]
+}
