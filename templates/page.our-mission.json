@@ -10,114 +10,112 @@
 {
   "sections": {
     "mission_hero": {
-      "type": "hss-hero",
+      "type": "hss-editorial-hero",
       "settings": {
         "color_scheme": "scheme-hss-navy",
-        "image_position": "right",
-        "overlay_opacity": 0,
         "eyebrow": "Our Mission",
         "heading": "Supporting the Everyday Foundations of <em>Healthy Sleep.</em>",
         "body": "<p>Across every walk of life, people depend on healthy sleep, consistent routines, and a comfortable environment to feel prepared for each day. Our mission is to help people build these everyday wellness habits — at home, during quiet moments, and throughout a busy life.</p>",
+        "footnote": "*Wellness looks different for everyone — this is for anyone building a healthier night.",
         "button_label": "Read Our Approach",
         "button_link": "shopify://pages/our-approach",
         "disclaimer": "General wellness only. Not medical advice or medical care.",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 64,
+        "padding_bottom": 64
       }
     },
-    "mission_vision": {
-      "type": "hss-intro",
+    "mission_stats": {
+      "type": "hss-stat-grid",
+      "blocks": {
+        "stat-1": { "type": "stat", "settings": { "number": "2026", "label": "The year our general-wellness program began" } },
+        "stat-2": { "type": "stat", "settings": { "number": "Worldwide", "label": "General-wellness availability" } },
+        "stat-3": { "type": "stat", "settings": { "number": "5", "label": "Foundations of a Healthy Sleep Space" } },
+        "stat-4": { "type": "stat", "settings": { "number": "0", "label": "Medical claims made — general wellness only" } }
+      },
+      "block_order": ["stat-1", "stat-2", "stat-3", "stat-4"],
+      "settings": {
+        "color_scheme": "scheme-hss-tint",
+        "eyebrow": "By the Numbers",
+        "heading": "A Program Built on Consistency",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "mission_narrative": {
+      "type": "hss-narrative",
       "settings": {
         "color_scheme": "scheme-hss-paper",
         "eyebrow": "Our Vision",
         "heading": "More Than Products — A Wellness Resource",
-        "body": "<p>We want to be more than a place to shop. Our vision is to grow into an education-driven, science-informed wellness resource — sharing clear, responsible information about healthy sleep and everyday wellness, alongside thoughtfully designed products that support your routine.</p>",
-        "button_label": "Visit the Wellness Library",
-        "button_link": "shopify://blogs/wellness-library",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "body": "<p>We want to be more than a place to shop. Our vision is to grow into an education-driven, science-informed wellness resource — sharing clear, responsible information about healthy sleep and everyday wellness, alongside thoughtfully designed products that support your routine.</p><p>We are committed to growing the Healthy Sleep Space program thoughtfully: educating before we promote, grounding every claim in responsible general-wellness language, and earning trust through clear, honest product information. As we grow, that commitment stays the same — one routine, and one person, at a time.</p>",
+        "padding_top": 80,
+        "padding_bottom": 56
       }
     },
-    "mission_values": {
-      "type": "hss-foundations",
+    "mission_resources": {
+      "type": "hss-link-list",
       "blocks": {
-        "foundation-1": {
-          "type": "foundation",
+        "link-1": { "type": "link", "settings": { "label": "Our Approach", "url": "shopify://pages/our-approach" } },
+        "link-2": { "type": "link", "settings": { "label": "Our Technology", "url": "shopify://pages/our-technology" } },
+        "link-3": { "type": "link", "settings": { "label": "Wellness Library", "url": "shopify://blogs/wellness-library" } },
+        "link-4": { "type": "link", "settings": { "label": "General Wellness Disclaimer", "url": "shopify://pages/disclaimer" } }
+      },
+      "block_order": ["link-1", "link-2", "link-3", "link-4"],
+      "settings": {
+        "color_scheme": "scheme-hss-gold-pale",
+        "eyebrow": "Learn More",
+        "heading": "Resources",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "mission_initiatives": {
+      "type": "hss-initiatives-grid",
+      "blocks": {
+        "initiative-1": {
+          "type": "initiative",
           "settings": {
-            "icon": "spark",
-            "number": "01",
-            "title": "Grounded in Science",
-            "text": "<p>We describe our products using clear, measured product information — never overstated claims.</p>"
+            "icon": "moon",
+            "title": "Better Nighttime Routines",
+            "text": "<p>We design products and education around one goal: helping you build a consistent, comfortable wind-down routine.</p>",
+            "link": "shopify://pages/our-approach"
           }
         },
-        "foundation-2": {
-          "type": "foundation",
+        "initiative-2": {
+          "type": "initiative",
+          "settings": {
+            "icon": "house",
+            "title": "Comfortable Wellness Environments",
+            "text": "<p>A quiet, welcoming space makes it easier to rest, relax, and maintain healthy habits — at home or on the go.</p>",
+            "link": "shopify://pages/shop-wellness"
+          }
+        },
+        "initiative-3": {
+          "type": "initiative",
           "settings": {
             "icon": "chat",
-            "number": "02",
-            "title": "Educate First",
-            "text": "<p>We believe people deserve to understand a product and its intended wellness purpose before they buy it.</p>"
+            "title": "Responsible Education",
+            "text": "<p>Our Wellness Library shares clear, science-informed articles on sleep and everyday wellness — written to educate, not oversell.</p>",
+            "link": "shopify://blogs/wellness-library"
           }
         },
-        "foundation-3": {
-          "type": "foundation",
+        "initiative-4": {
+          "type": "initiative",
           "settings": {
             "icon": "transparency",
-            "number": "03",
-            "title": "Build Trust Through Transparency",
-            "text": "<p>Clear directions, honest descriptions, and responsible communication guide everything we publish.</p>"
-          }
-        },
-        "foundation-4": {
-          "type": "foundation",
-          "settings": {
-            "icon": "heart",
-            "number": "04",
-            "title": "Responsible by Design",
-            "text": "<p>Every product and every page is built to stay within general-wellness guidelines, always.</p>"
+            "title": "Worldwide, Responsible Growth",
+            "text": "<p>As Healthy Sleep Space grows worldwide, every market and every page stays consistent with general-wellness guidelines.</p>",
+            "link": "shopify://pages/about-us"
           }
         }
       },
-      "block_order": ["foundation-1", "foundation-2", "foundation-3", "foundation-4"],
-      "settings": {
-        "color_scheme": "scheme-hss-tint",
-        "eyebrow": "What Guides Our Work",
-        "heading": "The Values Behind Everything We Build",
-        "columns_desktop": "4",
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
-    "mission_commitment": {
-      "type": "hss-checklist",
-      "blocks": {
-        "item-1": { "type": "item", "settings": { "text": "<p>Educate before we promote</p>" } },
-        "item-2": { "type": "item", "settings": { "text": "<p>Ground every claim in responsible, general-wellness language</p>" } },
-        "item-3": { "type": "item", "settings": { "text": "<p>Earn trust through clear, honest product information</p>" } },
-        "item-4": { "type": "item", "settings": { "text": "<p>Build a program people can rely on, one routine at a time</p>" } }
-      },
-      "block_order": ["item-1", "item-2", "item-3", "item-4"],
-      "settings": {
-        "color_scheme": "scheme-hss-gold-pale",
-        "eyebrow": "Our Commitment",
-        "heading": "Building a Worldwide Wellness Program, Responsibly",
-        "body": "<p>We are committed to growing the Healthy Sleep Space program thoughtfully — always leading with education, grounded in science, and consistent with general-wellness guidelines. As we grow, our commitment stays the same:</p>",
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
-    "mission_cta": {
-      "type": "hss-checklist",
+      "block_order": ["initiative-1", "initiative-2", "initiative-3", "initiative-4"],
       "settings": {
         "color_scheme": "scheme-hss-paper",
-        "heading": "One Mission: Better Nights, Every Day.",
-        "body": "<p>Wherever you are and whatever your routine looks like, we're here to help you build healthy habits that support better sleep and everyday wellness.</p>",
-        "button_label": "Shop Wellness Products",
-        "button_link": "shopify://collections/all",
-        "button_label_2": "About Healthy Sleep Space",
-        "button_link_2": "shopify://pages/about-us",
-        "padding_top": 88,
-        "padding_bottom": 88
+        "eyebrow": "Where We're Focused",
+        "heading": "Initiatives",
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "mission_notice": {
@@ -134,10 +132,10 @@
   },
   "order": [
     "mission_hero",
-    "mission_vision",
-    "mission_values",
-    "mission_commitment",
-    "mission_cta",
+    "mission_stats",
+    "mission_narrative",
+    "mission_resources",
+    "mission_initiatives",
     "mission_notice"
   ]
 }

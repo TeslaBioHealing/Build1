@@ -1,0 +1,152 @@
+{{ 'hss-sections.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    --padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      --padding-top: {{ section.settings.padding_top }}px;
+      --padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="hss-editorial-hero__media">
+    {%- if section.settings.image != blank -%}
+      {%- liquid
+        assign hss_editorial_alt = section.settings.image.alt | default: section.settings.heading | strip_html | escape
+      -%}
+      {{
+        section.settings.image
+        | image_url: width: 2000
+        | image_tag: loading: 'eager', fetchpriority: 'high', widths: '600, 900, 1200, 1600, 2000', alt: hss_editorial_alt
+      }}
+    {%- else -%}
+      <div class="hss-editorial-hero__placeholder">
+        {%- render 'hss-icon', icon: 'bed' -%}
+      </div>
+    {%- endif -%}
+  </div>
+
+  <div class="page-width" style="padding-top: var(--padding-top); padding-bottom: var(--padding-bottom);">
+    <div class="hss-editorial-hero__copy">
+      {%- if section.settings.eyebrow != blank -%}
+        <span class="hss-eyebrow">{{ section.settings.eyebrow | escape }}</span>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h1 class="hss-heading hss-editorial-hero__heading">{{ section.settings.heading }}</h1>
+      {%- endif -%}
+      {%- if section.settings.body != blank -%}
+        <div class="hss-editorial-hero__body">{{ section.settings.body }}</div>
+      {%- endif -%}
+      {%- if section.settings.footnote != blank -%}
+        <p class="hss-editorial-hero__footnote">{{ section.settings.footnote | escape }}</p>
+      {%- endif -%}
+      {%- if section.settings.button_label != blank -%}
+        <div class="hss-cta-row">
+          <a
+            {% if section.settings.button_link == blank %}
+              role="link" aria-disabled="true"
+            {% else %}
+              href="{{ section.settings.button_link }}"
+            {% endif %}
+            class="button button--primary"
+          >
+            {{- section.settings.button_label | escape -}}
+          </a>
+        </div>
+      {%- endif -%}
+      {%- if section.settings.disclaimer != blank -%}
+        <p class="hss-disclaimer">{{ section.settings.disclaimer | escape }}</p>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "HSS Editorial Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-hss-paper"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Full-width image"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body text"
+    },
+    {
+      "type": "text",
+      "id": "footnote",
+      "label": "Italic footnote (optional)"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "disclaimer",
+      "label": "Disclaimer line"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 72
+    }
+  ],
+  "presets": [
+    {
+      "name": "HSS Editorial Hero"
+    }
+  ]
+}
+{% endschema %}

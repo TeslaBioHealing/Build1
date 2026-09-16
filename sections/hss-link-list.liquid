@@ -1,0 +1,125 @@
+{{ 'hss-sections.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    --padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      --padding-top: {{ section.settings.padding_top }}px;
+      --padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient" style="padding-top: var(--padding-top); padding-bottom: var(--padding-bottom);">
+  <div class="page-width">
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank -%}
+      <div class="hss-link-list__intro">
+        {%- if section.settings.eyebrow != blank -%}
+          <span class="hss-eyebrow">{{ section.settings.eyebrow | escape }}</span>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="hss-heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="hss-link-list__list">
+      {%- for block in section.blocks -%}
+        <a
+          {% if block.settings.url == blank %}
+            role="link" aria-disabled="true"
+          {% else %}
+            href="{{ block.settings.url }}"
+          {% endif %}
+          class="hss-link-list__row"
+          {{ block.shopify_attributes }}
+        >
+          <span>{{ block.settings.label | escape }}</span>
+          <span class="hss-link-list__arrow" aria-hidden="true">→</span>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "HSS Link List",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-hss-gold-pale"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Resources"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 56
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Link label"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "HSS Link List",
+      "blocks": [
+        { "type": "link", "settings": { "label": "First link" } },
+        { "type": "link", "settings": { "label": "Second link" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

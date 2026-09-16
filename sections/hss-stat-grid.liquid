@@ -1,0 +1,120 @@
+{{ 'hss-sections.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    --padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      --padding-top: {{ section.settings.padding_top }}px;
+      --padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient" style="padding-top: var(--padding-top); padding-bottom: var(--padding-bottom);">
+  <div class="page-width">
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank -%}
+      <div class="hss-stat-grid__intro">
+        {%- if section.settings.eyebrow != blank -%}
+          <span class="hss-eyebrow">{{ section.settings.eyebrow | escape }}</span>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="hss-heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="hss-stat-grid__grid">
+      {%- for block in section.blocks -%}
+        <div class="hss-stat-tile" {{ block.shopify_attributes }}>
+          <span class="hss-stat-tile__number">{{ block.settings.number | escape }}</span>
+          <span class="hss-stat-tile__label">{{ block.settings.label | escape }}</span>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "HSS Stat Grid",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-hss-tint"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "By the Numbers"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 72
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Stat",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number / stat",
+          "default": "100%"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Describe this stat"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "HSS Stat Grid",
+      "blocks": [
+        { "type": "stat", "settings": { "number": "2026", "label": "The year our program began" } },
+        { "type": "stat", "settings": { "number": "Worldwide", "label": "General-wellness availability" } },
+        { "type": "stat", "settings": { "number": "5", "label": "Foundations of a Healthy Sleep Space" } },
+        { "type": "stat", "settings": { "number": "0", "label": "Medical claims made — general wellness only" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
