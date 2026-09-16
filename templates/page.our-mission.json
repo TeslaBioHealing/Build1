@@ -30,7 +30,7 @@
         "stat-1": { "type": "stat", "settings": { "number": "2026", "label": "The year our general-wellness program began" } },
         "stat-2": { "type": "stat", "settings": { "number": "Worldwide", "label": "General-wellness availability" } },
         "stat-3": { "type": "stat", "settings": { "number": "5", "label": "Foundations of a Healthy Sleep Space" } },
-        "stat-4": { "type": "stat", "settings": { "number": "0", "label": "Medical claims made — general wellness only" } }
+        "stat-4": { "type": "stat", "settings": { "number": "12", "label": "Wellness products to choose from" } }
       },
       "block_order": ["stat-1", "stat-2", "stat-3", "stat-4"],
       "settings": {
