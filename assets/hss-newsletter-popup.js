@@ -35,15 +35,6 @@
         });
       }
 
-      var justSubscribed = !!modal.querySelector('[data-newsletter-success]');
-      if (justSubscribed) {
-        safeSet(SUBSCRIBED_KEY, '1');
-        window.setTimeout(function () {
-          if (typeof modal.show === 'function') modal.show();
-        }, 300);
-        return;
-      }
-
       if (safeGet(SUBSCRIBED_KEY)) return;
 
       var dismissedAt = safeGet(DISMISSED_KEY);
