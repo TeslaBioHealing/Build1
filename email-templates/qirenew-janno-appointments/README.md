@@ -35,6 +35,6 @@ https://api.leadconnectorhq.com/widget/booking/iWg3H3Ls5qLVwdm5xwL1
 `{{appointment.only_start_time}}`, `{{appointment.timezone}}`, `{{appointment.meeting_location}}`,
 `{{appointment.reschedule_link}}`, `{{appointment.cancellation_link}}`,
 `{{appointment.add_to_google_calendar}}`, `{{appointment.add_to_ical_outlook}}`,
-`{{location.name}}`, `{{location.full_address}}`, `{{location.phone}}`, `{{location.email}}`
+`{{location.full_address}}`, `{{location.phone}}`, `{{location.email}}`
 
 Brand colors: green `#07931D` (from logo), dark green `#056E16`, tint `#EAF6EC`.
