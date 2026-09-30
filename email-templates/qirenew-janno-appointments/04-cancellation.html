@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+  QiRenew · Cancellation
+  Subject:   Your appointment has been cancelled
+  Preheader: Your appointment with {{appointment.user.name}} was cancelled. Book a new time anytime.
+-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<title>Your appointment has been cancelled</title>
+<style>
+  body { margin:0; padding:0; }
+  a { color:#07931D; }
+  @media only screen and (max-width:620px) {
+    .container { width:100% !important; }
+    .px { padding-left:20px !important; padding-right:20px !important; }
+    .h1 { font-size:24px !important; line-height:30px !important; }
+  }
+</style>
+</head>
+<body style="margin:0;padding:0;background-color:#F3F5F3;">
+<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;font-size:1px;line-height:1px;color:#F3F5F3;">Your appointment with {{appointment.user.name}} was cancelled. Book a new time anytime.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#F3F5F3" style="background-color:#F3F5F3;">
+  <tr>
+    <td align="center" style="padding:24px 12px;">
+      <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;background-color:#FFFFFF;border-radius:8px;overflow:hidden;">
+
+        <!-- Logo -->
+        <tr>
+          <td align="center" style="padding:24px 24px 20px 24px;background-color:#FFFFFF;">
+            <img src="{{custom_values.qirenew_logo_url}}" width="220" alt="QiRenew" style="display:block;width:220px;max-width:220px;height:auto;border:0;">
+          </td>
+        </tr>
+
+        <!-- Summary band -->
+        <tr>
+          <td align="center" bgcolor="#07931D" style="padding:18px 24px;background-color:#07931D;font-family:Arial, Helvetica, sans-serif;color:#FFFFFF;">
+            <div style="font-size:15px;line-height:22px;">Cancelled &middot; {{appointment.user.name}}</div>
+            <div style="font-size:17px;line-height:24px;font-weight:bold;">{{appointment.only_start_date}} &middot; {{appointment.only_start_time}} <span style="font-weight:normal;">({{appointment.timezone}})</span></div>
+          </td>
+        </tr>
+
+        <!-- Body -->
+        <tr>
+          <td class="px" style="padding:28px 32px 8px 32px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:26px;font-weight:bold;color:#1F2A22;padding:0 0 6px 0;">Hi {{contact.first_name}},</td>
+              </tr>
+              <tr>
+                <td class="h1" style="font-family:Arial, Helvetica, sans-serif;font-size:26px;line-height:32px;font-weight:bold;color:#1F2A22;padding:0 0 22px 0;">Your appointment has been cancelled.</td>
+              </tr>
+            </table>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td width="28" valign="top" style="padding:0 0 14px 0;font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:24px;color:#07931D;font-weight:bold;">&#10003;</td>
+              <td valign="top" style="padding:0 0 14px 0;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:24px;color:#1F2A22;"><strong>Was:</strong> {{appointment.only_start_date}} at {{appointment.only_start_time}} ({{appointment.timezone}})</td>
+            </tr>
+            <tr>
+              <td width="28" valign="top" style="padding:0 0 14px 0;font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:24px;color:#07931D;font-weight:bold;">&#10003;</td>
+              <td valign="top" style="padding:0 0 14px 0;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:24px;color:#1F2A22;"><strong>With:</strong> {{appointment.user.name}}</td>
+            </tr>
+            <tr>
+              <td width="28" valign="top" style="padding:0 0 14px 0;font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:24px;color:#07931D;font-weight:bold;">&#10003;</td>
+              <td valign="top" style="padding:0 0 14px 0;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:24px;color:#1F2A22;">Still want to meet? Pick a new time on <a href="https://api.leadconnectorhq.com/widget/booking/iWg3H3Ls5qLVwdm5xwL1" target="_blank" style="color:#07931D;font-weight:bold;">{{appointment.user.name}}'s calendar</a>.</td>
+            </tr>
+            <tr>
+              <td width="28" valign="top" style="padding:0 0 14px 0;font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:24px;color:#07931D;font-weight:bold;">&#10003;</td>
+              <td valign="top" style="padding:0 0 14px 0;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:24px;color:#1F2A22;">Questions? Call <a href="tel:{{location.phone}}" style="color:#07931D;font-weight:bold;text-decoration:none;">{{location.phone}}</a> or simply reply to this email.</td>
+            </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Buttons -->
+        <tr>
+          <td class="px" style="padding:8px 32px 32px 32px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="padding:8px 0 0 0;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+                <td align="center" bgcolor="#07931D" style="border-radius:6px;">
+                  <a href="https://api.leadconnectorhq.com/widget/booking/iWg3H3Ls5qLVwdm5xwL1" target="_blank" style="display:block;padding:15px 20px;font-family:Arial, Helvetica, sans-serif;font-size:17px;line-height:22px;color:#FFFFFF;text-decoration:none;border-radius:6px;">Book a new time</a>
+                </td>
+              </tr></table>
+            </td>
+          </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+          <td align="center" bgcolor="#EAF6EC" style="padding:20px 24px;background-color:#EAF6EC;font-family:Arial, Helvetica, sans-serif;font-size:13px;line-height:20px;color:#5B6B5F;">
+            <strong style="color:#056E16;">{{location.name}}</strong><br>
+            {{location.full_address}}<br>
+            <a href="tel:{{location.phone}}" style="color:#056E16;text-decoration:none;">{{location.phone}}</a> &middot; <a href="mailto:{{location.email}}" style="color:#056E16;text-decoration:none;">{{location.email}}</a>
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
