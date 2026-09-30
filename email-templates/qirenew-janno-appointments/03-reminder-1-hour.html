@@ -61,7 +61,7 @@
             </tr>
             <tr>
               <td width="28" valign="top" style="padding:0 0 14px 0;font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:24px;color:#07931D;font-weight:bold;">&#10003;</td>
-              <td valign="top" style="padding:0 0 14px 0;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:24px;color:#1F2A22;"><strong>Where:</strong> {{appointment.meeting_location}}</td>
+              <td valign="top" style="padding:0 0 14px 0;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:24px;color:#1F2A22;"><strong>Where:</strong> Zoom &middot; <a href="{{appointment.meeting_location}}" target="_blank" style="color:#07931D;font-weight:bold;">Join Zoom meeting</a></td>
             </tr>
             <tr>
               <td width="28" valign="top" style="padding:0 0 14px 0;font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:24px;color:#07931D;font-weight:bold;">&#10003;</td>
@@ -83,7 +83,16 @@
             <td style="padding:8px 0 0 0;">
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
                 <td align="center" bgcolor="#07931D" style="border-radius:6px;">
-                  <a href="{{appointment.reschedule_link}}" target="_blank" style="display:block;padding:15px 20px;font-family:Arial, Helvetica, sans-serif;font-size:17px;line-height:22px;color:#FFFFFF;text-decoration:none;border-radius:6px;">Reschedule appointment</a>
+                  <a href="{{appointment.meeting_location}}" target="_blank" style="display:block;padding:15px 20px;font-family:Arial, Helvetica, sans-serif;font-size:17px;line-height:22px;color:#FFFFFF;text-decoration:none;border-radius:6px;">Join Zoom meeting</a>
+                </td>
+              </tr></table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:14px 0 0 0;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+                <td align="center" bgcolor="#FFFFFF" style="border:1px solid #07931D;border-radius:6px;">
+                  <a href="{{appointment.reschedule_link}}" target="_blank" style="display:block;padding:14px 20px;font-family:Arial, Helvetica, sans-serif;font-size:17px;line-height:22px;color:#07931D;text-decoration:none;border-radius:6px;">Reschedule appointment</a>
                 </td>
               </tr></table>
             </td>

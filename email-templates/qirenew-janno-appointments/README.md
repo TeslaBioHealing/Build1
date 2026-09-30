@@ -2,13 +2,18 @@
 
 Three HTML emails for a GoHighLevel appointment workflow on Janno's calendar.
 
-| File | Send | Subject | Preview text |
-|---|---|---|---|
-| `01-confirmation.html` | Immediately after booking | Your appointment with {{appointment.user.name}} is confirmed | {{appointment.only_start_date}} at {{appointment.only_start_time}}. We look forward to seeing you. |
-| `02-reminder-24-hours.html` | 24 hours before start | Reminder: your appointment is tomorrow | See you tomorrow at {{appointment.only_start_time}} with {{appointment.user.name}}. |
-| `03-reminder-1-hour.html` | 1 hour before start | Starting soon: your appointment in 1 hour | See you at {{appointment.only_start_time}} with {{appointment.user.name}}. |
+| File | GHL template name | Send | Subject | Preview text |
+|---|---|---|---|---|
+| `01-confirmation.html` | Booking Confirmation Email | Immediately after booking | Your appointment with {{appointment.user.name}} is confirmed | {{appointment.only_start_date}} at {{appointment.only_start_time}}. We look forward to seeing you. |
+| `02-reminder-24-hours.html` | Booking Email 24 Hours | 24 hours before start | Reminder: your appointment is tomorrow | See you tomorrow at {{appointment.only_start_time}} with {{appointment.user.name}}. |
+| `03-reminder-1-hour.html` | Booking Email 1 Hour Before | 1 hour before start | Starting soon: your appointment in 1 hour | See you at {{appointment.only_start_time}} with {{appointment.user.name}}. |
 
 ## Setup
+
+The templates are saved in the **Cell Renew** sub-account under *Marketing → Emails → Templates*.
+Janno's calendar (*Janno's Personal Calendar*) is assigned to Janno Ray Guinayhan, so
+`{{appointment.user.name}}` resolves to his name. The Zoom link comes from
+`{{appointment.meeting_location}}`, which is only filled when the calendar's meeting location is set to Zoom.
 
 1. **Logo:** upload `qirenew-logo.png` to *Media Library*, copy its URL, and create a custom value
    named **QiRenew Logo URL** (key `{{custom_values.qirenew_logo_url}}`) under *Settings → Custom Values*.
