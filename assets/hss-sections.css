@@ -249,6 +249,9 @@
 .hss-intro__media img,
 .hss-intro__media svg {
   width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: calc(var(--media-radius, 0) * 1px);
   display: block;
 }
