@@ -14,6 +14,7 @@
       "settings": {
         "color_scheme": "scheme-hss-navy",
         "image_position": "right",
+        "image": "shopify://shop_images/hero-family-bedroom.jpg",
         "overlay_opacity": 0,
         "eyebrow": "Healthy Sleep Space™",
         "heading": "A Better Space for <em>Better&nbsp;Sleep.</em>",
@@ -31,6 +32,7 @@
       "type": "hss-intro",
       "settings": {
         "color_scheme": "scheme-hss-paper",
+        "image": "shopify://shop_images/night-begins-sleep-square.jpg",
         "eyebrow": "Where Better Nights Begin",
         "heading": "Simple routines. Comfortable spaces. Better nights.",
         "body": "<p>Healthy Sleep Space is a worldwide general-wellness program designed to help you prepare for rest, protect the night, and begin again with healthy choices.</p>",
