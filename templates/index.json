@@ -123,6 +123,7 @@
             "collection": "bedroom-and-bedside",
             "custom_title": "",
             "custom_text": "Create a restful environment right where you sleep.",
+            "image": "shopify://shop_images/89685d04-7d2e-437e-bd6b-6c6e86ec8c18.png",
             "custom_link": ""
           }
         },
@@ -132,6 +133,7 @@
             "collection": "personal-wellness",
             "custom_title": "",
             "custom_text": "Support your wind-down and quiet-time routines.",
+            "image": "shopify://shop_images/Water_Enlova-dated.png",
             "custom_link": ""
           }
         },
@@ -141,6 +143,7 @@
             "collection": "room-and-space",
             "custom_title": "",
             "custom_text": "Enhance bedrooms, living areas, and wellness spaces.",
+            "image": "shopify://shop_images/Cozy_Gold_Product_Work_Nook.png",
             "custom_link": ""
           }
         },
@@ -150,6 +153,7 @@
             "collection": "travel-wellness",
             "custom_title": "",
             "custom_text": "Keep your routine consistent wherever you go.",
+            "image": "shopify://shop_images/Cozy_Couple_with_Matching_Travel_Pillows.png",
             "custom_link": ""
           }
         },
@@ -159,6 +163,7 @@
             "collection": "wellness-sets",
             "custom_title": "",
             "custom_text": "Curated combinations to support your routine.",
+            "image": "shopify://shop_images/QiRenew_2.webp",
             "custom_link": ""
           }
         }
