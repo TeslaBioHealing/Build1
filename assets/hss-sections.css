@@ -917,3 +917,7 @@
   line-height: 1.6;
   opacity: 0.85;
 }
+/* HSS Foundations: yellow icons */
+.hss-foundations__grid .hss-card__icon {
+  color: rgb(var(--color-hss-gold, 247, 186, 33));
+}
