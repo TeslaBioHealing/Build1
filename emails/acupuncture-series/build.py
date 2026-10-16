@@ -125,7 +125,7 @@ def render(e):
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
               <tr>
                 <td style="font-family:{SERIF};font-size:22px;color:#ffffff;">QiRenew <span style="color:{GOLD};">&middot;</span></td>
-                <td align="right" style="font-family:{SANS};font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#d9e2d6;">By Tesla BioHealing</td>
+                <td align="right" style="font-family:{SANS};font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#d9e2d6;">Biophoton wellness for calm spaces</td>
               </tr>
             </table>
           </td>
@@ -148,7 +148,7 @@ def render(e):
           <td style="background:{DEEP};padding:24px 32px;font-family:{SANS};font-size:11px;line-height:1.7;color:#c9d4c6;">
             <span style="color:#ffffff;font-weight:bold;">General Wellness Notice:</span> {DISCLAIMER}
             <div style="height:12px;line-height:12px;">&nbsp;</div>
-            &copy; 2026 QiRenew, a Tesla BioHealing company &nbsp;&middot;&nbsp; <a href="{UNSUBSCRIBE_LINK}" style="color:#ffffff;text-decoration:underline;">Unsubscribe</a>
+            &copy; 2026 QiRenew &nbsp;&middot;&nbsp; <a href="{UNSUBSCRIBE_LINK}" style="color:#ffffff;text-decoration:underline;">Unsubscribe</a>
           </td>
         </tr>
 
