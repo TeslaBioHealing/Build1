@@ -8,8 +8,8 @@ from pathlib import Path
 
 OUT = Path(__file__).parent
 
-BOOKING_LINK = "{{BOOKING_LINK}}"          # replace with the calendar link
-UNSUBSCRIBE_LINK = "{{UNSUBSCRIBE_LINK}}"  # replace with the platform's unsubscribe merge field
+BOOKING_LINK = "https://api.leadconnectorhq.com/widget/booking/nARZoutps8cBpj9hxNWf"
+UNSUBSCRIBE_LINK = "{{unsubscribe_link}}"  # GoHighLevel merge field
 
 # Brand tokens (same palette as the CellRenew practitioner emails)
 DEEP = "#173625"
