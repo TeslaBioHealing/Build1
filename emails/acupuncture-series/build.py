@@ -1,4 +1,4 @@
-"""Builds the 5-day QiRenew acupuncture-practitioner email series.
+"""Builds the QiRenew email series for acupuncture center owners.
 
 Every email shares one table-based, inline-styled template (matching the
 existing QiRenew practitioner emails) so it pastes cleanly into an email
@@ -10,6 +10,8 @@ OUT = Path(__file__).parent
 
 BOOKING_LINK = "https://api.leadconnectorhq.com/widget/booking/nARZoutps8cBpj9hxNWf"
 UNSUBSCRIBE_LINK = "{{unsubscribe_link}}"  # GoHighLevel merge field
+IMG_BASE = ("https://raw.githubusercontent.com/TeslaBioHealing/Build1/"
+            "5ec57e6160d2f57a2b946fca0ad3d4e54642b766/emails/acupuncture-series/images")
 
 # Brand tokens (same palette as the QiRenew practitioner emails)
 DEEP = "#173625"
@@ -82,6 +84,16 @@ def quote(label, text):
       <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:{GOLD};font-weight:bold;margin-bottom:8px;">{label}</div>
       <div style="font-family:{SERIF};font-size:16px;line-height:1.6;color:{DEEP};">{text}</div>
     </td>
+  </tr>
+</table>'''
+
+
+def img(file, alt):
+    """Full-width photo. Served from the public repo, pinned to the commit that added it."""
+    return f'''
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 24px 0;">
+  <tr>
+    <td><img src="{IMG_BASE}/{file}" alt="{alt}" width="536" style="display:block;width:100%;max-width:536px;height:auto;border:0;outline:none;text-decoration:none;"></td>
   </tr>
 </table>'''
 
@@ -163,212 +175,209 @@ def render(e):
 
 # ---------- the series ----------
 
-# Each email stands alone (no references to other emails) and follows
-# Problem -> Agitate -> Solution. The "problem" is always about the practice,
-# the space, or the conversation, never a health condition.
+# Written for acupuncture center owners and decision makers. Each email stands
+# alone and follows Problem -> Agitate -> Solution. The "problem" is always a
+# business or client-experience problem, never a health condition.
 EMAILS = [
     {
         "day": 1,
         "slug": "day-1-what-it-is",
-        "subject": "What biophoton wellness is, and what it isn't",
-        "preheader": "A plain-language explanation. No pitch attached.",
-        "eyebrow": "A note for acupuncture practitioners",
-        "headline": "A plain-language look at biophoton wellness",
+        "subject": "What makes a client choose your acupuncture center?",
+        "preheader": "When every center offers acupuncture, the experience is what clients remember.",
+        "eyebrow": "For acupuncture center owners",
+        "headline": "Give clients a reason to choose your center",
         "body": [
             # Problem
-            p("New wellness technologies come across a practitioner's desk all the time. Most "
-              "arrive with big promises and very little explanation of what the product "
-              "actually is."),
+            p("Most acupuncture centers in a given area offer similar services, similar session "
+              "lengths, and similar prices. From the outside, it's hard for a new client to tell "
+              "one center from the next."),
             # Agitate
-            p("That leaves you guessing. When the claims are bigger than the explanation, it's "
-              "hard to know what you'd be bringing into your space, or what you'd say to the "
-              "clients who trust your judgment."),
+            p("When the experience feels interchangeable, clients decide on price and "
+              "convenience. They try the center that's closer, cheaper, or running a promotion, "
+              "and the relationship you've built becomes easy to walk away from."),
             # Solution
-            h2("So here is QiRenew, in plain language"),
+            h2("Meet the QiRenew System"),
+            img("qirenew-system-units.jpg", "The QiRenew System: four solid-state biophoton units"),
             p("The QiRenew System is a general wellness device system crafted with proprietary "
-              "biophoton technology. Made with activated mineral composites, its solid-state units "
-              "are designed to enhance the flow of Qi (&ldquo;energy&rdquo;), promote a soothing "
-              "environment, and support healthy, restful sleep routines. You simply place it near "
-              "a bed, chair, or workspace."),
+              "biophoton technology and made with activated mineral composites. Its solid-state "
+              "units are designed to enhance the flow of Qi (&ldquo;energy&rdquo;), promote a "
+              "soothing environment, and support healthy, restful sleep routines."),
+            p("For an acupuncture center, that means a calm, Qi-centered environment clients can "
+              "feel the moment they walk in, built around the same idea your practice is built "
+              "on."),
+            h2("Why centers choose it"),
             rows([
-                ("&#10003;", "Passive: no setup and nothing to adjust", None),
-                ("&#10003;", "No lasers, no heat, no cords", None),
-                ("&#10003;", "Designed for relaxation, comfort, and everyday well-being", None),
+                ("1", "A signature client experience",
+                 "A Qi-centered environment gives clients something to remember about your "
+                 "center, and something to tell their friends about."),
+                ("2", "A natural fit for your philosophy",
+                 "It's designed around the flow of Qi, so it feels at home in an acupuncture "
+                 "center instead of feeling like a gadget."),
+                ("3", "No added work for your team",
+                 "It's passive: no setup, no cords, no heat, and nothing for your staff to "
+                 "manage."),
             ]),
-            h2("What it isn't"),
-            p("It isn't a medical device, and it isn't intended to diagnose, treat, cure, or "
-              "prevent any condition. It's not a substitute for professional care, and it doesn't "
-              "replace anything you do in your practice. We think being clear about that up front "
-              "is the most useful thing we can offer."),
-            p("If you'd like to know more about how it works in a space like yours, Janno is "
-              "happy to answer questions. No pitch, just information."),
+            p("It's a general wellness device. It isn't intended to diagnose, treat, cure, or "
+              "prevent any condition, and it doesn't change the work you do. It elevates the "
+              "space that work happens in."),
+            p("Janno can show you how centers like yours set it up in a short, practical call."),
         ],
-        "cta": "Ask Janno a Question",
+        "cta": "See How QiRenew Fits Your Center",
     },
     {
         "day": 2,
         "slug": "day-2-qi-and-environment",
-        "subject": "The room is part of the experience",
-        "preheader": "Qi, environment, and the space around a session.",
-        "eyebrow": "Qi, energy, and environment",
-        "headline": "Why the space around a session matters",
+        "subject": "Wellness technology that speaks the language of Qi",
+        "preheader": "Most wellness tech feels out of place in an acupuncture center. This was designed for it.",
+        "eyebrow": "Built around Qi",
+        "headline": "Wellness technology that belongs in an acupuncture center",
         "body": [
             # Problem
-            p("A session can feel calm. The space around it often doesn't. Clients arrive "
-              "straight from traffic, a full inbox, or a busy day, and they sit under bright "
-              "lights with their phones while they wait."),
+            p("Most wellness technology is designed for gyms, spas, or tech-savvy consumers: "
+              "screens, apps, blinking lights, and subscription dashboards."),
             # Agitate
-            p("Those few minutes before and after a session shape how the whole visit feels. "
-              "When the room feels rushed, it's harder for clients to settle in and unwind, no "
-              "matter how much care goes into your work."),
+            p("Bring that into an acupuncture center and it clashes with everything you've "
+              "built. The calm, Qi-centered experience clients come to you for starts to feel "
+              "like a showroom, and your team ends up explaining a gadget instead of focusing on "
+              "clients."),
             # Solution
-            h2("Making the environment part of the experience"),
-            p("In your work, Qi (&ldquo;energy&rdquo;) is a central idea, and you already know "
-              "that the setting matters: the light, the quiet, the temperature. That setting is "
-              "the part of the picture QiRenew is designed for. The QiRenew System creates a "
-              "calming biophoton environment that supports the flow of Qi and a calm mind. It "
-              "isn't a technique. It's part of the room itself."),
-            p("Some practitioners layer QiRenew with the relaxation sessions, mindfulness "
-              "practices, and holistic modalities they already offer in their wellness space."),
-            quote("A simple way to think about it",
-                  "Your work is the session. QiRenew is designed to be part of the calm "
-                  "environment the session happens in."),
-            h2("What a calm environment can include"),
+            h2("Designed around the same idea as your practice"),
+            p("QiRenew starts where your practice starts: with Qi (&ldquo;energy&rdquo;). The "
+              "QiRenew System creates a calming biophoton environment that supports the flow of "
+              "Qi and a calm mind. There are no screens and nothing to operate. It's simply part "
+              "of the room."),
+            p("That makes it easy to layer QiRenew with the relaxation sessions, mindfulness "
+              "practices, and holistic modalities your center already offers."),
+            quote("Why it fits",
+                  "Your work is the session. QiRenew makes the environment around it feel as "
+                  "intentional as the work itself."),
+            h2("What your clients notice"),
             rows([
-                ("1", "Comfortable seating and a quiet place to rest", None),
-                ("2", "Soft lighting and an uncluttered, peaceful room", None),
-                ("3", "A biophoton environment that supports the flow of Qi", None),
+                ("1", "A calm, intentional atmosphere from the moment they arrive", None),
+                ("2", "A space that reflects the Qi philosophy they chose you for", None),
+                ("3", "Nothing distracting: no screens, no sounds, no setup", None),
             ]),
             h2("What we don't claim"),
             p("We don't claim QiRenew changes the outcome of any session, and it isn't meant to "
-              "be part of anyone's health plan. It's a general wellness product, a way to help a "
-              "calm space feel even more restful."),
+              "be part of anyone's health plan. It's a general wellness product designed to make "
+              "your center feel even more restful."),
         ],
-        "cta": "Talk It Through with Janno",
+        "cta": "Talk to Janno About Your Center",
     },
     {
         "day": 3,
         "slug": "day-3-placement",
-        "subject": "Where practitioners actually place it",
-        "preheader": "Practical notes: waiting areas, relaxation rooms, and your own desk.",
-        "eyebrow": "Practical placement",
-        "headline": "Where it fits in a working practice",
+        "subject": "Zero setup, zero staff time: how centers place QiRenew",
+        "preheader": "It fits a busy acupuncture schedule without changing a single session.",
+        "eyebrow": "Built for busy centers",
+        "headline": "It fits your center without changing how you run it",
         "body": [
             # Problem
-            p("Adding anything new to a working practice usually comes with strings attached: "
-              "setup, cords, training, upkeep, or a change to how your sessions run."),
+            p("Every acupuncture center owner knows the math: rooms turn over all day, and your "
+              "team's time belongs to clients."),
             # Agitate
-            p("When your schedule is already full, even small changes add friction. And anything "
-              "that needs regular attention tends to end up pushed into a closet within a few "
-              "months."),
+            p("New equipment usually means setup, training, cords, upkeep, and a few extra "
+              "minutes per session. Across a full week, that adds up, and anything that needs "
+              "regular attention tends to end up pushed into a closet."),
             # Solution
-            h2("Designed to stay in the background"),
-            p("The QiRenew System is passive, so there's nothing for you or your clients to do. "
-              "It's simple to incorporate into relaxation rooms and other wellness spaces, and "
-              "it sits quietly where you place it."),
-            h2("Three common places"),
+            h2("Passive by design"),
+            img("qirenew-acupuncture-room.jpg",
+                "A calm acupuncture session room with QiRenew units placed along the walls"),
+            p("The QiRenew System is passive: no cords, no heat, nothing to switch on, and "
+              "nothing for your staff to learn. Place it once and it simply stays part of the "
+              "room."),
+            h2("Where centers place it"),
             rows([
-                ("1", "The waiting area",
-                 "Placed near seating to create a calm, relaxing environment from the moment "
-                 "clients arrive."),
-                ("2", "The relaxation room",
-                 "Positioned near a chair or quiet corner where clients unwind before heading "
-                 "back into their day."),
-                ("3", "Your own workspace",
-                 "Many practitioners start with one near their own desk or chair, so they can "
-                 "experience the environment for themselves first."),
+                ("1", "Session rooms",
+                 "Placed along the walls or near the table, out of the way of your work."),
+                ("2", "The waiting area",
+                 "Near seating, so a calm, relaxing environment greets clients at check-in."),
+                ("3", "The relaxation room",
+                 "Near a chair or quiet corner where clients unwind before heading back into "
+                 "their day."),
             ]),
-            h2("A few practical notes"),
-            p("There are no cords, no heat, and nothing to switch on, so it won't add steps to "
-              "your day or change how you run your sessions."),
-            p("We also don't recommend a number of units or hours for any health goal. "
-              "Placement is simply about comfort and the feel of the room, and that's a "
-              "conversation about your space, not about anyone's health."),
+            p("We size each setup to your center: its rooms, its layout, and where clients spend "
+              "their time. We don't recommend a number of units or hours for any health goal. "
+              "It's about the feel of your space."),
         ],
-        "cta": "Walk Through Your Space with Janno",
+        "cta": "Plan Your Space with Janno",
     },
     {
         "day": 4,
         "slug": "day-4-talking-with-clients",
-        "subject": "How to talk about it with your clients",
-        "preheader": "The wording we use, and the simple test behind it.",
-        "eyebrow": "Talking with clients",
-        "headline": "How to talk about it with your clients",
+        "subject": "What your clients do between visits",
+        "preheader": "Keep your center part of their everyday routine, not just their appointment.",
+        "eyebrow": "Beyond the session",
+        "headline": "Stay part of your clients' routine between visits",
         "body": [
             # Problem
-            p("Clients notice anything new in your space, and they ask about it, often with a "
-              "personal health question attached."),
+            p("Your relationship with a client is strongest during their visit. Then they go "
+              "home, and for days or weeks, your center isn't part of their day at all."),
             # Agitate
-            p("Without clear wording ready, a well-meaning answer can easily drift into promises "
-              "about health or results that no wellness product should make. That puts you in an "
-              "awkward spot, and it isn't fair to the client either."),
+            p("That's when routines drift and other options start to look appealing. Clients ask "
+              "what they can do at home, and if you don't have an answer, they find one "
+              "somewhere else, usually from a store or website that has nothing to do with your "
+              "center."),
             # Solution
-            h2("The words we use"),
-            p("We've put a lot of care into how we describe QiRenew, and we're happy to share "
-              "that language with you: relaxation, comfort, calm, everyday well-being, a restful "
-              "sleep routine, and the flow of Qi (&ldquo;energy&rdquo;). We stay away from "
-              "anything about health conditions, symptoms, or medical results, and we don't "
-              "compare it to medical devices."),
-            h2("If a client asks about a health concern"),
-            rows([
-                ("1", "Acknowledge",
-                 "Thank them for asking. There's no need to comment on their concern."),
-                ("2", "Clarify",
-                 "Explain that it's a general wellness device, not designed for any medical "
-                 "condition, and that their doctor is the best person for health questions."),
-                ("3", "Refocus",
-                 "Bring it back to comfort, relaxation, and the calm of the space."),
-            ]),
+            h2("A natural recommendation from your center"),
+            p("The QiRenew System is designed to support the flow of Qi (&ldquo;energy&rdquo;) "
+              "and create a relaxing, wellness-supportive environment at home. Clients can place "
+              "it near their bed, chair, or workspace as part of their everyday routine, and "
+              "every time they see it, they're reminded of your center."),
+            h2("Talking about it the right way"),
+            p("We give partner centers clear, approved wording so every recommendation stays "
+              "focused on wellness: relaxation, comfort, calm, everyday well-being, and the flow "
+              "of Qi. If a client asks about a health concern, the answer is simple:"),
             quote("Example wording",
                   "&ldquo;Thanks for asking. It isn't designed for any medical condition, so I "
                   "can't say that, and your doctor is the best person to ask. Many people simply "
-                  "enjoy it as part of a calm, relaxing space.&rdquo;"),
-            h2("The one-question test"),
-            p("Before describing it, we ask ourselves one question: <em>would this sentence still "
-              "make sense to someone with no health concerns at all?</em> If it would, it's "
-              "wellness language. If it wouldn't, we rephrase it."),
+                  "enjoy it as part of a calm, relaxing space at home.&rdquo;"),
+            p("Clear wording protects your center's reputation and keeps every conversation "
+              "honest, which is exactly what clients expect from you."),
         ],
-        "cta": "Ask Janno Your Questions",
+        "cta": "Ask Janno About Offering QiRenew",
     },
     {
         "day": 5,
         "slug": "day-5-common-questions",
-        "subject": "Your questions, answered",
-        "preheader": "The questions practitioners ask us most, in one place.",
-        "eyebrow": "Common questions",
-        "headline": "Answers to the questions practitioners ask most",
+        "subject": "The questions acupuncture center owners ask before saying yes",
+        "preheader": "Straight answers on setup, fit, sizing, and next steps.",
+        "eyebrow": "Before you decide",
+        "headline": "The questions center owners ask before saying yes",
         "body": [
             # Problem
-            p("Practitioners looking at something new for their space tend to ask the same "
-              "handful of practical questions."),
+            p("Bringing anything new into your center is a business decision. You need to know "
+              "it will be used, that it fits your brand, and that it won't create extra work or "
+              "risk."),
             # Agitate
-            p("The answers are usually buried in sales pages or vague marketing language, which "
-              "makes it hard to tell whether something is even worth a conversation."),
+            p("Most wellness products bury those answers under sales language. Guess wrong, and "
+              "you're left with a box in the closet and an awkward conversation with your team."),
             # Solution
-            p("So here are straight answers to the questions we hear most often."),
-            faq("Does it need power or setup?",
-                "No. It's passive: no cords, nothing to switch on, and nothing to set up."),
-            faq("Does it produce heat, or anything I need to manage?",
-                "No lasers and no heat. The QiRenew System is solid-state and designed to create a calming "
-                "biophoton environment, and it sits quietly in the background."),
-            faq("Is it meant to be part of a client's health plan?",
-                "No. It's a general wellness product designed to support relaxation, comfort, and "
-                "everyday well-being. It isn't intended to diagnose, treat, cure, or prevent any "
-                "condition, and it doesn't replace anything you or a client's doctor does."),
-            faq("How many would I need?",
-                "There's no &ldquo;right amount&rdquo; for any health goal, and we won't suggest "
-                "one. If we talk, it's about your space: its size, its layout, and where clients "
-                "rest."),
-            faq("Can it be used at home, too?",
-                "Yes. The QiRenew System is designed to support the flow of Qi "
-                "(&ldquo;energy&rdquo;) and create a relaxing, wellness-supportive environment at "
-                "home. Some people place it near their bed, chair, or workspace as part of their "
-                "everyday routine."),
-            faq("What happens on a call?",
-                "A relaxed, 30-minute conversation with Janno about your space and any questions "
-                "you still have. If it's not a fit, that's a perfectly good outcome too."),
-            p("Whether or not QiRenew is right for your practice, we hope these answers are "
-              "useful."),
+            p("So here are straight answers."),
+            img("qirenew-packaging.jpg", "QiRenew units in their gold packaging"),
+            faq("Will my team need training or setup time?",
+                "No. It's passive: no cords, nothing to switch on, and nothing to adjust. Unpack "
+                "it, place it, and you're done."),
+            faq("Will it fit the look and feel of my center?",
+                "The solid-state units have a clean, minimal gold finish designed to sit quietly "
+                "in session rooms, waiting areas, and relaxation rooms."),
+            faq("How many units does my center need?",
+                "That depends on your space, not on any health goal. On a call, we look at your "
+                "rooms and layout and recommend a setup that fits."),
+            faq("What can my team say to clients?",
+                "We provide approved wellness wording, so your team can talk about it with "
+                "confidence. It's a general wellness product designed to support relaxation, "
+                "comfort, and everyday well-being. It isn't intended to diagnose, treat, cure, or "
+                "prevent any condition."),
+            faq("Can clients use it at home?",
+                "Yes. The QiRenew System is designed to create a relaxing, wellness-supportive "
+                "environment at home, too, which gives your center a natural way to stay part of "
+                "clients' everyday routine."),
+            faq("What happens on the call?",
+                "A focused, 30-minute conversation with Janno about your center, your rooms, and "
+                "your goals. If it's not a fit, you'll know quickly, and that's a perfectly good "
+                "outcome."),
+            p("If QiRenew makes sense for your center, the next step is simple."),
         ],
         "cta": "Book a 30-Minute Call with Janno",
     },
