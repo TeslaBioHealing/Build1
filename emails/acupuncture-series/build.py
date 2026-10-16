@@ -163,20 +163,28 @@ def render(e):
 
 # ---------- the series ----------
 
+# Each email stands alone (no references to other emails) and follows
+# Problem -> Agitate -> Solution. The "problem" is always about the practice,
+# the space, or the conversation, never a health condition.
 EMAILS = [
     {
         "day": 1,
         "slug": "day-1-what-it-is",
         "subject": "What biophoton wellness is, and what it isn't",
-        "preheader": "A plain-language starting point. No pitch attached.",
+        "preheader": "A plain-language explanation. No pitch attached.",
         "eyebrow": "A note for acupuncture practitioners",
         "headline": "A plain-language look at biophoton wellness",
         "body": [
-            p("Over the next few days, we'll send you a short series of notes about QiRenew: "
-              "what it is, what it isn't, and how some acupuncture practitioners think about it in "
-              "their own spaces. There's no hard sell here, just the information we'd want if we "
-              "were in your position."),
-            p("Let's start with the basics."),
+            # Problem
+            p("New wellness technologies come across a practitioner's desk all the time. Most "
+              "arrive with big promises and very little explanation of what the product "
+              "actually is."),
+            # Agitate
+            p("That leaves you guessing. When the claims are bigger than the explanation, it's "
+              "hard to know what you'd be bringing into your space, or what you'd say to the "
+              "clients who trust your judgment."),
+            # Solution
+            h2("So here is QiRenew, in plain language"),
             p("The QiRenew System is a general wellness device system crafted with proprietary "
               "biophoton technology. Made with activated mineral composites, its solid-state units "
               "are designed to enhance the flow of Qi (&ldquo;energy&rdquo;), promote a soothing "
@@ -192,8 +200,8 @@ EMAILS = [
               "prevent any condition. It's not a substitute for professional care, and it doesn't "
               "replace anything you do in your practice. We think being clear about that up front "
               "is the most useful thing we can offer."),
-            p("Tomorrow, we'll look at something that will feel familiar to you: Qi, "
-              "environment, and why the space around a session matters."),
+            p("If you'd like to know more about how it works in a space like yours, Janno is "
+              "happy to answer questions. No pitch, just information."),
         ],
         "cta": "Ask Janno a Question",
     },
@@ -205,14 +213,21 @@ EMAILS = [
         "eyebrow": "Qi, energy, and environment",
         "headline": "Why the space around a session matters",
         "body": [
-            p("Yesterday we covered what QiRenew is and what it isn't. Today, a slightly "
-              "different angle, and one you already know well."),
-            p("In your work, Qi (&ldquo;energy&rdquo;) is a central idea. You also know that the "
-              "setting shapes the experience: the light, the quiet, the temperature, and the few "
-              "minutes someone spends resting before heading back into their day."),
-            p("That setting is the part of the picture QiRenew is designed for. The QiRenew "
-              "System creates a calming biophoton environment that supports the flow of Qi and a "
-              "calm mind. It isn't a technique. It's part of the room itself."),
+            # Problem
+            p("A session can feel calm. The space around it often doesn't. Clients arrive "
+              "straight from traffic, a full inbox, or a busy day, and they sit under bright "
+              "lights with their phones while they wait."),
+            # Agitate
+            p("Those few minutes before and after a session shape how the whole visit feels. "
+              "When the room feels rushed, it's harder for clients to settle in and unwind, no "
+              "matter how much care goes into your work."),
+            # Solution
+            h2("Making the environment part of the experience"),
+            p("In your work, Qi (&ldquo;energy&rdquo;) is a central idea, and you already know "
+              "that the setting matters: the light, the quiet, the temperature. That setting is "
+              "the part of the picture QiRenew is designed for. The QiRenew System creates a "
+              "calming biophoton environment that supports the flow of Qi and a calm mind. It "
+              "isn't a technique. It's part of the room itself."),
             p("Some practitioners layer QiRenew with the relaxation sessions, mindfulness "
               "practices, and holistic modalities they already offer in their wellness space."),
             quote("A simple way to think about it",
@@ -228,8 +243,6 @@ EMAILS = [
             p("We don't claim QiRenew changes the outcome of any session, and it isn't meant to "
               "be part of anyone's health plan. It's a general wellness product, a way to help a "
               "calm space feel even more restful."),
-            p("Tomorrow: the practical side. Where practitioners actually place the QiRenew System, "
-              "and what (little) is involved."),
         ],
         "cta": "Talk It Through with Janno",
     },
@@ -241,11 +254,18 @@ EMAILS = [
         "eyebrow": "Practical placement",
         "headline": "Where it fits in a working practice",
         "body": [
-            p("Today is practical. The questions we hear most are simple ones: Where does it go? "
-              "Does it need setup? Will it change how my space runs?"),
-            p("The short answer: the QiRenew System is designed to sit quietly in the background. "
-              "Because it's passive, there's nothing for you or your clients to do, and it's "
-              "simple to incorporate into relaxation rooms and other wellness spaces."),
+            # Problem
+            p("Adding anything new to a working practice usually comes with strings attached: "
+              "setup, cords, training, upkeep, or a change to how your sessions run."),
+            # Agitate
+            p("When your schedule is already full, even small changes add friction. And anything "
+              "that needs regular attention tends to end up pushed into a closet within a few "
+              "months."),
+            # Solution
+            h2("Designed to stay in the background"),
+            p("The QiRenew System is passive, so there's nothing for you or your clients to do. "
+              "It's simple to incorporate into relaxation rooms and other wellness spaces, and "
+              "it sits quietly where you place it."),
             h2("Three common places"),
             rows([
                 ("1", "The waiting area",
@@ -264,8 +284,6 @@ EMAILS = [
             p("We also don't recommend a number of units or hours for any health goal. "
               "Placement is simply about comfort and the feel of the room, and that's a "
               "conversation about your space, not about anyone's health."),
-            p("Tomorrow: how to talk about it with clients, including the wording we use "
-              "ourselves."),
         ],
         "cta": "Walk Through Your Space with Janno",
     },
@@ -277,14 +295,20 @@ EMAILS = [
         "eyebrow": "Talking with clients",
         "headline": "How to talk about it with your clients",
         "body": [
-            p("If QiRenew ever becomes part of your space, clients will notice it and ask about "
-              "it. We've put a lot of care into how we describe it, keeping it clear, honest, and "
-              "focused on wellness, and we're happy to share that language with you."),
+            # Problem
+            p("Clients notice anything new in your space, and they ask about it, often with a "
+              "personal health question attached."),
+            # Agitate
+            p("Without clear wording ready, a well-meaning answer can easily drift into promises "
+              "about health or results that no wellness product should make. That puts you in an "
+              "awkward spot, and it isn't fair to the client either."),
+            # Solution
             h2("The words we use"),
-            p("Relaxation, comfort, calm, everyday well-being, a restful sleep routine, and the "
-              "flow of Qi (&ldquo;energy&rdquo;). We stay away from anything about health "
-              "conditions, symptoms, or medical results, and we don't compare it to medical "
-              "devices."),
+            p("We've put a lot of care into how we describe QiRenew, and we're happy to share "
+              "that language with you: relaxation, comfort, calm, everyday well-being, a restful "
+              "sleep routine, and the flow of Qi (&ldquo;energy&rdquo;). We stay away from "
+              "anything about health conditions, symptoms, or medical results, and we don't "
+              "compare it to medical devices."),
             h2("If a client asks about a health concern"),
             rows([
                 ("1", "Acknowledge",
@@ -303,8 +327,6 @@ EMAILS = [
             p("Before describing it, we ask ourselves one question: <em>would this sentence still "
               "make sense to someone with no health concerns at all?</em> If it would, it's "
               "wellness language. If it wouldn't, we rephrase it."),
-            p("Tomorrow is the last note in the series: answers to the questions practitioners "
-              "ask us most."),
         ],
         "cta": "Ask Janno Your Questions",
     },
@@ -316,8 +338,14 @@ EMAILS = [
         "eyebrow": "Common questions",
         "headline": "Answers to the questions practitioners ask most",
         "body": [
-            p("To close out the series, here are straightforward answers to the questions we "
-              "hear most often from acupuncture practitioners."),
+            # Problem
+            p("Practitioners looking at something new for their space tend to ask the same "
+              "handful of practical questions."),
+            # Agitate
+            p("The answers are usually buried in sales pages or vague marketing language, which "
+              "makes it hard to tell whether something is even worth a conversation."),
+            # Solution
+            p("So here are straight answers to the questions we hear most often."),
             faq("Does it need power or setup?",
                 "No. It's passive: no cords, nothing to switch on, and nothing to set up."),
             faq("Does it produce heat, or anything I need to manage?",
@@ -339,8 +367,8 @@ EMAILS = [
             faq("What happens on a call?",
                 "A relaxed, 30-minute conversation with Janno about your space and any questions "
                 "you still have. If it's not a fit, that's a perfectly good outcome too."),
-            p("Thank you for reading along this week. Whether or not QiRenew is right for your "
-              "practice, we hope these notes were useful."),
+            p("Whether or not QiRenew is right for your practice, we hope these answers are "
+              "useful."),
         ],
         "cta": "Book a 30-Minute Call with Janno",
     },
@@ -367,7 +395,7 @@ section p{{font-size:13px;color:{SUB};margin:0 0 10px;}}
 section a{{color:{DEEP};}}
 iframe{{width:100%;height:1500px;border:1px solid {PANEL_LINE};background:#fff;}}
 </style></head><body>
-<header><h1>QiRenew &middot; Acupuncture Practitioner Series</h1><p>5-day nurture sequence &middot; one email per day</p></header>
+<header><h1>QiRenew &middot; Acupuncture Practitioner Series</h1><p>5 standalone emails &middot; Problem, Agitate, Solution</p></header>
 {cards}
 </body></html>
 '''
